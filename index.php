@@ -30,12 +30,17 @@ body {
     width: 0;
     position: fixed;
     z-index: 1;
-    top: 50px;
+    top: 100px;
     left: 0;
-    background-color:white ;
+    background-color:whitesmoke ;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 50px;
+}
+.scrollable {
+    margin-top: 90px;
+    height: 500px; /* or any value */
+    overflow-y: auto;
 }
 
 .sidenav a {
@@ -57,14 +62,16 @@ body {
 </style>
 </head>
 <body style="background-color: whitesmoke">
-   <nav class="navbar navbar-inverse navbar-fixed-top" style="height: 50px">
+   <nav class="navbar navbar navbar-fixed-top" style="height: 50px">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="admin_home.jsp">MU LOGO</a>
+            <a class="navbar-brand" href="index.php"><img src="icon9.jpg" alt="MIT Logo"/></a>
         </div>
+        <ul class="nav navbar-nav navbar-header">
+            <li style="padding-left: 250px ; padding-top: 30px; color: #BF360C"><h3>Manipal Institute of technology</h3></li>
+        </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="admin_home.jsp">Manipal Institute of technology</a></li>
-            <li><a href="#">LOGOUT</a></li>
+            <li style="margin-top: 20px;" class="btn btn-default"><a href="#">LOGOUT</a></li>
         </ul>
     </div>
 </nav>
@@ -76,12 +83,13 @@ body {
             <a class="btn " disabled href="#" style="background-color: #861510; height: 70px; padding-top: 20px;" >PROGRESS</a>
             <a class="btn " disabled href="#" style="background-color: #670F0B; height: 70px; padding-top: 20px;">CHALLENGES</a>
         </div>
+        <div class="scrollable">
         <div style="margin-left: 25%">
             <br><br><br><br><br>
             <form class="form-group formwidth" method="post" action="dataUpdate.php">
                 <table class="table table-bordered table-hover table-striped table-responsive">
                 <tbody>
-                    <tr>
+                    <tr class="success">
                         <td>To what extent is your guide available when you had queries/issues?</td>
                         <td><input type="radio" name="available" value="Always Available">Always Available</td>
                         <td><input type="radio" name="available" value="Available most of the time">Available most of the time</td>
@@ -89,7 +97,7 @@ body {
                         <td><input type="radio" name="available" value="Rarely Available">Rarely Available</td>
                         <td><input type="radio" name="available" value="Not available at all">Not available at all</td>
                     </tr>
-                    <tr>
+                    <tr class="danger">
                         <td>How useful is your guide's feedback?</td>
                         <td><input type="radio" name="feedback" value="Extremely useful">Extremely useful</td>
                         <td><input type="radio" name="feedback" value="Very useful">Very useful</td>
@@ -97,7 +105,7 @@ body {
                         <td><input type="radio" name="feedback" value="Rarely useful">Rarely useful</td>
                         <td><input type="radio" name="feedback" value="Not useful at all">Not useful at all</td>
                     </tr>
-                    <tr>
+                    <tr class="info">
                         <td>To what extent does your guide review the paper/report and presentation on time?</td>
                         <td><input type="radio" name="review" value="Always on time">Always on time</td>
                         <td><input type="radio" name="review" value="Mostly on time">Mostly on time</td>
@@ -105,7 +113,7 @@ body {
                         <td><input type="radio" name="review" value="Rarely on time">Rarely on time</td>
                         <td><input type="radio" name="review" value="Not at all">Not at all</td>
                     </tr>
-                    <tr>
+                    <tr class="warning">
                         <td>To what extend has your guide encouraged you to interact with external experts?</td>
                         <td><input type="radio" name="encourage" value="Greatly encouraged">Greatly encouraged</td>
                         <td><input type="radio" name="encourage" value="Encouraged">Encouraged</td>
@@ -139,6 +147,7 @@ body {
             <button class="btn btn-primary">Submit</button>
             </form>
         </div>
+            </div>
     </div>
     
 </body>
