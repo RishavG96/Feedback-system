@@ -85,7 +85,7 @@ body {
         </div>
         <div class="scrollable">
         <div style="margin-left: 25%">
-            <br><br><br><br><br>
+            <br>
             <form class="form-group formwidth" method="post" action="dataUpdate.php">
                 <table class="table table-bordered table-hover table-striped table-responsive">
                 <tbody>
