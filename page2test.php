@@ -78,15 +78,15 @@ body {
 </nav>
     <div class="container">
         <div id="mySidenav" class="sidenav" style="width:25%;">
-            <a href="page2.php" class="btn active " style="background-color: #FF8A65; height: 90px; padding-top: 20px" >GUIDANCE<br> RECEIVED</a>
-            <a class="btn " disabled href="#" style="background-color: #C21E17; height: 90px; padding-top: 20px">FACILITIES <br>AVAILABLE</a>
+            <a class="btn " disabled href="#" style="background-color: #C21E17; height: 90px; padding-top: 20px">GUIDANCE <br>RECEIVED</a>
+            <a href="page2.php" class="btn active " style="background-color: #FF8A65; height: 90px; padding-top: 20px" >FACILITIES<br> AVAILABLE</a>
             <a class="btn " disabled href="#" style="background-color: #A11913 ;height: 90px; padding-top: 20px">WORK AND LIFE<br> BALANCE</a>
             <a class="btn " disabled href="#" style="background-color: #861510; height: 90px; padding-top: 30px;" >PROGRESS</a>
             <a class="btn " disabled href="#" style="background-color: #670F0B; height: 90px; padding-top: 30px;">CHALLENGES</a>
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 150px;  height :450px;">
             <div style="margin-top: 25px;">
-            <br>
+                <marquee>This text will scroll from right to left</marquee>
             <form class="form-group formwidth" method="post" action="page2.php">
             <h2>How do you rate the quality of the following facilities and services available in the campus?</h2><br><br>
             <table class="table table-bordered table-hover">
@@ -107,7 +107,7 @@ body {
                         <td><input type="radio" name="leave" value="Poor"></td>
                         <td><input type="radio" name="leave" value="Not Applicable"></td>
                     </tr>
-                    <tr style="background-color: #1d262b">
+                    <tr>
                         <td>HealthCare</td>
                         <td><input type="radio" name="healthcare" value="Excellent"></td>
                         <td><input type="radio" name="healthcare" value="Good"></td>
@@ -123,7 +123,7 @@ body {
                         <td><input type="radio" name="infrastructure" value="Poor"></td>
                         <td><input type="radio" name="infrastructure" value="Not Applicable"></td>
                     </tr>
-                    <tr style="background-color: #1d262b;">
+                    <tr>
                         <td>Resource<br>(Ex: Software,Equipments, Chemicals)</td>
                         <td><input type="radio" name="resource" value="Excellent"></td>
                         <td><input type="radio" name="resource" value="Good"></td>
