@@ -31,12 +31,12 @@ body {
     width: 0;
     position: fixed;
     z-index: 1;
-    top: 100px;
+    top: 150px;
     left: 0;
     background-color:whitesmoke ;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 50px;
+    
 }
 .scrollable {
     margin-top: 90px;
@@ -62,14 +62,14 @@ body {
 }
 </style>
 </head>
-<body style="background-color: whitesmoke">
+<body style="background-color: #CF4747">
    <nav class="navbar navbar navbar-fixed-top" style="height: 50px">
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand" href="index.php"><img src="icon9.jpg" alt="MIT Logo"/></a>
         </div>
         <ul class="nav navbar-nav navbar-header">
-            <li style="padding-left: 250px ; padding-top: 30px; color: #BF360C"><h3>Manipal Institute of technology</h3></li>
+            <li style="padding-left: 250px ; padding-top: 30px; color: #111111"><h3>Manipal Institute of technology</h3></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li style="margin-top: 20px;" class="btn btn-default"><a href="#">LOGOUT</a></li>
@@ -87,7 +87,7 @@ body {
         <div class="scrollable des" style="margin-left: 25%; margin-top: 150px;  height :450px;">
             <div style="margin-top: 25px;">
                 <marquee>This text will scroll from right to left</marquee>
-                <form class="form-group formwidth" method="post" action="#">
+                <form class="form-group formwidth" method="post" action="page2test.php">
             <table class="table table-hover">
             <tr>
                 <td><h5>To what extent is your guide available when you had queries/issues?</h5></td>

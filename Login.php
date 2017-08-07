@@ -58,11 +58,11 @@
   <div class="right-arrow">
   <a href="" ><img src="https://thumb7.shutterstock.com/display_pic_with_logo/615538/515274235/stock-vector-arrow-right-vector-rounded-icon-image-style-is-a-flat-icon-symbol-inside-a-circle-black-color-515274235.jpg" alt="right arrow" style="width:16%;height:26%;"></a>
   </div>-->
-  <form action="#" method="post">
-      <input type="submit" value="Ph.D Candidate" style="background-color: #CF4747; height: 40px; width: 200px; margin: 15px"/><br>
-      <input type="submit" value="Head of Department"style="background-color: #CF4747; height: 40px; width: 200px; margin: 15px"/><br>
-      <input type="submit" value="Head of Institute"style="background-color: #CF4747; height: 40px; width: 200px; margin: 15px"/><br>
-      <input type="submit" value="Academic Director"style="background-color: #CF4747; height: 40px; width: 200px; margin: 15px"/>
+  <form action="LoginAuth.php" method="post">
+      <input type="submit" name="tologin" value="Ph.D Candidate" style="background-color: #CF4747; height: 40px; width: 200px; margin: 15px"/><br>
+      <input type="submit" name="tologin" value="Head of Department"style="background-color: #CF4747; height: 40px; width: 200px; margin: 15px"/><br>
+      <input type="submit" name="tologin" value="Head of Institute"style="background-color: #CF4747; height: 40px; width: 200px; margin: 15px"/><br>
+      <input type="submit" name="tologin" value="Academic Director"style="background-color: #CF4747; height: 40px; width: 200px; margin: 15px"/>
   </form>
 </div>
 
