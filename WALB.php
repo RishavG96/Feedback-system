@@ -69,7 +69,7 @@ body {
             <a class="navbar-brand" href="index.php"><img src="icon9.jpg" alt="MIT Logo"/></a>
         </div>
         <ul class="nav navbar-nav navbar-header">
-            <li style="padding-left: 250px ; padding-top: 30px; color: #111111"><h3>Manipal Institute of technology</h3></li>
+            <li style="padding-left: 250px ; padding-top: 30px; color: #BF360C"><h3>Manipal Institute of technology</h3></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li style="margin-top: 20px;" class="btn btn-default"><a href="#">LOGOUT</a></li>
