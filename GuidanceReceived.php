@@ -63,7 +63,7 @@ body {
 </style>
 </head>
 <body style="background-color: #CF4747">
-   <nav class="navbar navbar navbar-fixed-top" style="height: 50px">
+   <!--<nav class="navbar navbar navbar-fixed-top" style="height: 50px">
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand" href="index.php"><img src="icon9.jpg" alt="MIT Logo"/></a>
@@ -73,6 +73,20 @@ body {
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li style="margin-top: 20px;" class="btn btn-default"><a href="#">LOGOUT</a></li>
+        </ul>
+    </div>
+</nav>-->
+   <nav class="navbar navbar-inverse navbar-fixed-top" >
+    <div class="container">
+        <div class="navbar-header">
+            <ul>
+            <li class="navbar-brand">MANIPAL UNIVERSITY</li>
+            <li class="navbar-brand" style="padding-left: 350px">PH.D FEEDBACK</li>
+            </ul>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            
+            <li><a href="Login.php">LOGOUT</a></li>
         </ul>
     </div>
 </nav>
