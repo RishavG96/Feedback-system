@@ -62,7 +62,7 @@
       <input type="submit" name="tologin" value="Ph.D Candidate" style="background-color: #CF4747; height: 40px; width: 200px; margin: 15px"/><br>
       <input type="submit" name="tologin" value="Head of Department"style="background-color: #CF4747; height: 40px; width: 200px; margin: 15px"/><br>
       <input type="submit" name="tologin" value="Head of Institute"style="background-color: #CF4747; height: 40px; width: 200px; margin: 15px"/><br>
-      <input type="submit" name="tologin" value="Academic Director"style="background-color: #CF4747; height: 40px; width: 200px; margin: 15px"/>
+      <input type="submit" name="tologin" value="Deputy Registrar"style="background-color: #CF4747; height: 40px; width: 200px; margin: 15px"/>
   </form>
 </div>
 

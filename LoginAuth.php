@@ -10,7 +10,7 @@ else if( $q1 === "Head of Department"){
 else if( $q1 === "Head of Institute"){
     header('Location: HoI.html');
 }
-else if( $q1 === "Academic Director"){
+else if( $q1 === "Deputy Registrar"){
     header('Location: DR.html');
 }
 ?>
