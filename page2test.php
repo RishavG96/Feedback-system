@@ -87,7 +87,7 @@ body {
         <div class="scrollable des" style="margin-left: 25%; margin-top: 150px;  height :450px;">
             <div style="margin-top: 25px;">
                 <marquee>This text will scroll from right to left</marquee>
-            <form class="form-group formwidth" method="post" action="#">
+                <form class="form-group formwidth" method="post" action="WALB.php">
             <h2>How do you rate the quality of the following facilities and services available in the campus?</h2><br><br>
             <table class="table table-bordered table-hover">
                 <tbody>
