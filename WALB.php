@@ -87,7 +87,7 @@ body {
         <div class="scrollable des" style="margin-left: 25%; margin-top: 150px;  height :450px;">
         <div style="margin-top : 5%;">
             <marquee>This text will scroll from right to left</marquee>
-            <form class="form-group formwidth" method="post" action="Challenges.php">
+            <form class="form-group formwidth" method="post" action="Progress.php">
                 <table class="table table-bordered table-hover">
                     <tbody>
                         <tr>
