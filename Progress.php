@@ -15,6 +15,22 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="js/bootstrap.min.js"></script>
         <title></title>
+        <script>
+            function showfunc(){
+                document.getElementById("Showthis").style.display = "block";
+            }
+            function hidefunc(){
+                document.getElementById("Showthis").style.display = "none";
+            }
+            function show1func(){
+                document.getElementById("Showthis1").style.display = "block";
+                document.getElementById("Showthis2").style.display = "block";
+            }
+            function hide1func(){
+                document.getElementById("Showthis1").style.display = "none";
+                document.getElementById("Showthis2").style.display = "none";
+            }
+        </script>
          <style>
              
             .btn[disabled]{
@@ -109,24 +125,24 @@ body {
                     </tr>
                     <tr>
                         <td>Have you completed DAC this semester?</td>
-                        <td><input type="radio" name="q7" value="Yes"></td>
-                        <td><input type="radio" name="q7" value="No"></td>
+                        <td><input type="radio" name="q7" value="Yes" onclick="show1func()"></td>
+                        <td><input type="radio" name="q7" value="No" onclick="hide1func()"></td>
                     </tr>
-                    <tr>
+                    <tr id="Showthis1" style="display : none;">
                         <td>Did you receive support from your guide during DAC?</td>
-                        <td><input type="radio" name="q7" value="Yes"></td>
-                        <td><input type="radio" name="q7" value="No"></td>
+                        <td><input type="radio" name="q7i" value="Yes"></td>
+                        <td><input type="radio" name="q7i" value="No"></td>
                     </tr>
-                    <tr>
-                        <td>Did you receive feedback from DAC members?</td>
-                        <td><input type="radio" name="q7" value="Yes"></td>
-                        <td><input type="radio" name="q7" value="No"></td>
+                    <tr id="Showthis2" style="display : none;">
+                        <td>Did you receive feedback from DAC members?&nbsp;</td>
+                        <td><input type="radio" name="q7ii" value="Yes"></td>
+                        <td><input type="radio" name="q7ii" value="No"></td>
                     </tr>
                     <tr>
                         <td>Have you published any conferences paper/journal paper in last 6 months?</td>
-                        <td><input type="radio" name="q8" value="Yes"></td>
-                        <td><input type="radio" name="q8" value="No"></td>
-                        <td><textarea ></textarea></td>
+                        <td><input type="radio" name="q8" value="Yes" onclick="showfunc()"></td>
+                        <td><input type="radio" name="q8" value="No" onclick="hidefunc()"></td>
+                        <td style="display:none" id="Showthis"><input type="text" id="Showthis" name="q8" style="height: 50px;color: black"> </td>
                     </tr>
                 </tbody>
             </table>
