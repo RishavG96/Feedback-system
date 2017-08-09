@@ -31,7 +31,7 @@ body {
     width: 0;
     position: fixed;
     z-index: 1;
-    top: 150px;
+    top: 100px;
     left: 0;
     background-color:whitesmoke ;
     overflow-x: hidden;
@@ -79,9 +79,9 @@ body {
    <nav class="navbar navbar-inverse navbar-fixed-top" >
     <div class="container">
         <div class="navbar-header">
-            <ul>
+            <ul style="list-style-type: none">
             <li class="navbar-brand">MANIPAL UNIVERSITY</li>
-            <li class="navbar-brand" style="padding-left: 350px">PH.D FEEDBACK</li>
+            <li class="navbar-brand" style="padding-left: 320px">PH.D FEEDBACK</li>
             </ul>
         </div>
         <ul class="nav navbar-nav navbar-right">
@@ -90,7 +90,7 @@ body {
         </ul>
     </div>
 </nav>
-    <div class="container">
+   <div class="container" style="position: relative;">
         <div id="mySidenav" class="sidenav" style="width:25%;">
             <a href="page2.php" class="btn active " style="background-color: #FF8A65; height: 90px; padding-top: 20px" >GUIDANCE<br> RECEIVED</a>
             <a class="btn " disabled href="#" style="background-color: #C21E17; height: 90px; padding-top: 20px">FACILITIES <br>AVAILABLE</a>
@@ -98,13 +98,13 @@ body {
             <a class="btn " disabled href="#" style="background-color: #861510; height: 90px; padding-top: 30px;" >PROGRESS</a>
             <a class="btn " disabled href="#" style="background-color: #670F0B; height: 90px; padding-top: 30px;">CHALLENGES</a>
         </div>
-        <div class="scrollable des" style="margin-left: 25%; margin-top: 150px;  height :450px;">
+        <div class="scrollable des" style="margin-left: 25%; margin-top: 100px; ;  height :450px;">
             <div style="margin-top: 25px;">
                 <marquee>This text will scroll from right to left</marquee>
                 <form class="form-group formwidth" method="post" action="page2test.php">
             <table class="table table-hover">
             <tr>
-                <td><h5>To what extent is your guide available when you had queries/issues?</h5></td>
+                <td>To what extent is your guide available when you had queries/issues?</td>
             <td><select style="background-color: #1d262b;width: 200px ;margin-top: 5px" name="available">
                 <option>--Choose an option--</option>
                 <option  value="Always Available" >Always Available</option>
@@ -115,7 +115,7 @@ body {
                 </select></td>
             </tr>
             <tr>
-                <td><h5>How useful is your guide's feedback?</h5></td>
+                <td>How useful is your guide's feedback?</td>
             <td><select style="background-color: #1d262b;width: 200px;margin-top: 5px " name="feedback">
                     <option>--Choose an option--</option>
                 <option  value="Extremely useful">Extremely useful</option>
@@ -126,7 +126,7 @@ body {
                 </select></td>
             </tr>
             <tr>
-                <td><h5>To what extent does your guide review the paper/report and presentation on time?</h5></td>
+                <td>To what extent does your guide review the paper/report and presentation on time?</td>
             <td><select style="background-color: #1d262b;width: 200px;margin-top: 5px" name="review">
                     <option>--Choose an option--</option>
                 <option  value="Always on time">Always on time</option>
@@ -137,7 +137,7 @@ body {
                 </select></td>
             </tr>
             <tr>
-                <td><h5>To what extend has your guide encouraged you to interact with external experts?</h5></td>
+                <td>To what extend has your guide encouraged you to interact with external experts?</td>
             <td><select style="background-color: #1d262b;width: 200px;margin-top: 5px" name="encourage">
                     <option>--Choose an option--</option>
                 <option  value="Greatly encouraged">Greatly encouraged</option>
@@ -148,7 +148,7 @@ body {
                 </select></td>
             </tr>
             <tr>
-                <td><h5>How often do you receive guidance or feedback from your guide?</h5></td>
+                <td>How often do you receive guidance or feedback from your guide?</td>
             <td><select style="background-color: #1d262b;width: 200px;margin-top: 5px " name="guidance">
                     <option>--Choose an option--</option>
                 <option  value="Weekly" >Weekly</option>
@@ -158,7 +158,7 @@ body {
                 </select></td>
             </tr>
             <tr>
-                <td><h5>Do you feel your guide/co-guide is biased?</h5></td>
+                <td>Do you feel your guide/co-guide is biased?</td>
             <td><select style="background-color: #1d262b;width: 200px;margin-top: 5px " name="biased">
                     <option>--Choose an option--</option>
                 <option  value="Yes">Yes</option>
@@ -166,7 +166,7 @@ body {
                 </select></td>
             </tr>
             <tr>
-                <td><h5>Have you noticed any improvement in guidance from last feedback submitted?</h5></td>
+                <td>Have you noticed any improvement in guidance from last feedback submitted?</td>
             <td><select style="background-color: #1d262b;width: 200px;margin-top: 5px" name="improvement">
                     <option>--Choose an option--</option>
                 <option  value="Yes">Yes</option>
@@ -174,7 +174,7 @@ body {
                 </select></td>
             </tr>
             <tr>
-            <td><h5>Would you recommend your guide to other candidates?(For final year only)</h5></td>
+            <td>Would you recommend your guide to other candidates?(For final year only)</td>
             <td><select style="background-color: #1d262b;width: 200px;margin-top: 5px " name="recommend">
                     <option>--Choose an option--</option>
                 <option  value="Yes">Yes</option>
@@ -187,7 +187,17 @@ body {
             </form>
         </div>
             </div>
-    </div>
-    
+   <footer >
+       <div style=" position: fixed;
+    height: 30px;
+    background-color: black;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;">
+           <center style="color: whitesmoke;">Designed and Developed by Information and Communication Technology Department.</center>
+       </div>
+</footer>
+   </div>
 </body>
 </html>

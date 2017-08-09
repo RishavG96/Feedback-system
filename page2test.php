@@ -31,7 +31,7 @@ body {
     width: 0;
     position: fixed;
     z-index: 1;
-    top: 150px;
+    top: 100px;
     left: 0;
     background-color:whitesmoke ;
     overflow-x: hidden;
@@ -63,16 +63,17 @@ body {
 </style>
 </head>
 <body style="background-color: #CF4747">
-   <nav class="navbar navbar navbar-fixed-top" style="height: 50px">
+   <nav class="navbar navbar-inverse navbar-fixed-top" >
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="index.php"><img src="icon9.jpg" alt="MIT Logo"/></a>
+            <ul style="list-style-type: none">
+            <li class="navbar-brand">MANIPAL UNIVERSITY</li>
+            <li class="navbar-brand" style="padding-left: 320px">PH.D FEEDBACK</li>
+            </ul>
         </div>
-        <ul class="nav navbar-nav navbar-header">
-            <li style="padding-left: 250px ; padding-top: 30px; color: #111111"><h3>Manipal Institute of technology</h3></li>
-        </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li style="margin-top: 20px;" class="btn btn-default"><a href="#">LOGOUT</a></li>
+            
+            <li><a href="Login.php">LOGOUT</a></li>
         </ul>
     </div>
 </nav>
@@ -84,7 +85,7 @@ body {
             <a class="btn " disabled href="#" style="background-color: #861510; height: 90px; padding-top: 30px;" >PROGRESS</a>
             <a class="btn " disabled href="#" style="background-color: #670F0B; height: 90px; padding-top: 30px;">CHALLENGES</a>
         </div>
-        <div class="scrollable des" style="margin-left: 25%; margin-top: 150px;  height :450px;">
+        <div class="scrollable des" style="margin-left: 25%; margin-top: 100px;  height :450px;">
             <div style="margin-top: 25px;">
                 <marquee>This text will scroll from right to left</marquee>
                 <form class="form-group formwidth" method="post" action="WALB.php">
@@ -167,6 +168,17 @@ body {
             </form>
         </div>
             </div>
+        <footer >
+       <div style=" position: fixed;
+    height: 30px;
+    background-color: black;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;">
+           <center style="color: whitesmoke;">Designed and Developed by Information and Communication Technology Department.</center>
+       </div>
+</footer>
     </div>
     
 </body>
