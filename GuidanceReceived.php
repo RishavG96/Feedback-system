@@ -14,7 +14,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="footer_css/css/style.css">
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="js/bootstrap.min.js"></script>
-        <title></title>
+        <title>Guidance Received</title>
          <style>
              
             .btn[disabled]{
@@ -100,7 +100,7 @@ body {
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 100px; ;  height :450px;">
             <div style="margin-top: 25px;">
-                <marquee>This text will scroll from right to left</marquee>
+                <marquee style="color:#FF8A65; font-family: Courier New;background:#FFEBCD">Welcome to Manipal University Feedback system portal! Your identity will not be disclosed under any circumstances.</marquee><br><br>
                 <form class="form-group formwidth" method="post" action="page2test.php">
             <table class="table table-hover">
             <tr>

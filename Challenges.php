@@ -14,7 +14,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="footer_css/css/style.css">
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="js/bootstrap.min.js"></script>
-        <title></title>
+        <title>CHALLENGES</title>
          <style>
              
             .btn[disabled]{
@@ -77,6 +77,7 @@ body {
         </ul>
     </div>
 </nav>
+    
     <div class="container">
         <div id="mySidenav" class="sidenav" style="width:25%; margin-top: 50px; padding: 0;">
             <a href="page2.php" class="btn" disabled style="background-color: #C21E17; height: 90px; padding-top: 20px" >GUIDANCE<br> RECEIVED</a>
@@ -86,17 +87,46 @@ body {
             <a class="btn active" href="#" style="background-color: #FF8A65; height: 90px; padding-top: 30px;">CHALLENGES</a>
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 100px;  height :450px;">
-        <div style="margin-top : 5%;">
-            <marquee>This text will scroll from right to left</marquee>
+        <div style="margin-top : 3%;">
+            <marquee style="color:#FF8A65; font-family: Courier New;background:#FFEBCD">Welcome to Manipal University Feedback system portal! Your identity will not be disclosed under any circumstances.</marquee><br><br>
             <form class="form-group formwidth" method="post" action="Login.php">
                 <h3>Which of the following would you say is the most difficult for PhD's in your discipline? </h3><br>
-                <input type="checkbox" name="q1[]" value="Learning what career possibilities exist">Learning what career possibilities exist<br>
-                <input type="checkbox" name="q1[]" value="Finding research careers within academia">Finding research careers within academia<br>
-                <input type="checkbox" name="q1[]" value="Finding research careers within industry">Finding research careers within industry<br>
-                <input type="checkbox" name="q1[]" value="Finding research careers within government">Finding research careers within government<br>
-                <input type="checkbox" name="q1[]" value="Finding research careers with charity/non-profit organisations">Finding research careers with charity/non-profit organisations<br>
-                <input type="checkbox" name="q1[]" value="Finding non-research careers that use your skills">Finding non-research careers that use your skills<br>
-                <input type="checkbox" name="q1[]" value="Others">Others<br>
+                <table class="table table-bordered table-hover">
+                <tbody>
+                    <tr>
+                        <th>Options</th>
+                        <th>Select</th>
+                    </tr>
+                    <tr>
+                        <td>Learning what career possibilities exist</td>
+                        <td><input type="radio" name="Learning what career possibilities exist" value="Select"></td>
+                    </tr>
+                    <tr style="background-color: #1d262b">
+                        <td>Finding research careers within academia</td>
+                        <td><input type="radio" name="Finding research careers within academia" value="Select"></td>
+                    </tr>
+                    <tr>
+                        <td>Finding research careers within industry</td>
+                        <td><input type="radio" name="Finding research careers within industry" value="Select"></td>
+                    </tr>
+                    <tr style="background-color: #1d262b;">
+                        <td>Finding research careers within government</td>
+                        <td><input type="radio" name="Finding research careers within government" value="Select"></td>
+                    </tr>
+                    <tr style="background-color: #1d262b;">
+                        <td>Finding research careers with charity/non-profit organisations</td>
+                        <td><input type="radio" name="Finding research careers with charity/non-profit organisations" value="Select"></td>
+                    </tr>
+                    <tr style="background-color: #1d262b;">
+                        <td>Finding research careers with charity/non-profit organisations</td>
+                        <td><input type="radio" name="Finding research careers with charity/non-profit organisations" value="Select"></td>
+                    </tr>
+                    <tr style="background-color: #1d262b;">
+                        <td>Others</td>
+                        <td><input type="radio" name="Others" value="Select"></td>
+                    </tr>
+                </tbody>
+            </table>
                 
                 <h3>Any other Comments</h3>
                 <input type="text" name="q2" style="margin-left: 0.1%;width:500px; height: 100px; padding: 0; color: black"><br><br>
