@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -42,40 +45,57 @@ and open the template in the editor.
         <div class="scrollable des" style="margin-left: 25%; margin-top: 100px;  height :450px;">
         <div style="margin-top : 2%;">
             <marquee style="color:#FF8A65; font-family: Courier New;background:#FFEBCD">Welcome to Manipal University Feedback system portal! Your identity will not be disclosed under any circumstances.</marquee><br><br>
-            <form class="form-group formwidth" method="post" action="Progress.php">
+            <?php
+                $var1=1;
+                if (isset($_SESSION['varname2']))
+                {
+                    $var1 = $_SESSION['varname2'];
+                }
+                if($var1 == 0)
+                {?>
+                <div class='alert alert-danger'>
+                    <strong>Please answer all the questions</strong>
+                </div>
+                <?php
+                }
+                ?>
+            <form class="form-group formwidth" method="post" action="dataUpdateWALB.php">
                 <table class="table table-bordered table-hover">
                     <tbody>
                         <tr>
                             <td>How do you rate the work atmosphere in your department?</td>
-                            <td style="color: black;"><select style="background-color:#1d262b;color: #ffffff;width : 200px;" name="q1">
-                    <option value="Excellent" class="form-control">Excellent</option>
-                    <option value="Good" class="form-control">Good</option>
-                    <option value="Satisfactory" class="form-control">Satisfactory</option>
-                    <option value="Poor" class="form-control">Poor</option>
+                    <td><select style="background-color:#1d262b;width : 200px;" name="q1">
+                    <option>--Choose an option--</option>
+                    <option value="Excellent" >Excellent</option>
+                    <option value="Good" >Good</option>
+                    <option value="Satisfactory" >Satisfactory</option>
+                    <option value="Poor">Poor</option>
                 </select></td>
                         </tr>
                         <tr>
                             <td>How many hours do you put in for research work per week?</td>
-                            <td style="color: black;"><select style="background-color:#1d262b;color: #ffffff;width : 200px;" name="q2">
-                    <option value="Less than 11 hours" class="form-control">Less than 11 hours</option>
-                    <option value="11-20 hours" class="form-control">11-20 hours</option>
-                    <option value="21-20 hours" class="form-control">21-30 hours</option>
-                    <option value="31-40 hours" class="form-control">31-40 hours</option>
-                    <option value="41-50 hours" class="form-control">41-50 hours</option>
-                    <option value="51-60 hours" class="form-control">51-60 hours</option>
-                    <option value="61-70 hours" class="form-control">61-70 hours</option>
-                    <option value="71-80 hours" class="form-control">71-80 hours</option>
-                    <option value="More than 80 hours" class="form-control">More than 80 hours</option>
+                            <td><select style="background-color:#1d262b;width : 200px;" name="q2">
+                    <option>--Choose an option--</option>
+                    <option value="Less than 11 hours">Less than 11 hours</option>
+                    <option value="11-20 hours" >11-20 hours</option>
+                    <option value="21-20 hours" >21-30 hours</option>
+                    <option value="31-40 hours" >31-40 hours</option>
+                    <option value="41-50 hours" >41-50 hours</option>
+                    <option value="51-60 hours" >51-60 hours</option>
+                    <option value="61-70 hours" >61-70 hours</option>
+                    <option value="71-80 hours" >71-80 hours</option>
+                    <option value="More than 80 hours" >More than 80 hours</option>
                 </select></td>
                         </tr>
                         <tr>
                             <td>To what extent do you receive support from the Head of the Department?</td>
-                            <td style="color: black;"><select style="background-color:#1d262b;color: #ffffff;width : 200px;" name="q3">
-                    <option value="Extremely Supportive" class="form-control">Extremely Supportive</option>
-                    <option value="Very Supportive" class="form-control">Very Supportive</option>
-                    <option value="Moderately Supportive" class="form-control">Moderately Supportive</option>
-                    <option value="Slightly Supportive" class="form-control">Slightly Supportive</option>
-                    <option value="Not at all supportive" class="form-control">Not at all supportive</option>
+                            <td><select style="background-color:#1d262b;width : 200px;" name="q3">
+                    <option>--Choose an option--</option>
+                    <option value="Extremely Supportive" >Extremely Supportive</option>
+                    <option value="Very Supportive" >Very Supportive</option>
+                    <option value="Moderately Supportive" >Moderately Supportive</option>
+                    <option value="Slightly Supportive" >Slightly Supportive</option>
+                    <option value="Not at all supportive" >Not at all supportive</option>
                 </select></td>
                         </tr>
                     </tbody>
@@ -90,13 +110,13 @@ and open the template in the editor.
                         </tr>
                         <tr>
                             <td>Are you able to balance your personal life and research work?</td>
-                            <td><input type="radio" name="q4" value="Yes">Yes</td>
-                            <td><input type="radio" name="q4" value="No">No</td>
+                            <td><input type="radio" name="q4" value="Yes"></td>
+                            <td><input type="radio" name="q4" value="No"></td>
                         </tr>
                         <tr>
                             <td>Do you receive appreciation and encouragement from your guide?</td>
-                            <td><input type="radio" name="q4" value="Yes">Yes</td>
-                            <td><input type="radio" name="q4" value="Yes">Yes</td>
+                            <td><input type="radio" name="q5" value="Yes"></td>
+                            <td><input type="radio" name="q5" value="Yes"></td>
                         </tr>
                         
                     </tbody>

@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -43,7 +46,21 @@ and open the template in the editor.
         <div class="scrollable des" style="margin-left: 25%; margin-top: 100px;  height :450px;">
         <div style="margin-top : 3%;">
             <marquee style="color:#FF8A65; font-family: Courier New;background:#FFEBCD">Welcome to Manipal University Feedback system portal! Your identity will not be disclosed under any circumstances.</marquee><br><br>
-            <form class="form-group formwidth" method="post" action="Login.php">
+            <?php
+                $var1=1;
+                if (isset($_SESSION['varname4']))
+                {
+                    $var1 = $_SESSION['varname4'];
+                }
+                if($var1 == 0)
+                {?>
+                <div class='alert alert-danger'>
+                    <strong>Please answer all the questions</strong>
+                </div>
+                <?php
+                }
+                ?>
+            <form class="form-group formwidth" method="post" action="dataUpdateChallenge.php">
                 <h3>Which of the following would you say is the most difficult for PhD's in your discipline? </h3><br>
                 <table class="table table-bordered table-hover">
                 <tbody>
@@ -53,37 +70,33 @@ and open the template in the editor.
                     </tr>
                     <tr>
                         <td>Learning what career possibilities exist</td>
-                        <td><input type="radio" name="Learning what career possibilities exist" value="Select"></td>
+                        <td><input type="radio" value="Learning what career possibilities exist" name="q1"></td>
                     </tr>
                     <tr style="background-color: #1d262b">
                         <td>Finding research careers within academia</td>
-                        <td><input type="radio" name="Finding research careers within academia" value="Select"></td>
+                        <td><input type="radio" value="Finding research careers within academia" name="q2"></td>
                     </tr>
                     <tr>
                         <td>Finding research careers within industry</td>
-                        <td><input type="radio" name="Finding research careers within industry" value="Select"></td>
+                        <td><input type="radio" value="Finding research careers within industry" name="q3"></td>
                     </tr>
                     <tr style="background-color: #1d262b;">
                         <td>Finding research careers within government</td>
-                        <td><input type="radio" name="Finding research careers within government" value="Select"></td>
+                        <td><input type="radio" value="Finding research careers within government" name="q4"></td>
                     </tr>
                     <tr style="background-color: #1d262b;">
                         <td>Finding research careers with charity/non-profit organisations</td>
-                        <td><input type="radio" name="Finding research careers with charity/non-profit organisations" value="Select"></td>
-                    </tr>
-                    <tr style="background-color: #1d262b;">
-                        <td>Finding research careers with charity/non-profit organisations</td>
-                        <td><input type="radio" name="Finding research careers with charity/non-profit organisations" value="Select"></td>
+                        <td><input type="radio" value="Finding research careers with charity/non-profit organisations" name="q5"></td>
                     </tr>
                     <tr style="background-color: #1d262b;">
                         <td>Others</td>
-                        <td><input type="radio" name="Others" value="Select"></td>
+                        <td><input type="radio" value="Others" name="q6"></td>
                     </tr>
                 </tbody>
             </table>
                 
                 <h3>Any other Comments</h3>
-                <input type="text" name="q2" style="margin-left: 0.1%;width:500px; height: 100px; padding: 0; color: black"><br><br>
+                <input type="text" name="q7" style="margin-left: 0.1%;width:500px; height: 100px; padding: 0; color: black"><br><br>
                 
                 <button class="btn btn-primary" style="margin-left: 45%">Submit</button>
             </form>

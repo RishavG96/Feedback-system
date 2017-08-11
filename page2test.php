@@ -59,7 +59,7 @@ and open the template in the editor.
                 <?php
                 }
                 ?>
-                <form class="form-group formwidth" method="post" action="WALB.php">
+                <form class="form-group formwidth" method="post" action="dataUpdateBalance.php">
             <h2>How do you rate the quality of the following facilities and services available in the campus?</h2><br><br>
             <table class="table table-bordered table-hover">
                 <tbody>
