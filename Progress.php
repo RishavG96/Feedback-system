@@ -12,7 +12,7 @@ and open the template in the editor.
         <link href="css/bootstrap.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="footer_css/css/zerogrid.css">
         <link rel="stylesheet" href="footer_css/css/style.css">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style2.css">
         <script src="js/bootstrap.min.js"></script>
         <title>PROGRESS</title>
         <script>
@@ -31,52 +31,6 @@ and open the template in the editor.
                 document.getElementById("Showthis2").style.display = "none";
             }
         </script>
-         <style>
-             
-            .btn[disabled]{
-                 background-color: black;
-                opacity: 1;
-            }
-           
-body {
-    font-family: "Lato", sans-serif;
-}
-
-.sidenav {
-    height: fit-content;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 100px;
-    left: 0;
-    background-color:whitesmoke ;
-    overflow-x: hidden;
-    transition: 0.5s;
-    
-}
-.scrollable {
-    margin-top: 90px;
-    height: 500px; /* or any value */
-    overflow-y: auto;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-}
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 22px;}
-}
-</style>
 </head>
 <body style="background-color: #CF4747">
    <nav class="navbar navbar-inverse navbar-fixed-top" >
@@ -159,13 +113,7 @@ body {
         </div>
             </div>
         <footer >
-       <div style=" position: fixed;
-    height: 30px;
-    background-color: black;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;">
+       <div style=" position: fixed;height: 30px;background-color: black;bottom: 0px;left: 0px;right: 0px;margin-bottom: 0px;">
            <center style="color: whitesmoke;">Designed and Developed by Information and Communication Technology Department.</center>
        </div>
 </footer>
