@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -42,6 +45,20 @@ and open the template in the editor.
         <div class="scrollable des" style="margin-left: 25%; margin-top: 100px;  height :450px;">
             <div style="margin-top: 25px;">
                 <marquee style="color:#FF8A65; font-family: Courier New;background:#FFEBCD">Welcome to Manipal University Feedback system portal! Your identity will not be disclosed under any circumstances.</marquee><br><br>
+                <?php
+                $var1=1;
+                if (isset($_SESSION['varname1']))
+                {
+                    $var1 = $_SESSION['varname1'];
+                }
+                if($var1 == 0)
+                {?>
+                <div class='alert alert-danger'>
+                    <strong>Please answer all the questions</strong>
+                </div>
+                <?php
+                }
+                ?>
                 <form class="form-group formwidth" method="post" action="WALB.php">
             <h2>How do you rate the quality of the following facilities and services available in the campus?</h2><br><br>
             <table class="table table-bordered table-hover">

@@ -4,17 +4,17 @@
 
 $con = mysqli_connect("localhost","root","","feedback1") or die(mysqli_error($con));
 
-$q1 = $_POST['available'];
-$q2 = $_POST['feedback'];
-$q3 = $_POST['review'];
-$q4 = $_POST['encourage'];
-$q5 = $_POST['guidance'];
-$q6 = $_POST['biased'];
-$q7 = $_POST['improvement'];
-$q8 = $_POST['recommend'];
+$q1 = $_POST['leave'];
+$q2 = $_POST['healthcare'];
+$q3 = $_POST['infrastructure'];
+$q4 = $_POST['resource'];
+$q5 = $_POST['q5'];
+$q6 = $_POST['q6'];
+$q7 = $_POST['q7'];
+$q8 = $_POST['q8'];
 if($q1 == "--Choose an option--"||$q2 == "--Choose an option--"||$q3== "--Choose an option--"||$q4 == "--Choose an option--"||$q5 == "--Choose an option--"||$q6 == "--Choose an option--"||$q7 == "--Choose an option--"||$q8 == "--Choose an option--")
 {
-    $_SESSION['varname'] = 0;
+    $_SESSION['varname1'] = 0;
     header('Location: GuidanceReceived.php');
 }
 else

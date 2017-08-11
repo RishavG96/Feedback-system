@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -42,7 +45,21 @@ and open the template in the editor.
         <div class="scrollable des" style="margin-left: 25%; margin-top: 100px; ;  height :450px;">
             <div style="margin-top: 25px;">
                 <marquee style="color:#FF8A65; font-family: Courier New;background:#FFEBCD">Welcome to Manipal University Feedback system portal! Your identity will not be disclosed under any circumstances.</marquee><br><br>
-                <form class="form-group formwidth" method="post" action="page2test.php">
+                <?php
+                $var1=1;
+                if (isset($_SESSION['varname']))
+                {
+                    $var1 = $_SESSION['varname'];
+                }
+                if($var1 == 0)
+                {?>
+                <div class='alert alert-danger'>
+                    <strong>Please answer all the questions</strong>
+                </div>
+                <?php
+                }
+                ?>
+                <form class="form-group formwidth" method="post" action="dataUpdate.php">
             <table class="table table-hover">
             <tr>
                 <td>To what extent is your guide available when you had queries/issues?</td>
@@ -123,7 +140,6 @@ and open the template in the editor.
                 </select></td>
             </tr>
             </table>
-            
             <button class="btn btn-primary bottom-right " style="margin-left: 45%">Submit</button>
             </form>
         </div>
