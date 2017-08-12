@@ -117,7 +117,7 @@ and open the template in the editor.
                         <tr>
                             <td>Do you receive appreciation and encouragement from your guide?</td>
                             <td><input type="radio" name="q5" value="Yes"></td>
-                            <td><input type="radio" name="q5" value="Yes"></td>
+                            <td><input type="radio" name="q5" value="No"></td>
                         </tr>
                         
                     </tbody>

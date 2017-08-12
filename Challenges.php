@@ -62,41 +62,17 @@ and open the template in the editor.
                 ?>
             <form class="form-group formwidth" method="post" action="dataUpdateChallenge.php">
                 <h3>Which of the following would you say is the most difficult for PhD's in your discipline? </h3><br>
-                <table class="table table-bordered table-hover">
-                <tbody>
-                    <tr>
-                        <th>Options</th>
-                        <th>Select</th>
-                    </tr>
-                    <tr>
-                        <td>Learning what career possibilities exist</td>
-                        <td><input type="radio" value="Learning what career possibilities exist" name="q1"></td>
-                    </tr>
-                    <tr style="background-color: #1d262b">
-                        <td>Finding research careers within academia</td>
-                        <td><input type="radio" value="Finding research careers within academia" name="q2"></td>
-                    </tr>
-                    <tr>
-                        <td>Finding research careers within industry</td>
-                        <td><input type="radio" value="Finding research careers within industry" name="q3"></td>
-                    </tr>
-                    <tr style="background-color: #1d262b;">
-                        <td>Finding research careers within government</td>
-                        <td><input type="radio" value="Finding research careers within government" name="q4"></td>
-                    </tr>
-                    <tr style="background-color: #1d262b;">
-                        <td>Finding research careers with charity/non-profit organisations</td>
-                        <td><input type="radio" value="Finding research careers with charity/non-profit organisations" name="q5"></td>
-                    </tr>
-                    <tr style="background-color: #1d262b;">
-                        <td>Others</td>
-                        <td><input type="radio" value="Others" name="q6"></td>
-                    </tr>
-                </tbody>
-            </table>
+                <input type="checkbox" name="q1" value="Learning what career possibilities exist">Learning what career possibilities exist<br>
+                <input type="checkbox" name="q2" value="Finding research careers within academia">Finding research careers within academia<br>
+                <input type="checkbox" name="q3" value="Finding research careers within industry">Finding research careers within industry<br>
+                <input type="checkbox" name="q4" value="Finding research careers within government">Finding research careers within government<br>
+                <input type="checkbox" name="q5" value="Finding research careers with charity/non-profit organisations">Finding research careers with charity/non-profit organisations<br>
+                <input type="checkbox" name="q6" value="Finding non-research careers that use your skills">Finding non-research careers that use your skills<br>
+                <input type="checkbox" name="q7" value="Others">Others<br>
+                
                 
                 <h3>Any other Comments</h3>
-                <input type="text" name="q7" style="margin-left: 0.1%;width:500px; height: 100px; padding: 0; color: black"><br><br>
+                <input type="text" name="q8" style="margin-left: 0.1%;width:500px; height: 100px; padding: 0; color: black"><br><br>
                 
                 <button class="btn btn-primary" style="margin-left: 45%">Submit</button>
             </form>

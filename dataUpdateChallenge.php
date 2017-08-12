@@ -34,7 +34,11 @@ if(isset($_POST['q6']) )
 {
     $q6 = $_POST['q6'];
 }
-    $user_select_query = "INSERT INTO challenges VALUES ('$q1', '$q2', '$q3', '$q4', '$q5', '$q6')";
+if(isset($_POST['q7']) )
+{
+    $q7 = $_POST['q7'];
+}
+    $user_select_query = "INSERT INTO challenges VALUES ('$q1', '$q2', '$q3', '$q4', '$q5', '$q6','$q7')";
     $user_query_result = mysqli_query($con, $user_select_query);
     header('Location: Login.php');
 ?>
