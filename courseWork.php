@@ -41,7 +41,7 @@ and open the template in the editor.
             <a class="btn " disabled href="#" style="background-color: #A11913 ;height: 90px; padding-top: 20px">WORK AND LIFE<br> BALANCE</a>
             <a class="btn " disabled href="#" style="background-color: #861510; height: 90px; padding-top: 30px;" >PROGRESS</a>
             <a class="btn " disabled href="#" style="background-color: #670F0B; height: 90px; padding-top: 30px;">CHALLENGES</a>
-            <a class="btn" disabled href="#" style="background-color: #C21E17; height: :90px; padding-top: 20px;">COURSE WORK</a>
+            <a class="btn" disabled href="#" style="background-color: #C21E17; height: 90px; padding-top: 20px;">COURSE WORK</a>
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 100px; ;  height :450px;">
             <div style="margin-top: 25px;">
