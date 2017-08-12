@@ -31,7 +31,7 @@ and open the template in the editor.
         <link  rel="stylesheet" type="text/css" href="css/style.css" />
         <script src="js1/fusioncharts.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <title>Showing all students</title>
+        <title>GUIDANCE RECEIVED</title>
 </head>
 <body style="background-color: #CF4747">
    
