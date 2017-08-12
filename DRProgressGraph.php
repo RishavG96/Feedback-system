@@ -31,7 +31,7 @@ and open the template in the editor.
         <link  rel="stylesheet" type="text/css" href="css/style.css" />
         <script src="js1/fusioncharts.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <title>FACILITIES AVAILABLE</title>
+        <title>PROGRESS</title>
 </head>
 <body style="background-color: #CF4747">
     <?php
@@ -144,10 +144,10 @@ and open the template in the editor.
         
      	// Execute the query, or else return the error message.
      	$result24 = $dbhandle->query($strQuery24) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
-        $result24i = $dbhandle->query($query24) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
-        if($result24i->num_rows>0)
+        $result24ik = $dbhandle->query($query24) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
+        if($result24ik->num_rows>0)
         {
-            while($row24=$result24i->fetch_assoc()){
+            while($row24=$result24->fetch_assoc()){
                 if($row24["q24"]=="Yes"){
                     $count24[0]+=1;
                 }
@@ -195,10 +195,10 @@ and open the template in the editor.
         
      	// Execute the query, or else return the error message.
      	$result24i = $dbhandle->query($strQuery24i) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
-        $result24ii = $dbhandle->query($query24i) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
-        if($result24ii->num_rows>0)
+        $result24ij = $dbhandle->query($query24i) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
+        if($result24ij->num_rows>0)
         {
-            while($row24i=$result24ii->fetch_assoc()){
+            while($row24i=$result24i->fetch_assoc()){
                 if($row24i["q24i"]=="Yes"){
                     $count24i[0]+=1;
                 }
@@ -249,7 +249,7 @@ and open the template in the editor.
         $result24iii = $dbhandle->query($query24ii) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
         if($result24iii->num_rows>0)
         {
-            while($row24ii=$result24iii->fetch_assoc()){
+            while($row24ii=$result24ii->fetch_assoc()){
                 if($row24ii["q24ii"]=="Yes"){
                     $count24ii[0]+=1;
                 }
@@ -300,7 +300,7 @@ and open the template in the editor.
         $result25i = $dbhandle->query($query25) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
         if($result25i->num_rows>0)
         {
-            while($row25=$result25i->fetch_assoc()){
+            while($row25=$result25->fetch_assoc()){
                 if($row25["q25"]=="Yes"){
                     $count25[0]+=1;
                 }
@@ -359,7 +359,7 @@ and open the template in the editor.
             <a class="btn active"  href="DRFacilitiesGraph.php" style="background-color: #A11913; height: 90px; padding-top: 20px">FACILITIES <br>AVAILABLE</a>
             <a class="btn "  href="DRWorkBalGraph.php" style="background-color:#861510  ;height: 90px; padding-top: 20px">WORK AND LIFE<br> BALANCE</a>
             <a class="btn "  href="DRProgressGraph.php" style="background-color:  #FF8A65; height: 90px; padding-top: 30px;" >PROGRESS</a>
-            <a class="btn "  href="#" style="background-color: #670F0B; height: 90px; padding-top: 30px;">CHALLENGES</a>
+            <a class="btn "  href="DRChallengesGraph.php" style="background-color: #670F0B; height: 90px; padding-top: 30px;">CHALLENGES</a>
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 100px; ;  height :450px;">
             <div style="margin-top: 25px;">
