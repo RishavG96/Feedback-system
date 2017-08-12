@@ -526,8 +526,8 @@ and open the template in the editor.
 </nav>
    <div class="container" style="position: relative;">
         <div id="mySidenav" class="sidenav" style="width:25%;">
-            <a href="DRGraph.php" class="btn active " style="background-color: #FF8A65; height: 90px; padding-top: 20px" >GUIDANCE<br> RECEIVED</a>
-            <a class="btn "  href="#" style="background-color: #C21E17; height: 90px; padding-top: 20px">FACILITIES <br>AVAILABLE</a>
+            <a href="DRGuidanceGraph.php" class="btn active " style="background-color: #FF8A65; height: 90px; padding-top: 20px" >GUIDANCE<br> RECEIVED</a>
+            <a class="btn "  href="DRFacilitiesGraph.php" style="background-color: #C21E17; height: 90px; padding-top: 20px">FACILITIES <br>AVAILABLE</a>
             <a class="btn "  href="#" style="background-color: #A11913 ;height: 90px; padding-top: 20px">WORK AND LIFE<br> BALANCE</a>
             <a class="btn "  href="#" style="background-color: #861510; height: 90px; padding-top: 30px;" >PROGRESS</a>
             <a class="btn "  href="#" style="background-color: #670F0B; height: 90px; padding-top: 30px;">CHALLENGES</a>
