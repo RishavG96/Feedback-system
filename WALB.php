@@ -34,15 +34,16 @@ and open the template in the editor.
         </ul>
     </div>
 </nav>
-    <div class="container">
-        <div id="mySidenav" class="sidenav" style="width:25%;">
-            <a href="page2.php" class="btn " disabled style="background-color: #C21E17; height: 90px; padding-top: 20px" >GUIDANCE<br> RECEIVED</a>
-            <a class="btn " disabled href="#" style="background-color: #A11913; height: 90px; padding-top: 20px">FACILITIES <br>AVAILABLE</a>
-            <a class="btn active"  href="#" style="background-color: #FF8A65 ;height: 90px; padding-top: 20px">WORK AND LIFE<br> BALANCE</a>
-            <a class="btn " disabled href="#" style="background-color: #861510; height: 90px; padding-top: 30px;" >PROGRESS</a>
-            <a class="btn " disabled href="#" style="background-color: #670F0B; height: 90px; padding-top: 30px;">CHALLENGES</a>
+        <div class="container">
+        <div id="mySidenav" class="sidenav" style="width:25%; margin-top: -20px;">
+            <a href="page2.php" class="btn " disabled style="background-color: #C21E17; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
+            <a class="btn " disabled href="#" style="background-color: #A11913; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
+            <a class="btn active" href="#" style="background-color: #FF8A65 ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
+            <a class="btn " disabled href="#" style="background-color: #861510; height: 80px; padding-top: 30px;" >PROGRESS</a>
+            <a class="btn " disabled href="#" style="background-color: #670F0B; height: 80px; padding-top: 30px;">CHALLENGES</a>
+            <a class="btn " disabled href="#" style="background-color: #4A0707; height: 80px; padding-top: 30px;">COURSE WORK</a>
         </div>
-        <div class="scrollable des" style="margin-left: 25%; margin-top: 100px;  height :450px;">
+        <div class="scrollable des" style="margin-left: 25%; margin-top: 80px;  height :480px;">
         <div style="margin-top : 2%;">
             <marquee style="color:#FF8A65; font-family: Courier New;background:#FFEBCD">Welcome to Manipal University Feedback system portal! Your identity will not be disclosed under any circumstances.</marquee><br><br>
             <?php
