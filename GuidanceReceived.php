@@ -1,6 +1,10 @@
 <?php 
 session_start();
 $_SESSION["guidance"]=1;
+if(!isset($_SESSION["login"]))
+{
+    header("Location: Logout.php");
+}
 if(isset($_SESSION["facilities"]))
 {
     header("Location: page2test.php");

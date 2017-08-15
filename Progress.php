@@ -1,6 +1,10 @@
 <?php 
 session_start();
 $_SESSION["progress"]=1;
+if(!isset($_SESSION["login"]))
+{
+    header("Location: Logout.php");
+}
 if(isset($_SESSION["challenges"]))
 {
     header("Location: Challenges.php");

@@ -1,6 +1,10 @@
 <?php 
 session_start();
 $_SESSION["walb"]=1;
+if(!isset($_SESSION["login"]))
+{
+    header("Location: Logout.php");
+}
 if(isset($_SESSION["progress"]))
 {
     header("Location: Progress.php");

@@ -1,6 +1,10 @@
 <?php 
 session_start();
 $_SESSION["course"]=1;
+if(!isset($_SESSION["login"]))
+{
+    header("Location: Logout.php");
+}
 ?>
 <!DOCTYPE html>
 <!--

@@ -25,6 +25,7 @@ and open the template in the editor.
             if($row["regno"]==$id && $row["pwd"]==$pwd)
             {
                 $flag=1;
+                $_SESSION["login"]=1;
                 header("Location: GuidanceReceived.php");
             }
         }
