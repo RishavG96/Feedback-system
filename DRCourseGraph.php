@@ -159,8 +159,8 @@ and open the template in the editor.
     <div class="container">
         <div class="navbar-header">
             <ul style="list-style-type: none">
-            <li class="navbar-brand">MANIPAL UNIVERSITY</li>
-            <li class="navbar-brand" style="padding-left: 320px">PH.D FEEDBACK</li>
+             <li class="navbar-brand"><img src="images/Manipal.jpg" style="height: 38px;width: 250px; background-color: white; margin-left: -110px;margin-top: -10px;"></li>
+            <li class="navbar-brand" style="padding-left: 320px"></li>
             </ul>
         </div>
         <ul class="nav navbar-nav navbar-right">
@@ -170,7 +170,7 @@ and open the template in the editor.
     </div>
 </nav>
    <div class="container" style="position: relative;">
-        <div id="mySidenav" class="sidenav" style="width:25%; margin-top: -20px;">
+        <div id="mySidenav" class="sidenav" style="width:25%;">
             <a href="DRGuidanceGraph.php" class="btn " style="background-color: #C21E17; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
             <a class="btn " href="DRFacilitiesGraph.php" style="background-color: #A11913; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
             <a class="btn " href="DRWorkBalGraph.php" style="background-color: #861510 ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
@@ -178,7 +178,7 @@ and open the template in the editor.
             <a class="btn " href="DRChallengesGraph.php" style="background-color: #4A0707; height: 80px; padding-top: 30px;">CHALLENGES</a>
             <a class="btn active" href="#" style="background-color: #FF8A65; height: 80px; padding-top: 30px;">COURSE WORK</a>
         </div>
-        <div class="scrollable des" style="margin-left: 25%; margin-top: 80px; ;  height :480px;">
+        <div class="scrollable des" style="margin-left: 25%; margin-top: 100px; ;  height :480px;">
             <div style="margin-top: 25px;">
                 <div style="margin-left: 130px" id="chart-33"><!-- Fusion Charts will render here--></div><br>
                 <div style="margin-left: 130px" id="chart-34"><!-- Fusion Charts will render here--></div><br>
