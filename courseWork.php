@@ -47,12 +47,12 @@ and open the template in the editor.
 </nav>
    <div class="container" style="position: relative;">
         <div id="mySidenav" class="sidenav" style="width:25%; margin-top: -20px;">
-            <a href="page2.php" class="btn " disabled style="background-color: #C21E17; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
-            <a class="btn " disabled href="#" style="background-color: #A11913; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
-            <a class="btn " disabled href="#" style="background-color: #861510 ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
-            <a class="btn " disabled href="#" style="background-color: #670F0B; height: 80px; padding-top: 30px;" >PROGRESS</a>
-            <a class="btn " disabled href="#" style="background-color: #4A0707; height: 80px; padding-top: 30px;">CHALLENGES</a>
-            <a class="btn active" href="#" style="background-color: #FF8A65; height: 80px; padding-top: 30px;">COURSE WORK</a>
+            <a href="page2.php" class="btn " disabled style="background-color: #C21E17; height: 60px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
+            <a class="btn " disabled href="#" style="background-color: #A11913; height: 60px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
+            <a class="btn " disabled href="#" style="background-color: #861510 ;height: 60px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
+            <a class="btn " disabled href="#" style="background-color: #670F0B; height: 60px; padding-top: 30px;" >PROGRESS</a>
+            <a class="btn " disabled href="#" style="background-color: #4A0707; height: 60px; padding-top: 30px;">CHALLENGES</a>
+            <a class="btn active" href="#" style="background-color: #FF8A65; height: 60px; padding-top: 30px;">COURSE WORK</a>
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 80px; ;  height :480px;">
             <div style="margin-top: 25px;">
@@ -75,25 +75,18 @@ and open the template in the editor.
                     <table class="table table-bordered table-hover">
                         <tr>
                             <td>What kind of course are you currently enrolled in?</td>
-                            <td><select style="background-color:#1d262b;width : 200px;"onchange="showfunc()" name="q33" id="quest">
-                                    <option>--Choose an option--</option>
-                                            <option value="PartTime">Part-Time</option>
-                                            <option value="FullTime">Full-Time</option>
-                                </select></td>
+                            <td><input type="radio" name="PartTime" value="Part-Time">
+                            <input type="radio" name="FullTime" value="FullTime"></td>
                         </tr>
-                        <tr id="Show1" style="display: none;">
-                            <td>What do you prefer? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                    <td><select style="background-color:#1d262b;width : 200px;" name="q34">
-                                <option>--Choose an option--</option>
-                                <option value="First 3 months Full Time">First 3 months Full Time</option>
-                                <option value="Within First 6 months">Within First 6 months</option>
-                                <option value="2-3 hours everyday">2-3 hours everyday</option>
-                                <option value="Within One year">Within One Year(As it is now)</option>
-                                </select></td>
+                        <tr>
+                            <td>What do you prefer?</td>
+                                    <td><input type="radio" name="First 3 months Ful Time" value="First 3 months Full Time"></td>
+                                <td><input type="radio" name="Within first 6 months" value="Within First 6 months"></td>
+                                <td><input type="radio" name="2-3 hours everyday" value="2-3 hours everyday"></td>
+                                <td><input type="radio" name="Within one year (As it is now)" value="Within one year"></td>
                         </tr>
                     </table>
-                    <br><br>
-                    <h4 style="margin-left: 10px;">Suggestion Regarding Course Work(12 credits) :</h4><br>
+                    <h4 style="margin-left: 10px;">Suggestions Regarding Course Work(12 credits) :</h4><br>
                     <textarea style="height: 200px;color: black;width: 500px; margin-left: 10px;"></textarea><br><br>
                     
                     <button class="btn btn-primary bottom-right " style="margin-left: 45%">Submit</button><br><br>
