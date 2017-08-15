@@ -1,5 +1,22 @@
 <?php 
 session_start();
+$_SESSION["walb"]=1;
+if(!isset($_SESSION["login"]))
+{
+    header("Location: Logout.php");
+}
+if(isset($_SESSION["progress"]))
+{
+    header("Location: Progress.php");
+}
+if(isset($_SESSION["challenges"]))
+{
+    header("Location: Challenges.php");
+}
+if(isset($_SESSION["course"]))
+{
+    header("Location: courseWork.php");
+}
 ?>
 <!DOCTYPE html>
 <!--
@@ -45,7 +62,7 @@ and open the template in the editor.
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 80px;  height :480px;">
         <div style="margin-top : 2%;">
-            <marquee style="color:#FF8A65; font-family: Courier New;background:#FFEBCD">Welcome to Manipal University Feedback system portal! Your identity will not be disclosed under any circumstances.</marquee><br><br>
+            <marquee style="color:#111111; font-family: Courier New;background:#FF8A65; margin-left: 1px">Welcome to Manipal University Feedback system portal! Your identity will not be disclosed under any circumstances.</marquee><br><br>
             <?php
                 $var1=1;
                 if (isset($_SESSION['varname2']))

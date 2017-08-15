@@ -1,5 +1,10 @@
 <?php 
 session_start();
+$_SESSION["course"]=1;
+if(!isset($_SESSION["login"]))
+{
+    header("Location: Logout.php");
+}
 ?>
 <!DOCTYPE html>
 <!--
@@ -55,13 +60,27 @@ and open the template in the editor.
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 80px; ;  height :480px;">
             <div style="margin-top: 25px;">
-                <marquee style="color:#FF8A65; font-family: Courier New;background:#FFEBCD">Welcome to Manipal University Feedback system portal! Please not that your identity will not be disclosed under any circumstances.</marquee><br><br>
-                <form action="dataUpdatecourseWork.php" method="post">
+                <marquee style="color:#111111; font-family: Courier New;background:#FF8A65; margin-left: 1px">Welcome to Manipal University Feedback system portal! Your identity will not be disclosed under any circumstances.</marquee><br><br>
+                <?php
+                $var1=1;
+                if (isset($_SESSION['varname5']))
+                {
+                    $var1 = $_SESSION['varname5'];
+                }
+                if($var1 == 0)
+                {?>
+                <div class='alert alert-danger'>
+                    <strong>Please answer all the questions</strong>
+                </div>
+                <?php
+                }
+                ?>
+                <form action="dataUpdateCourse.php" method="post">
                     <table class="table table-bordered table-hover">
                         <tr>
                             <td>What kind of course are you currently enrolled in?</td>
                             <td><select style="background-color:#1d262b;width : 200px;"onchange="showfunc()" name="q33" id="quest">
-                                    <option value="--Chose an option--">--Choose an option--</option>
+                                    <option>--Choose an option--</option>
                                             <option value="PartTime">Part-Time</option>
                                             <option value="FullTime">Full-Time</option>
                                 </select></td>

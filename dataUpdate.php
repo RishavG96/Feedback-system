@@ -19,7 +19,10 @@ if($q1 == "--Choose an option--"||$q2 == "--Choose an option--"||$q3== "--Choose
 }
 else
 {
-$user_select_query = "INSERT INTO guidance ( q1,q2,q3,q4,q5,q6,q7,q8) VALUES ('$q1', '$q2', '$q3', '$q4', '$q5', '$q6', '$q7', '$q8')";
+    $r=$_SESSION["regno"];
+    $d=$_SESSION["dept"];
+    $i=$_SESSION["institute"];
+$user_select_query = "INSERT INTO guidance ( regno,dept,institute,q1,q2,q3,q4,q5,q6,q7,q8) VALUES ('$r','$d','$i','$q1', '$q2', '$q3', '$q4', '$q5', '$q6', '$q7', '$q8')";
 $user_query_result = mysqli_query($con, $user_select_query);
 header('Location: page2test.php');
 }

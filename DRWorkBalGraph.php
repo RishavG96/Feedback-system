@@ -373,6 +373,10 @@ and open the template in the editor.
                 <div style="margin-left: 130px" id="chart-19"><!-- Fusion Charts will render here--></div><br>
                 <div style="margin-left: 130px" id="chart-20"><!-- Fusion Charts will render here--></div><br>
                 <div style="margin-left: 130px" id="chart-21"><!-- Fusion Charts will render here--></div><br>
+                <ul class="pager">
+                    <li class="previous"><a href="DRFacilitiesGraph.php">Previous</a></li>
+                    <li class="next"><a href="DRProgressGraph.php">Next</a></li>
+                </ul>
         </div>
             </div>
    <footer >

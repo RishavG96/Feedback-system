@@ -125,6 +125,10 @@ and open the template in the editor.
         <div class="scrollable des" style="margin-left: 25%; margin-top: 100px; ;  height :450px;">
             <div style="margin-top: 25px;">
                 <div style="margin-left: 130px" id="chart-26"><!-- Fusion Charts will render here--></div><br>
+                <ul class="pager">
+                    <li class="previous"><a href="DRProgressGraph.php">Previous</a></li>
+                    <li class="next"><a href="DRCourseGraph.php">Next</a></li>
+                </ul>
         </div>
             </div>
    <footer >
