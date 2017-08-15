@@ -1,4 +1,10 @@
 <?php 
+session_start();
+if(!isset($_SESSION["login"]))
+{
+    header("Location: Logout.php");
+}
+$i=$_SESSION["institute"];
 include("./php-wrapper/fusioncharts.php");
 $hostdb = "localhost";  // MySQl host
    $userdb = "root";  // MySQL username
@@ -40,8 +46,8 @@ and open the template in the editor.
         $count17=array(0,0,0,0);
         $value17=array("Excellent","Good","Satisfactory","Poor");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery17 = "SELECT q17 FROM  workbal";
-        $query17 = "SELECT q17 from workbal";
+     	$strQuery17 = "SELECT q17 FROM  workbal where institute='$i'";
+        $query17 = "SELECT q17 from workbal where institute='$i'";
         
      	// Execute the query, or else return the error message.
      	$result17 = $dbhandle->query($strQuery17) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -101,8 +107,8 @@ and open the template in the editor.
         $count18=array(0,0,0,0,0,0,0,0,0);
         $value18=array("Less than 11 hours","11-20 hours","21-20 hours","31-40 hours","41-50 hours","51-60 hours","61-70 hours","71-80 hours","More than 80 hours");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery18 = "SELECT q18 FROM workbal";
-        $query18 = "SELECT q18 from workbal";
+     	$strQuery18 = "SELECT q18 FROM workbal where institute='$i'";
+        $query18 = "SELECT q18 from workbal where institute='$i'";
         
      	// Execute the query, or else return the error message.
      	$result18 = $dbhandle->query($strQuery18) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -180,8 +186,8 @@ and open the template in the editor.
         $count19=array(0,0,0,0,0);
         $value19=array("Extremely Supportive","Very Supportive","Moderately Supportive","Slightly Supportive","Not at all supportive");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery19 = "SELECT q19 FROM workbal ";
-        $query19 = "SELECT q19 from workbal";
+     	$strQuery19 = "SELECT q19 FROM workbal  where institute='$i'";
+        $query19 = "SELECT q19 from workbal where institute='$i'";
         
      	// Execute the query, or else return the error message.
      	$result19 = $dbhandle->query($strQuery19) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -240,8 +246,8 @@ and open the template in the editor.
         $count20=array(0,0);
         $value20=array("Yes","No");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery20 = "SELECT q20 FROM workbal ";
-        $query20 = "SELECT q20 from workbal";
+     	$strQuery20 = "SELECT q20 FROM workbal  where institute='$i'";
+        $query20 = "SELECT q20 from workbal where institute='$i'";
         
      	// Execute the query, or else return the error message.
      	$result20 = $dbhandle->query($strQuery20) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -290,8 +296,8 @@ and open the template in the editor.
         $count21=array(0,0);
         $value21=array("Yes","No");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery21 = "SELECT q21 FROM workbal ";
-        $query21 = "SELECT q21 from workbal";
+     	$strQuery21 = "SELECT q21 FROM workbal  where institute='$i'";
+        $query21 = "SELECT q21 from workbal where institute='$i'";
         
      	// Execute the query, or else return the error message.
      	$result21 = $dbhandle->query($strQuery21) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -360,12 +366,12 @@ and open the template in the editor.
 </nav>
    <div class="container" style="position: relative;">
         <div id="mySidenav" class="sidenav" style="width:25%;">
-            <a href="DRGuidanceGraph.php" class="btn " style="background-color: #C21E17; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
-            <a class="btn " href="DRFacilitiesGraph.php" style="background-color: #A11913; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
-            <a class="btn active" href="#" style="background-color: #FF8A65 ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
-            <a class="btn " href="DRProgressGraph.php" style="background-color: #861510; height: 80px; padding-top: 30px;" >PROGRESS</a>
-            <a class="btn " href="DRChallengesGraph.php" style="background-color: #670F0B; height: 80px; padding-top: 30px;">CHALLENGES</a>
-            <a class="btn " href="DRCourseGraph.php" style="background-color: #4A0707; height: 80px; padding-top: 30px;">COURSE WORK</a>
+            <a href="HoIGuidanceGraph.php" class="btn " style="background-color: #C21E17; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
+            <a class="btn " href="HoIFacilitiesGraph.php" style="background-color: #A11913; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
+            <a class="btn active" href="HoIWorkBalGraph.php" style="background-color: #FF8A65 ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
+            <a class="btn " href="HoIProgressGraph.php" style="background-color: #861510; height: 80px; padding-top: 30px;" >PROGRESS</a>
+            <a class="btn " href="HoIChallengesGraph.php" style="background-color: #670F0B; height: 80px; padding-top: 30px;">CHALLENGES</a>
+            <a class="btn " href="HoICourseGraph.php" style="background-color: #4A0707; height: 80px; padding-top: 30px;">COURSE WORK</a>
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 100px;  height :480px;">
             <div style="margin-top: 25px;">
@@ -375,8 +381,8 @@ and open the template in the editor.
                 <div style="margin-left: 130px" id="chart-20"><!-- Fusion Charts will render here--></div><br>
                 <div style="margin-left: 130px" id="chart-21"><!-- Fusion Charts will render here--></div><br>
                 <ul class="pager">
-                    <li class="previous"><a href="DRFacilitiesGraph.php">Previous</a></li>
-                    <li class="next"><a href="DRProgressGraph.php">Next</a></li>
+                    <li class="previous"><a href="HoIFacilitiesGraph.php">Previous</a></li>
+                    <li class="next"><a href="HoIProgressGraph.php">Next</a></li>
                 </ul>
         </div>
             </div>

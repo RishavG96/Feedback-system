@@ -1,5 +1,9 @@
 <?php 
 session_start();
+if(isset($_SESSION["hoilogin"]))
+{
+    header("Location: HoIGuidanceGraph.php");
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,7 +37,7 @@ session_start();
 
 
 </div>
-<p style="align-content: center;color:white">Designed, developed and maintained by Department of Information and Communication Technology</p>
+<p style="align-content: center;color:white;padding: 10px">Designed, developed and maintained by Department of Information and Communication Technology</p>
 
 </div>
 

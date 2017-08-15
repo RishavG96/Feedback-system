@@ -1,4 +1,10 @@
 <?php 
+session_start();
+if(!isset($_SESSION["login"]))
+{
+    header("Location: Logout.php");
+}
+$i=$_SESSION["institute"];
 include("./php-wrapper/fusioncharts.php");
 $hostdb = "localhost";  // MySQl host
    $userdb = "root";  // MySQL username
@@ -40,8 +46,8 @@ and open the template in the editor.
         $count33=array(0,0);
         $value33=array("PartTime","FullTime");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery33 = "SELECT q33 FROM course";
-        $query33 = "SELECT q33 from course";
+     	$strQuery33 = "SELECT q33 FROM course where institute='$i'";
+        $query33 = "SELECT q33 from course where institute='$i'";
         
      	// Execute the query, or else return the error message.
      	$result33 = $dbhandle->query($strQuery33) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -95,8 +101,8 @@ and open the template in the editor.
         $count34=array(0,0,0,0);
         $value34=array("First 3 months Full Time","Within First 6 months","2-3 hours everyday","Within One year");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery34 = "SELECT q34 FROM course ";
-        $query34 = "SELECT q34 from course";
+     	$strQuery34 = "SELECT q34 FROM course where institute='$i' ";
+        $query34 = "SELECT q34 from course where institute='$i'";
         
      	// Execute the query, or else return the error message.
      	$result34 = $dbhandle->query($strQuery34) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -171,11 +177,11 @@ and open the template in the editor.
 </nav>
    <div class="container" style="position: relative;">
         <div id="mySidenav" class="sidenav" style="width:25%;">
-            <a href="DRGuidanceGraph.php" class="btn " style="background-color: #C21E17; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
-            <a class="btn " href="DRFacilitiesGraph.php" style="background-color: #A11913; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
-            <a class="btn " href="DRWorkBalGraph.php" style="background-color: #861510 ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
-            <a class="btn " href="DRProgressGraph.php" style="background-color: #670F0B; height: 80px; padding-top: 30px;" >PROGRESS</a>
-            <a class="btn " href="DRChallengesGraph.php" style="background-color: #4A0707; height: 80px; padding-top: 30px;">CHALLENGES</a>
+            <a href="HoIGuidanceGraph.php" class="btn " style="background-color: #C21E17; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
+            <a class="btn " href="HoIFacilitiesGraph.php" style="background-color: #A11913; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
+            <a class="btn " href="HoIWorkBalGraph.php" style="background-color: #861510 ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
+            <a class="btn " href="HoIProgressGraph.php" style="background-color: #670F0B; height: 80px; padding-top: 30px;" >PROGRESS</a>
+            <a class="btn " href="HoIChallengesGraph.php" style="background-color: #4A0707; height: 80px; padding-top: 30px;">CHALLENGES</a>
             <a class="btn active" href="#" style="background-color: #FF8A65; height: 80px; padding-top: 30px;">COURSE WORK</a>
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 100px; ;  height :480px;">
@@ -183,7 +189,7 @@ and open the template in the editor.
                 <div style="margin-left: 130px" id="chart-33"><!-- Fusion Charts will render here--></div><br>
                 <div style="margin-left: 130px" id="chart-34"><!-- Fusion Charts will render here--></div><br>
                 <ul class="pager">
-                    <li class="previous"><a href="DRChallengesGraph.php">Previous</a></li>
+                    <li class="previous"><a href="HoIChallengesGraph.php">Previous</a></li>
                 </ul>
         </div>
             </div>

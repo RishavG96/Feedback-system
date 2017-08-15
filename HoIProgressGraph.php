@@ -1,4 +1,10 @@
 <?php 
+session_start();
+$i=$_SESSION["institute"];
+if(!isset($_SESSION["login"]))
+{
+    header("Location: Logout.php");
+}
 include("./php-wrapper/fusioncharts.php");
 $hostdb = "localhost";  // MySQl host
    $userdb = "root";  // MySQL username
@@ -38,8 +44,8 @@ and open the template in the editor.
         $count22=array(0,0);
         $value22=array("Yes","No");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery22 = "SELECT q22 FROM progress ";
-        $query22 = "SELECT q22 from progress";
+     	$strQuery22 = "SELECT q22 FROM progress  where institute='$i'";
+        $query22 = "SELECT q22 from progress where institute='$i'";
         
      	// Execute the query, or else return the error message.
      	$result22 = $dbhandle->query($strQuery22) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -88,8 +94,8 @@ and open the template in the editor.
         $count23=array(0,0);
         $value23=array("Yes","No");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery23 = "SELECT q23 FROM progress ";
-        $query23 = "SELECT q23 from progress";
+     	$strQuery23 = "SELECT q23 FROM progress where institute='$i' ";
+        $query23 = "SELECT q23 from progress where institute='$i'";
         
      	// Execute the query, or else return the error message.
      	$result23 = $dbhandle->query($strQuery23) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -139,8 +145,8 @@ and open the template in the editor.
         $count24=array(0,0);
         $value24=array("Yes","No");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery24 = "SELECT q24 FROM progress";
-        $query24 = "SELECT q24 from progress";
+     	$strQuery24 = "SELECT q24 FROM progress where institute='$i'";
+        $query24 = "SELECT q24 from progress where institute='$i'";
         
      	// Execute the query, or else return the error message.
      	$result24 = $dbhandle->query($strQuery24) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -190,8 +196,8 @@ and open the template in the editor.
         $count24i=array(0,0);
         $value24i=array("Yes","No");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery24i = "SELECT q24i FROM progress";
-        $query24i = "SELECT q24i from progress";
+     	$strQuery24i = "SELECT q24i FROM progress where institute='$i'";
+        $query24i = "SELECT q24i from progress where institute='$i'";
         
      	// Execute the query, or else return the error message.
      	$result24i = $dbhandle->query($strQuery24i) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -241,8 +247,8 @@ and open the template in the editor.
         $count24ii=array(0,0);
         $value24ii=array("Yes","No");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery24ii = "SELECT q24ii FROM progress";
-        $query24ii = "SELECT q24ii from progress";
+     	$strQuery24ii = "SELECT q24ii FROM progress where institute='$i'";
+        $query24ii = "SELECT q24ii from progress where institute='$i'";
         
      	// Execute the query, or else return the error message.
      	$result24ii = $dbhandle->query($strQuery24ii) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -292,8 +298,8 @@ and open the template in the editor.
         $count25=array(0,0);
         $value25=array("Yes","No");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery25 = "SELECT q25 FROM progress";
-        $query25 = "SELECT q25 from progress";
+     	$strQuery25 = "SELECT q25 FROM progress where institute='$i'";
+        $query25 = "SELECT q25 from progress where institute='$i'";
         
      	// Execute the query, or else return the error message.
      	$result25 = $dbhandle->query($strQuery25) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -355,12 +361,12 @@ and open the template in the editor.
 </nav>
    <div class="container" style="position: relative;">
         <div id="mySidenav" class="sidenav" style="width:25%;">
-            <a href="DRGuidanceGraph.php" class="btn " style="background-color: #C21E17; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
-            <a class="btn " href="DRFacilitiesGraph.php" style="background-color: #A11913; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
-            <a class="btn " href="DRWorkBalGraph.php" style="background-color: #861510 ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
-            <a class="btn active" href="DRProgressGraph.php" style="background-color: #FF8A65; height: 80px; padding-top: 30px;" >PROGRESS</a>
-            <a class="btn " href="DRChallengesGraph.php" style="background-color: #670F0B; height: 80px; padding-top: 30px;">CHALLENGES</a>
-            <a class="btn " href="DRCourseGraph.php" style="background-color: #4A0707; height: 80px; padding-top: 30px;">COURSE WORK</a>
+            <a href="HoIGuidanceGraph.php" class="btn " style="background-color: #C21E17; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
+            <a class="btn " href="HoIFacilitiesGraph.php" style="background-color: #A11913; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
+            <a class="btn " href="HoIWorkBalGraph.php" style="background-color: #861510 ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
+            <a class="btn active" href="HoIProgressGraph.php" style="background-color: #FF8A65; height: 80px; padding-top: 30px;" >PROGRESS</a>
+            <a class="btn " href="HoIChallengesGraph.php" style="background-color: #670F0B; height: 80px; padding-top: 30px;">CHALLENGES</a>
+            <a class="btn " href="HoICourseGraph.php" style="background-color: #4A0707; height: 80px; padding-top: 30px;">COURSE WORK</a>
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 100px; ;  height :480px;">
             <div style="margin-top: 25px;">
@@ -371,8 +377,8 @@ and open the template in the editor.
                 <div style="margin-left: 130px" id="chart-24ii"><!-- Fusion Charts will render here--></div><br>
                 <div style="margin-left: 130px" id="chart-25"><!-- Fusion Charts will render here--></div><br>
                 <ul class="pager">
-                    <li class="previous"><a href="DRWorkBalGraph.php">Previous</a></li>
-                    <li class="next"><a href="DRChallengesGraph.php">Next</a></li>
+                    <li class="previous"><a href="HoIWorkBalGraph.php">Previous</a></li>
+                    <li class="next"><a href="HoIChallengesGraph.php">Next</a></li>
                 </ul>
         </div>
             </div>

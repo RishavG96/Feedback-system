@@ -24,6 +24,10 @@ if(isset($_SESSION["course"]))
 {
     header("Location: courseWork.php");
 }
+if(isset($_SESSION["hoilogin"]))
+{
+    header("Location: HoIGuidanceGraph.php");
+}
 
 ?>
 <!DOCTYPE html>

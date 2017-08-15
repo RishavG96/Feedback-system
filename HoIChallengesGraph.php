@@ -1,4 +1,10 @@
 <?php 
+session_start();
+if(!isset($_SESSION["login"]))
+{
+    header("Location: Logout.php");
+}
+$i=$_SESSION["institute"];
 include("./php-wrapper/fusioncharts.php");
 $hostdb = "localhost";  // MySQl host
    $userdb = "root";  // MySQL username
@@ -38,8 +44,8 @@ and open the template in the editor.
         $count26=array(0,0,0,0,0,0,0);
         $value26=array("Learning what career possibilities exist","Finding research careers within academia","Finding research careers within industry","Finding research careers within government","Finding research careers with charity/non-profit organisations","Finding non-research careers that use your skills","Others");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery26 = "SELECT * FROM challenges";
-        $query26 = "SELECT * from challenges";
+     	$strQuery26 = "SELECT * FROM challenges where institute='$i'";
+        $query26 = "SELECT * from challenges where institute='$i'";
         
      	// Execute the query, or else return the error message.
      	$result26 = $dbhandle->query($strQuery26) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -116,19 +122,19 @@ and open the template in the editor.
 </nav>
    <div class="container" style="position: relative;">
         <div id="mySidenav" class="sidenav" style="width:25%;">
-            <a href="DRGuidanceGraph.php" class="btn " style="background-color: #C21E17; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
-            <a class="btn " href="DRFacilitiesGraph.php" style="background-color: #A11913; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
-            <a class="btn " href="DRWorkBalGraph.php" style="background-color: #861510 ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
-            <a class="btn " href="DRProgressGraph.php" style="background-color: #670F0B; height: 80px; padding-top: 30px;" >PROGRESS</a>
-            <a class="btn active" href="DRChallengesGraph.php" style="background-color: #FF8A65; height: 80px; padding-top: 30px;">CHALLENGES</a>
-            <a class="btn " href="DRCourseGraph.php" style="background-color: #4A0707; height: 80px; padding-top: 30px;">COURSE WORK</a>
+            <a href="HoIGuidanceGraph.php" class="btn " style="background-color: #C21E17; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
+            <a class="btn " href="HoIFacilitiesGraph.php" style="background-color: #A11913; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
+            <a class="btn " href="HoIWorkBalGraph.php" style="background-color: #861510 ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
+            <a class="btn " href="HoIProgressGraph.php" style="background-color: #670F0B; height: 80px; padding-top: 30px;" >PROGRESS</a>
+            <a class="btn active" href="HoIChallengesGraph.php" style="background-color: #FF8A65; height: 80px; padding-top: 30px;">CHALLENGES</a>
+            <a class="btn " href="HoICourseGraph.php" style="background-color: #4A0707; height: 80px; padding-top: 30px;">COURSE WORK</a>
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 100px; ;  height :480px;">
             <div style="margin-top: 25px;">
                 <div style="margin-left: 130px" id="chart-26"><!-- Fusion Charts will render here--></div><br>
                 <ul class="pager">
-                    <li class="previous"><a href="DRProgressGraph.php">Previous</a></li>
-                    <li class="next"><a href="DRCourseGraph.php">Next</a></li>
+                    <li class="previous"><a href="HoIProgressGraph.php">Previous</a></li>
+                    <li class="next"><a href="HoICourseGraph.php">Next</a></li>
                 </ul>
         </div>
             </div>
