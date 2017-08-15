@@ -542,8 +542,12 @@ and open the template in the editor.
                 <div style="margin-left: 130px" id="chart-6"><!-- Fusion Charts will render here--></div><br>
                 <div style="margin-left: 130px" id="chart-7"><!-- Fusion Charts will render here--></div><br>
                 <div style="margin-left: 130px" id="chart-8"><!-- Fusion Charts will render here--></div><br>
+                <ul class="pager">
+                    <li class="next"><a href="DRFacilitiesGraph.php">Next</a></li>
+                </ul>
         </div>
             </div>
+       
    <footer >
        <div style=" position: fixed;height: 30px;background-color: black;bottom: 0px;left: 0px;right: 0px;margin-bottom: 0px;">
            <center style="color: whitesmoke;">Designed and Developed by Information and Communication Technology Department.</center>
