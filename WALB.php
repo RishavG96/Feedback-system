@@ -1,6 +1,18 @@
 <?php 
 session_start();
-session_unset();
+$_SESSION["walb"]=1;
+if(isset($_SESSION["progress"]))
+{
+    header("Location: Progress.php");
+}
+if(isset($_SESSION["challenges"]))
+{
+    header("Location: Challenges.php");
+}
+if(isset($_SESSION["course"]))
+{
+    header("Location: courseWork.php");
+}
 ?>
 <!DOCTYPE html>
 <!--

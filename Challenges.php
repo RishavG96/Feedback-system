@@ -1,6 +1,10 @@
 <?php 
 session_start();
-session_unset();
+$_SESSION["challenges"]=1;
+if(isset($_SESSION["course"]))
+{
+    header("Location: courseWork.php");
+}
 ?>
 <!DOCTYPE html>
 <!--

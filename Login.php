@@ -1,9 +1,43 @@
+<?php 
+session_start();
+if(isset($_SESSION["facilities"]))
+{
+    header("Location: page2test.php");
+}
+if(isset($_SESSION["guidance"]))
+{
+    header("Location: GuidanceReceived.php");
+}
+if(isset($_SESSION["walb"]))
+{
+    header("Location: WALB.php");
+}
+if(isset($_SESSION["progress"]))
+{
+    header("Location: Progress.php");
+}
+if(isset($_SESSION["challenges"]))
+{
+    header("Location: Challenges.php");
+}
+if(isset($_SESSION["course"]))
+{
+    header("Location: courseWork.php");
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
   <title>Feedback System</title>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width:device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link href="css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="footer_css/css/zerogrid.css">
+  <link rel="stylesheet" href="footer_css/css/style.css">
   <link rel="stylesheet" type="text/css" href="style2.css">
+  <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -24,7 +58,7 @@
 
 
 </div>
-<p style="align-content: center;color:white">Designed, developed and maintained by Department of Information and Communication Technology</p>
+<p style="align-content: center;color:white;padding: 10px">Designed, developed and maintained by Department of Information and Communication Technology</p>
 
 </div>
 

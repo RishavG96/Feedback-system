@@ -16,7 +16,7 @@ else
     if($q33==  "PartTime"){
         $user_select_query = "INSERT INTO course ( q33,q34) VALUES ('$q33', '$q34')";
         $user_query_result = mysqli_query($con, $user_select_query);
-        header('Location: Login.php');
+        header('Location: Logout.php');
     }
     else
     {
@@ -28,7 +28,7 @@ else
         else{
             $user_select_query = "INSERT INTO course ( q33,q34) VALUES ('$q33', '$q34')";
             $user_query_result = mysqli_query($con, $user_select_query);
-            header('Location: Login.php');
+            header('Location: Logout.php');
         }
     }
 }

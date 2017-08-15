@@ -1,5 +1,26 @@
 <?php 
 session_start();
+$_SESSION["guidance"]=1;
+if(isset($_SESSION["facilities"]))
+{
+    header("Location: page2test.php");
+}
+if(isset($_SESSION["walb"]))
+{
+    header("Location: WALB.php");
+}
+if(isset($_SESSION["progress"]))
+{
+    header("Location: Progress.php");
+}
+if(isset($_SESSION["challenges"]))
+{
+    header("Location: Challenges.php");
+}
+if(isset($_SESSION["course"]))
+{
+    header("Location: courseWork.php");
+}
 ?>
 <!DOCTYPE html>
 <!--
@@ -30,7 +51,7 @@ and open the template in the editor.
         </div>
         <ul class="nav navbar-nav navbar-right">
             
-            <li><a href="Login.php">LOGOUT</a></li>
+            <li><a href="Logout.php">LOGOUT</a></li>
         </ul>
     </div>
 </nav>

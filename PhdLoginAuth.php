@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -11,20 +14,24 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        $con=  mysqli_connect("localhost", "user", "", "feedback1");
+        $con=  mysqli_connect("localhost", "root", "", "feedback1");
         $query="select * from phd";
         $result=$con->query($query) or exit($con->errno);
         $id=$_POST["ID"];
         $pwd=$_POST["psw"];
+        $flag=0;
         while($row=$result->fetch_assoc())
         {
             if($row["regno"]==$id && $row["pwd"]==$pwd)
             {
+                $flag=1;
                 header("Location: GuidanceReceived.php");
             }
-            else{
-                header("Location: Ph.Dcandidate.html");
-            }
+        }
+        if($flag==0)
+        {
+            $_SESSION['phd'] = 0;
+            header("Location: Ph.Dcandidate.php");
         }
         ?>
     </body>
