@@ -1,9 +1,18 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
   <title>Feedback System</title>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width:device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link href="css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="footer_css/css/zerogrid.css">
+  <link rel="stylesheet" href="footer_css/css/style.css">
   <link rel="stylesheet" type="text/css" href="style2.css">
+  <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -44,12 +53,27 @@
   <h2 style="size:large;color:white;">Head of the Institute (HoI)</h2>
   <br>
   <div class="accept">
-    <form action="PhdLoginAuth.php" method="post">
+      <form action="HoiLoginAuth.php" method="post">
     <input type="text" placeholder="Username" name="ID" required>
     <br>
     <br>
     <input type="password" placeholder="Password" name="psw" required>
-    <br><br><br>
+    <br><br>
+    <?php
+    $var=1;
+    if (isset($_SESSION['hoi']))
+    {
+    $var = $_SESSION['hoi'];
+    }
+    if($var == 0)
+    {
+    ?>
+    <div class='alert alert-danger'>
+        <strong>Invalid Login Credentials!</strong>
+    </div>
+    <?php
+    }
+    ?>
     <input type="submit" value="Login" style="background-color: #CF4747;color: #ffffff;width: 100px;height: 30px">
     </form>
   </div>
