@@ -8,9 +8,9 @@ else if( $q1 === "Head of Department"){
     header('Location: HoD.html');
 }
 else if( $q1 === "Head of Institute"){
-    header('Location: HoI.html');
+    header('Location: HoI.php');
 }
 else if( $q1 === "Deputy Registrar"){
-    header('Location: DR.html');
+    header('Location: DR.php');
 }
 ?>
