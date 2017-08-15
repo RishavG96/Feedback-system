@@ -14,8 +14,13 @@ if($q33 == "--Choose an option--")
 else
 {
     if($q33==  "PartTime"){
-        $user_select_query = "INSERT INTO course ( q33,q34) VALUES ('$q33', '$q34')";
+        $r=$_SESSION["regno"];
+        $d=$_SESSION["dept"];
+        $i=$_SESSION["institute"];
+        $user_select_query = "INSERT INTO course ( regno,dept,institute, q33,q34) VALUES ('$r','$d','$i','$q33', '$q34')";
         $user_query_result = mysqli_query($con, $user_select_query);
+        $filled="Update phd set filled='true' where regno='$r' ";
+        $query_result = mysqli_query($con, $filled);
         header('Location: Logout.php');
     }
     else
@@ -26,8 +31,13 @@ else
             header('Location: courseWork.php');
         }
         else{
-            $user_select_query = "INSERT INTO course ( q33,q34) VALUES ('$q33', '$q34')";
+            $r=$_SESSION["regno"];
+            $d=$_SESSION["dept"];
+            $i=$_SESSION["institute"];
+            $user_select_query = "INSERT INTO course (  regno,dept,institute,q33,q34) VALUES ('$r','$d','$i','$q33', '$q34')";
             $user_query_result = mysqli_query($con, $user_select_query);
+            $filled="Update phd set filled='true' where regno='$r' ";
+            $query_result = mysqli_query($con, $filled);
             header('Location: Logout.php');
         }
     }

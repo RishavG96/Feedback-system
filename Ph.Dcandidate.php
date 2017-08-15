@@ -98,6 +98,21 @@ if(isset($_SESSION["course"]))
     <?php
     }
     ?>
+    <?php
+    $var=1;
+    if (isset($_SESSION['done']))
+    {
+    $var = $_SESSION['done'];
+    }
+    if($var == 0)
+    {
+    ?>
+    <div class='alert alert-danger'>
+        <strong>You have already filled the feedbacks!</strong>
+    </div>
+    <?php
+    }
+    ?>
     <input type="submit" value="Login" style="background-color: #CF4747;color: #ffffff;width: 100px;height: 30px">
     </form><br><br>
   </div>

@@ -25,8 +25,18 @@ and open the template in the editor.
             if($row["regno"]==$id && $row["pwd"]==$pwd)
             {
                 $flag=1;
+                if($row["filled"]=="true")
+                {
+                    $_SESSION['done'] = 0;
+                    header("Location: Ph.Dcandidate.php");
+                }
+                else{
+                $_SESSION["regno"]=$id;
+                $_SESSION["dept"]=$row["dept"];
+                $_SESSION["institute"]=$row["institute"];
                 $_SESSION["login"]=1;
                 header("Location: GuidanceReceived.php");
+                }
             }
         }
         if($flag==0)
