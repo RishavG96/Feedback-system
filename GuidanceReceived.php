@@ -60,13 +60,12 @@ and open the template in the editor.
     </div>
 </nav>
    <div class="container" style="position: relative;">
-        <div id="mySidenav" class="sidenav" style="width:25%;margin-top: -20px;">
-            <a href="page2.php" class="btn active"style="background-color: #FF8A65; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
-            <a class="btn " disabled href="#" style="background-color: #C21E17; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
-            <a class="btn " disabled href="#" style="background-color: #A11913 ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
-            <a class="btn " disabled href="#" style="background-color: #861510; height: 80px; padding-top: 30px;" >PROGRESS</a>
-            <a class="btn " disabled href="#" style="background-color: #670F0B; height: 80px; padding-top: 30px;">CHALLENGES</a>
-            <a class="btn" disabled href="#" style="background-color: #4A0707; height: 80px; padding-top: 30px;">COURSE WORK</a>
+        <div id="mySidenav" class="sidenav" style="width:25%;">
+            <a href="DRGuidanceGraph.php" class="btn active " style="background-color: #FF8A65; height: 90px; padding-top: 20px" >GUIDANCE<br> RECEIVED</a>
+            <a class="btn "  href="DRFacilitiesGraph.php" style="background-color: #C21E17; height: 90px; padding-top: 20px">FACILITIES <br>AVAILABLE</a>
+            <a class="btn "  href="DRWorkBalGraph.php" style="background-color: #A11913 ;height: 90px; padding-top: 20px">WORK AND LIFE<br> BALANCE</a>
+            <a class="btn "  href="DRProgressGraph.php" style="background-color: #861510; height: 90px; padding-top: 30px;" >PROGRESS</a>
+            <a class="btn "  href="DRChallengesGraph.php" style="background-color: #670F0B; height: 90px; padding-top: 30px;">CHALLENGES</a>
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 80px; ;  height :480px;">
             <div style="margin-top: 25px;">
