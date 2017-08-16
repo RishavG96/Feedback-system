@@ -41,7 +41,7 @@ if(isset($_POST['q7']) )
     $r=$_SESSION["regno"];
     $d=$_SESSION["dept"];
     $i=$_SESSION["institute"];
-    $user_select_query = "INSERT INTO challenges VALUES ('$r','$d','$i','$q1', '$q2', '$q3', '$q4', '$q5', '$q6','$q7')";
+    $user_select_query = "INSERT INTO challenges VALUES ('$r','$i','$q1', '$q2', '$q3', '$q4', '$q5', '$q6','$q7')";
     $user_query_result = mysqli_query($con, $user_select_query);
     header('Location: courseWork.php');
 ?>

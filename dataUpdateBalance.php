@@ -18,7 +18,7 @@ if(isset($_POST['leave']) && isset($_POST['healthcare']) && isset($_POST['infras
     $r=$_SESSION["regno"];
     $d=$_SESSION["dept"];
     $i=$_SESSION["institute"];
-    $user_select_query = "INSERT INTO facilities ( regno,dept,institute,q9,q10,q11,q12,q13,q14,q15,q16) VALUES ('$r','$d','$i','$q1', '$q2', '$q3', '$q4', '$q5', '$q6', '$q7', '$q8')";
+    $user_select_query = "INSERT INTO facilities ( regno,institute,q9,q10,q11,q12,q13,q14,q15,q16) VALUES ('$r','$i','$q1', '$q2', '$q3', '$q4', '$q5', '$q6', '$q7', '$q8')";
     $user_query_result = mysqli_query($con, $user_select_query);
     header('Location: WALB.php');
 }
