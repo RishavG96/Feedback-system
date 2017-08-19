@@ -33,18 +33,13 @@ and open the template in the editor.
         <title>PROGRESS</title>
         <script>
             function showfunc(){
-                document.getElementById("Showthis").style.display = "block";
-            }
-            function hidefunc(){
-                document.getElementById("Showthis").style.display = "none";
-            }
-            function show1func(){
-                document.getElementById("Showthis1").style.display = "block";
-                document.getElementById("Showthis2").style.display = "block";
-            }
-            function hide1func(){
-                document.getElementById("Showthis1").style.display = "none";
-                document.getElementById("Showthis2").style.display = "none";
+                if(document.getElementbyId("quest").value == "Yes"){
+                    document.getElementbyId("Showthis").style.display = "block";
+                }
+                if(document.getElementbyId("quest").value == "--Choose an option--" || document.getElementbyId("quest").value == "No")
+                {
+                    document.getElementbyId("Showthis").style.display = "none";
+                }
             }
         </script>
 </head>
@@ -95,21 +90,30 @@ and open the template in the editor.
             <table class="table table-bordered table-hover">
                 <tbody>
                     <tr>
-                        <th>Questions</th>
-                        <th>Yes</th>
-                        <th>No</th>
-                        <th style="width: 200px"></th>
+                        <td>Have you published any conference paper/journal paper in last 6 months?</td>
+                        <td><select style="background-color:#1d262b;width : 200px;" name="q34" onchange="showfunc()" id="quest">
+                                <option value="--Choose an option--">--Choose an option--</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </td>
                     </tr>
-                    
-                    
                     <tr>
-                        <td>Have you published any conferences paper/journal paper in last 6 months?</td>
-                        <td><input type="radio" name="q8" value="Yes" onclick="showfunc()"></td>
-                        <td><input type="radio" name="q8" value="No" onclick="hidefunc()"></td>
-                        <td><textarea id="Showthis" style="height: 50px;color: black;display:none"></textarea></td>
+                        <td>How do you rate the PhD program overall?</td>
+                        <td>
+                        <select style="background-color:#1d262b;width : 200px;" name="q34">
+                                <option>--Choose an option--</option>
+                                <option value="Excellent">Excellent</option>
+                                <option value="Good">Good</option>
+                                <option value="Satisfactory">Satisfactory</option>
+                                <option value="Poor">Poor</option>
+                                <option value="Not Applicable">Not applicable</option></select>
+                        </td>
                     </tr>
                 </tbody>
-            </table>
+            </table><br>
+            
+            <textarea style="height: 100px; width: 500px; color: black; display: none" id="Showthis" ></textarea><br><br>
             
             <button class="btn btn-primary bottom-right " style="margin-left: 45%">Submit</button>
             </form>
