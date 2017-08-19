@@ -32,7 +32,7 @@ if(isset($_POST['q5']) && isset($_POST['q6']) && isset($_POST['q7']) && isset($_
     $i=$_SESSION["institute"];
     $user_select_query = "INSERT INTO progress ( regno,institute,q22,q23,q24,q24i,q24ii,q25) VALUES ('$r','$i','$q1', '$q2', '$q3', '$q3i', '$q3ii','$q4')";
     $user_query_result = mysqli_query($con, $user_select_query);
-    header('Location: Challenges.php');
+    header('Location: GuidanceReceived.php');
     }
 }
 else

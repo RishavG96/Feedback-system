@@ -21,7 +21,7 @@ else
         $user_query_result = mysqli_query($con, $user_select_query);
         $filled="Update phd set filled='true' where regno='$r' ";
         $query_result = mysqli_query($con, $filled);
-        header('Location: Logout.php');
+        header('Location: Progress.php');
     }
     else
     {
@@ -38,7 +38,7 @@ else
             $user_query_result = mysqli_query($con, $user_select_query);
             $filled="Update phd set filled='true' where regno='$r' ";
             $query_result = mysqli_query($con, $filled);
-            header('Location: Logout.php');
+            header('Location: Progress.php');
         }
     }
 }
