@@ -1,7 +1,7 @@
 <?php
 session_start();
 $_SESSION["facilities"]=1;
-if(!isset($_SESSION["login"]))
+/*if(!isset($_SESSION["login"]))
 {
     header("Location: Logout.php");
 }
@@ -20,7 +20,7 @@ if(isset($_SESSION["challenges"]))
 if(isset($_SESSION["course"]))
 {
     header("Location: courseWork.php");
-}
+}*/
 ?>
 <!DOCTYPE html>
 <!--
@@ -39,6 +39,20 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="style2.css">
         <script src="js/bootstrap.min.js"></script>
         <title>FACILITIES AVAILABLE</title>
+        <script>
+            function showfunc(){
+                document.getElementById("Showthis").style.display = "block";
+            }
+            function hidefunc(){
+                document.getElementById("Showthis").style.display = "none";
+            }
+            function show1func(){
+                document.getElementById("Showthis1").style.display = "block";
+            }
+            function hide1func(){
+                document.getElementById("Showthis1").style.display = "none";
+            }
+        </script>
 </head>
 <body style="background-color: #CF4747">
    <nav class="navbar navbar-inverse navbar-fixed-top" >
@@ -135,14 +149,14 @@ and open the template in the editor.
                         <th>No</th>
                     </tr>
                     <tr>
-                        <td>Have you applied for funds from the institute/department in the last 6 months?</td>
+                        <td>Have you applied for funds from the Institute/Department in the last 6 months?</td>
                         <td><input type="radio" name="q5" value="Yes"></td>
                         <td><input type="radio" name="q5" value="No"></td>
                     </tr>
                     <tr>
-                        <td>Have you initiated research grant submission in the last 6 months?</td>
-                        <td><input type="radio" name="q6" value="Yes"></td>
-                        <td><input type="radio" name="q6" value="No"></td>
+                        <td>Have you initiated research grant submission from an external agency in the last 6 months?</td>
+                        <td><input type="radio" name="q6" value="Yes" onclick="showfunc()" onclick="showfunc1()"></td>
+                        <td><input type="radio" name="q6" value="No" onclick="hidefunc()" onclick="hidefunc1()"></td>
                     </tr>
                     <tr>
                         <td>Have you availed facilities from the University to attend workshop/publish research work?</td>
@@ -155,7 +169,10 @@ and open the template in the editor.
                         <td><input type="radio" name="q8" value="No"></td>
                     </tr>
                 </tbody>
-            </table>
+            </table><br><br>
+            
+   
+            <textarea id="Showthis" style="height: 100px;color: black;display:none; width: 500px;padding-top: 0px; line-height: none;background-color: white;" placeholder="Details of the research grant submission from an external agency"></textarea><br><br>
             
             <button class="btn btn-primary bottom-right " style="margin-left: 45%">Submit</button>
             </form>

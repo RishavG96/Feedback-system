@@ -1,7 +1,7 @@
 <?php 
 session_start();
 $_SESSION["walb"]=1;
-if(!isset($_SESSION["login"]))
+/*if(!isset($_SESSION["login"]))
 {
     header("Location: Logout.php");
 }
@@ -16,7 +16,7 @@ if(isset($_SESSION["challenges"]))
 if(isset($_SESSION["course"]))
 {
     header("Location: courseWork.php");
-}
+}*/
 ?>
 <!DOCTYPE html>
 <!--
@@ -106,39 +106,16 @@ and open the template in the editor.
                 </select></td>
                         </tr>
                         <tr>
-                            <td>To what extent do you receive support from the Head of the Department?</td>
-                            <td><select style="background-color:#1d262b;width : 200px;" name="q3">
+                            <td>Are you able to balance your personal life and research work?</td>
+                            <td><select style="background-color:#1d262b;width : 200px;" name="q2">
                     <option>--Choose an option--</option>
-                    <option value="Extremely Supportive" >Extremely Supportive</option>
-                    <option value="Very Supportive" >Very Supportive</option>
-                    <option value="Moderately Supportive" >Moderately Supportive</option>
-                    <option value="Slightly Supportive" >Slightly Supportive</option>
-                    <option value="Not at all supportive" >Not at all supportive</option>
-                </select></td>
+                    <option value="Yes">Yes</option>
+                    <option value="No" >No</option>
+                                </select></td>
                         </tr>
                     </tbody>
                 </table>
                 
-                <table class="table table-bordered table-hover">
-                    <tbody>
-                        <tr>
-                            <th> </th>
-                            <th>Yes</th>
-                            <th>No</th>
-                        </tr>
-                        <tr>
-                            <td>Are you able to balance your personal life and research work?</td>
-                            <td><input type="radio" name="q4" value="Yes"></td>
-                            <td><input type="radio" name="q4" value="No"></td>
-                        </tr>
-                        <tr>
-                            <td>Do you receive appreciation and encouragement from your guide?</td>
-                            <td><input type="radio" name="q5" value="Yes"></td>
-                            <td><input type="radio" name="q5" value="No"></td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
                 <br>    
                 <button class="btn btn-primary" style="margin-left: 45%">Submit</button> 
             </form>

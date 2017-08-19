@@ -1,10 +1,10 @@
 <?php 
 session_start();
 $_SESSION["course"]=1;
-if(!isset($_SESSION["login"]))
+/*if(!isset($_SESSION["login"]))
 {
     header("Location: Logout.php");
-}
+}*/
 ?>
 <!DOCTYPE html>
 <!--
@@ -27,8 +27,14 @@ and open the template in the editor.
             function showfunc(){
                 if (document.getElementById("quest").value == "FullTime"){
                 document.getElementById("Show1").style.display = "block";
+                document.getElementById("Show2").style.display = "none";
             }
-            if (document.getElementById("quest").value == "PartTime" || document.getElementById("quest").value == "--Chose an option--" ){
+            if (document.getElementById("quest").value == "PartTime"){
+                document.getElementById("Show2").style.display = "block";
+                document.getElementById("Show1").style.display = "none";
+            }
+            if (document.getElementById("quest").value == "--Choose an option--" ){
+                document.getElementById("Show2").style.display = "none";
                 document.getElementById("Show1").style.display = "none";
             }
         }
@@ -92,7 +98,16 @@ and open the template in the editor.
                                 <option value="First 3 months Full Time">First 3 months Full Time</option>
                                 <option value="Within First 6 months">Within First 6 months</option>
                                 <option value="2-3 hours everyday">2-3 hours everyday</option>
-                                <option value="Within One year">Within One Year(As it is now)</option>
+                                <option value="Within One year">Within One Year</option>
+                                </select></td>
+                        </tr>
+                                                <tr id="Show2" style="display: none;">
+                            <td>What do you prefer? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                    <td><select style="background-color:#1d262b;width : 200px;" name="q34">
+                                <option>--Choose an option--</option>
+                                <option value="Within First 6 months">Within First 6 months</option>
+                                <option value="2-3 hours everyday">2-3 hours everyday</option>
+                                <option value="Within One year">Within One Year</option>
                                 </select></td>
                         </tr>
                     </table>

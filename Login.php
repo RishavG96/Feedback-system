@@ -1,6 +1,6 @@
 <?php 
 session_start();
-if(isset($_SESSION["facilities"]))
+/*if(isset($_SESSION["facilities"]))
 {
     header("Location: page2test.php");
 }
@@ -28,7 +28,7 @@ if(isset($_SESSION["hoilogin"]))
 {
     header("Location: HoIGuidanceGraph.php");
 }
-
+*/
 ?>
 <!DOCTYPE html>
 <html>

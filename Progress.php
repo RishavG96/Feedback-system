@@ -1,7 +1,7 @@
 <?php 
 session_start();
 $_SESSION["progress"]=1;
-if(!isset($_SESSION["login"]))
+/*if(!isset($_SESSION["login"]))
 {
     header("Location: Logout.php");
 }
@@ -12,7 +12,7 @@ if(isset($_SESSION["challenges"]))
 if(isset($_SESSION["course"]))
 {
     header("Location: courseWork.php");
-}
+}*/
 ?>
 <!DOCTYPE html>
 <!--
@@ -100,36 +100,8 @@ and open the template in the editor.
                         <th>No</th>
                         <th style="width: 200px"></th>
                     </tr>
-                    <tr>
-                        <td>Have you started writing your thesis?(final year only)</td>
-                        <td><input type="radio" name="q5" value="Yes"></td>
-                        <td><input type="radio" name="q5" value="No"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Have you attended any workshops/seminars/guest lectures in the last 6 months?</td>
-                        <td><input type="radio" name="q6" value="Yes"></td>
-                        <td><input type="radio" name="q6" value="No"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Have you completed DAC this semester?</td>
-                        <td><input type="radio" name="q7" value="Yes" onclick="show1func()"></td>
-                        <td><input type="radio" name="q7" value="No" onclick="hide1func()"></td>
-                        <td></td>
-                    </tr>
-                    <tr id="Showthis1" style="display : none;">
-                        <td>Did you receive support from your guide during DAC?</td>
-                        <td><input type="radio" name="q7i" value="Yes"></td>
-                        <td><input type="radio" name="q7i" value="No"></td>
-                        
-                    </tr>
-                    <tr id="Showthis2" style="display : none;">
-                        <td>Did you receive feedback from DAC members?&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;</td>
-                        <td><input type="radio" name="q7ii" value="Yes"></td>
-                        <td><input type="radio" name="q7ii" value="No"></td>
-                        
-                    </tr>
+                    
+                    
                     <tr>
                         <td>Have you published any conferences paper/journal paper in last 6 months?</td>
                         <td><input type="radio" name="q8" value="Yes" onclick="showfunc()"></td>
