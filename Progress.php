@@ -1,7 +1,7 @@
 <?php 
 session_start();
 $_SESSION["progress"]=1;
-if(!isset($_SESSION["login"]))
+/*if(!isset($_SESSION["login"]))
 {
     header("Location: Logout.php");
 }
@@ -12,7 +12,7 @@ if(isset($_SESSION["challenges"]))
 if(isset($_SESSION["course"]))
 {
     header("Location: courseWork.php");
-}
+}*/
 ?>
 <!DOCTYPE html>
 <!--
@@ -33,18 +33,13 @@ and open the template in the editor.
         <title>PROGRESS</title>
         <script>
             function showfunc(){
-                document.getElementById("Showthis").style.display = "block";
-            }
-            function hidefunc(){
-                document.getElementById("Showthis").style.display = "none";
-            }
-            function show1func(){
-                document.getElementById("Showthis1").style.display = "block";
-                document.getElementById("Showthis2").style.display = "block";
-            }
-            function hide1func(){
-                document.getElementById("Showthis1").style.display = "none";
-                document.getElementById("Showthis2").style.display = "none";
+                if(document.getElementbyId("quest").value == "Yes"){
+                    document.getElementbyId("Showthis").style.display = "block";
+                }
+                if(document.getElementbyId("quest").value == "--Choose an option--" || document.getElementbyId("quest").value == "No")
+                {
+                    document.getElementbyId("Showthis").style.display = "none";
+                }
             }
         </script>
 </head>
@@ -65,12 +60,12 @@ and open the template in the editor.
 </nav>
    <div class="container" style="position: relative;">
         <div id="mySidenav" class="sidenav" style="width:25%; ">
-            <a href="#" class="btn " disabled style="background-color: #C21E17; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
-            <a class="btn " disabled href="#" style="background-color: #A11913; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
-            <a class="btn " disabled href="#" style="background-color: #861510 ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
-            <a class="btn active" href="Progress.php" style="background-color: #FF8A65; height: 80px; padding-top: 30px;" >PROGRESS</a>
-            <a class="btn " disabled href="#" style="background-color: #670F0B; height: 80px; padding-top: 30px;">CHALLENGES</a>
-            <a class="btn " disabled href="#" style="background-color: #4A0707; height: 80px; padding-top: 30px;">COURSE WORK</a>
+    <a class="btn" disabled href="#" style="background-color: #C21E17; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
+            <a class="btn " disabled href="#" style="background-color: #A11913; height: 80px; padding-top: 30px;">COURSE WORK</a>
+            <a class="btn active"  href="Progress.php" style="background-color: #FF8A65; height: 80px; padding-top: 30px;" >PROGRESS</a>
+            <a href="#" class="btn " disabled style="background-color: #861510; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
+            <a class="btn " disabled href="#" style="background-color: #670F0B ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
+            <a class="btn " disabled href="#" style="background-color: #4A0707; height: 80px; padding-top: 30px;">CHALLENGES</a>
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 100px; ;  height :480px;">
             <div style="margin-top: 25px;">
@@ -95,49 +90,30 @@ and open the template in the editor.
             <table class="table table-bordered table-hover">
                 <tbody>
                     <tr>
-                        <th>Questions</th>
-                        <th>Yes</th>
-                        <th>No</th>
-                        <th style="width: 200px"></th>
+                        <td>Have you published any conference paper/journal paper in last 6 months?</td>
+                        <td><select style="background-color:#1d262b;width : 200px;" name="q34" onchange="showfunc()" id="quest">
+                                <option value="--Choose an option--">--Choose an option--</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Have you started writing your thesis?(final year only)</td>
-                        <td><input type="radio" name="q5" value="Yes"></td>
-                        <td><input type="radio" name="q5" value="No"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Have you attended any workshops/seminars/guest lectures in the last 6 months?</td>
-                        <td><input type="radio" name="q6" value="Yes"></td>
-                        <td><input type="radio" name="q6" value="No"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Have you completed DAC this semester?</td>
-                        <td><input type="radio" name="q7" value="Yes" onclick="show1func()"></td>
-                        <td><input type="radio" name="q7" value="No" onclick="hide1func()"></td>
-                        <td></td>
-                    </tr>
-                    <tr id="Showthis1" style="display : none;">
-                        <td>Did you receive support from your guide during DAC?</td>
-                        <td><input type="radio" name="q7i" value="Yes"></td>
-                        <td><input type="radio" name="q7i" value="No"></td>
-                        
-                    </tr>
-                    <tr id="Showthis2" style="display : none;">
-                        <td>Did you receive feedback from DAC members?&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;</td>
-                        <td><input type="radio" name="q7ii" value="Yes"></td>
-                        <td><input type="radio" name="q7ii" value="No"></td>
-                        
-                    </tr>
-                    <tr>
-                        <td>Have you published any conferences paper/journal paper in last 6 months?</td>
-                        <td><input type="radio" name="q8" value="Yes" onclick="showfunc()"></td>
-                        <td><input type="radio" name="q8" value="No" onclick="hidefunc()"></td>
-                        <td><textarea id="Showthis" style="height: 50px;color: black;display:none"></textarea></td>
+                        <td>How do you rate the PhD program overall?</td>
+                        <td>
+                        <select style="background-color:#1d262b;width : 200px;" name="q34">
+                                <option>--Choose an option--</option>
+                                <option value="Excellent">Excellent</option>
+                                <option value="Good">Good</option>
+                                <option value="Satisfactory">Satisfactory</option>
+                                <option value="Poor">Poor</option>
+                                <option value="Not Applicable">Not applicable</option></select>
+                        </td>
                     </tr>
                 </tbody>
-            </table>
+            </table><br>
+            
+            <textarea style="height: 100px; width: 500px; color: black; display: none" id="Showthis" ></textarea><br><br>
             
             <button class="btn btn-primary bottom-right " style="margin-left: 45%">Submit</button>
             </form>

@@ -1,7 +1,7 @@
 <?php 
 session_start();
 $_SESSION["guidance"]=1;
-if(!isset($_SESSION["login"]))
+/*if(!isset($_SESSION["login"]))
 {
     header("Location: Logout.php");
 }
@@ -24,7 +24,7 @@ if(isset($_SESSION["challenges"]))
 if(isset($_SESSION["course"]))
 {
     header("Location: courseWork.php");
-}
+}*/
 ?>
 <!DOCTYPE html>
 <!--
@@ -43,6 +43,18 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="style2.css">
         <script src="js/bootstrap.min.js"></script>
         <title>Guidance Received</title>
+        <script>
+                function showfunc(){
+                if (document.getElementById("quest").value == "Yes"){
+                document.getElementById("Show1").style.display = "block";
+                document.getElementById("Show2").style.display = "block";
+            }
+            if (document.getElementById("quest").value == "No" || document.getElementById("quest").value == "--Chose an option--" ){
+                document.getElementById("Show1").style.display = "none";
+                document.getElementById("Show2").style.display = "none";
+            }
+        }
+        </script>
 </head>
 <body style="background-color: #CF4747">
    <nav class="navbar navbar-inverse navbar-fixed-top" >
@@ -61,12 +73,12 @@ and open the template in the editor.
 </nav>
    <div class="container" style="position: relative;">
         <div id="mySidenav" class="sidenav" style="width:25%;">
-            <a href="GuidanceReceived.php" class="btn active" style="background-color: #FF8A65; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
- <a class="btn " disabled href="#" style="background-color: #C21E17; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
- <a class="btn " disabled href="#" style="background-color: #A11913 ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
- <a class="btn " disabled href="#" style="background-color: #861510; height: 80px; padding-top: 30px;" >PROGRESS</a>
- <a class="btn " disabled href="#" style="background-color: #670F0B; height: 80px; padding-top: 30px;">CHALLENGES</a>
- <a class="btn"  disabled href="#" style="background-color: #4A0707; height: 80px; padding-top: 30px;">COURSE WORK</a>
+                <a class="btn" disabled href="#" style="background-color: #C21E17; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
+            <a class="btn " disabled href="#" style="background-color: #A11913; height: 80px; padding-top: 30px;">COURSE WORK</a>
+            <a class="btn " disabled  href="" style="background-color: #861510; height: 80px; padding-top: 30px;" >PROGRESS</a>
+            <a href="#" class="btn active"  href="GuidanceReceived.php"style="background-color: #FF8A65; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
+            <a class="btn " disabled href="#" style="background-color: #670F0B ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
+            <a class="btn " disabled href="#" style="background-color: #4A0707; height: 80px; padding-top: 30px;">CHALLENGES</a>
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 100px; ;  height :480px;">
             <div style="margin-top: 25px;">
@@ -86,7 +98,7 @@ and open the template in the editor.
                 }
                 ?>
                 <form class="form-group formwidth" method="post" action="dataUpdate.php">
-            <table class="table table-hover">
+            <table class="table table-hover table-bordered">
             <tr>
                 <td>To what extent is your guide available when you had queries/issues?</td>
             <td><select style="background-color: #1d262b;width: 200px ;margin-top: 5px" name="available">
@@ -121,7 +133,7 @@ and open the template in the editor.
                 </select></td>
             </tr>
             <tr>
-                <td>To what extend has your guide encouraged you to interact with external experts?</td>
+                <td>To what extent has your guide encouraged you to interact with external experts?</td>
             <td><select style="background-color: #1d262b;width: 200px;margin-top: 5px" name="encourage">
                     <option>--Choose an option--</option>
                 <option  value="Greatly encouraged">Greatly encouraged</option>
@@ -142,7 +154,7 @@ and open the template in the editor.
                 </select></td>
             </tr>
             <tr>
-                <td>Do you feel your guide/co-guide is biased?</td>
+                <td>Do you feel your guide is biased?</td>
             <td><select style="background-color: #1d262b;width: 200px;margin-top: 5px " name="biased">
                     <option>--Choose an option--</option>
                 <option  value="Yes">Yes</option>
@@ -150,22 +162,48 @@ and open the template in the editor.
                 </select></td>
             </tr>
             <tr>
-                <td>Have you noticed any improvement in guidance from last feedback submitted?</td>
-            <td><select style="background-color: #1d262b;width: 200px;margin-top: 5px" name="improvement">
-                    <option>--Choose an option--</option>
-                <option  value="Yes">Yes</option>
-                <option  value="No">No</option>
-                </select></td>
-            </tr>
-            <tr>
-            <td>Would you recommend your guide to other candidates?(For final year only)</td>
+            <td>Would you recommend your guide to other candidates?</td>
             <td><select style="background-color: #1d262b;width: 200px;margin-top: 5px " name="recommend">
                     <option>--Choose an option--</option>
                 <option  value="Yes">Yes</option>
                 <option  value="No">No</option>
                 </select></td>
             </tr>
-            </table>
+            <tr>
+                                            <td>To what extent do you receive support from the Head of the Department?</td>
+                            <td><select style="background-color:#1d262b;width : 200px;" name="q3">
+                    <option>--Choose an option--</option>
+                    <option value="Extremely Supportive" >Extremely Supportive</option>
+                    <option value="Moderately Supportive" >Moderately Supportive</option>
+                    <option value="Slightly Supportive" >Slightly Supportive</option>
+                    <option value="Not at all supportive" >Not at all supportive</option>
+                </select></td>
+            </tr>
+                                <tr>
+                        <td>Have you completed DAC in the last 6 months?</td>
+                        <td><select style="background-color:#1d262b;width : 200px;" onchange="showfunc()"name="q34" id="quest">
+                                <option value="--Choose an option--">--Choose an option--</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option></select></td>
+                    </tr>
+                    <tr id="Show1" style="display: none;">
+                        <td>Did you receive support from your guide during DAC? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                <td><select style="background-color:#1d262b;width : 200px;">
+                                        <option value="--Choose an option">--Choose an option--</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                            </select></td>
+                    </tr>
+                    <tr id="Show2" style="display: none;">
+                        <td>Did you receive feedback from DAC members?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td><select style="background-color:#1d262b;width : 200px;">
+                                        <option value="--Choose an option">--Choose an option--</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                            </select></td>
+                    </tr>
+                    
+             </table>
             <button class="btn btn-primary bottom-right " style="margin-left: 45%">Submit</button>
             </form>
         </div>

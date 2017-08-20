@@ -1,7 +1,7 @@
 <?php 
 session_start();
 $_SESSION["walb"]=1;
-if(!isset($_SESSION["login"]))
+/*if(!isset($_SESSION["login"]))
 {
     header("Location: Logout.php");
 }
@@ -16,7 +16,7 @@ if(isset($_SESSION["challenges"]))
 if(isset($_SESSION["course"]))
 {
     header("Location: courseWork.php");
-}
+}*/
 ?>
 <!DOCTYPE html>
 <!--
@@ -53,12 +53,12 @@ and open the template in the editor.
 </nav>
         <div class="container">
         <div id="mySidenav" class="sidenav" style="width:25%;">
-            <a href="#" class="btn " disabled style="background-color: #C21E17; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
-            <a class="btn " disabled href="#" style="background-color: #A11913; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
+                            <a class="btn" disabled href="#" style="background-color: #C21E17; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
+            <a class="btn " disabled href="#" style="background-color: #A11913; height: 80px; padding-top: 30px;">COURSE WORK</a>
+            <a class="btn " disabled  href="#" style="background-color: #861510; height: 80px; padding-top: 30px;" >PROGRESS</a>
+            <a href="#" class="btn " disabled  href="#"style="background-color: #670F0B; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
             <a class="btn active" href="WALB.php" style="background-color: #FF8A65 ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
-            <a class="btn " disabled href="#" style="background-color: #861510; height: 80px; padding-top: 30px;" >PROGRESS</a>
-            <a class="btn " disabled href="#" style="background-color: #670F0B; height: 80px; padding-top: 30px;">CHALLENGES</a>
-            <a class="btn " disabled href="#" style="background-color: #4A0707; height: 80px; padding-top: 30px;">COURSE WORK</a>
+            <a class="btn " disabled href="#" style="background-color: #4A0707; height: 80px; padding-top: 30px;">CHALLENGES</a>
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 100px;  height :480px;">
         <div style="margin-top : 2%;">
@@ -106,39 +106,16 @@ and open the template in the editor.
                 </select></td>
                         </tr>
                         <tr>
-                            <td>To what extent do you receive support from the Head of the Department?</td>
-                            <td><select style="background-color:#1d262b;width : 200px;" name="q3">
+                            <td>Are you able to balance your personal life and research work?</td>
+                            <td><select style="background-color:#1d262b;width : 200px;" name="q2">
                     <option>--Choose an option--</option>
-                    <option value="Extremely Supportive" >Extremely Supportive</option>
-                    <option value="Very Supportive" >Very Supportive</option>
-                    <option value="Moderately Supportive" >Moderately Supportive</option>
-                    <option value="Slightly Supportive" >Slightly Supportive</option>
-                    <option value="Not at all supportive" >Not at all supportive</option>
-                </select></td>
+                    <option value="Yes">Yes</option>
+                    <option value="No" >No</option>
+                                </select></td>
                         </tr>
                     </tbody>
                 </table>
                 
-                <table class="table table-bordered table-hover">
-                    <tbody>
-                        <tr>
-                            <th> </th>
-                            <th>Yes</th>
-                            <th>No</th>
-                        </tr>
-                        <tr>
-                            <td>Are you able to balance your personal life and research work?</td>
-                            <td><input type="radio" name="q4" value="Yes"></td>
-                            <td><input type="radio" name="q4" value="No"></td>
-                        </tr>
-                        <tr>
-                            <td>Do you receive appreciation and encouragement from your guide?</td>
-                            <td><input type="radio" name="q5" value="Yes"></td>
-                            <td><input type="radio" name="q5" value="No"></td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
                 <br>    
                 <button class="btn btn-primary" style="margin-left: 45%">Submit</button> 
             </form>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 $_SESSION["facilities"]=1;
-if(!isset($_SESSION["login"]))
+/*if(!isset($_SESSION["login"]))
 {
     header("Location: Logout.php");
 }
@@ -20,7 +20,7 @@ if(isset($_SESSION["challenges"]))
 if(isset($_SESSION["course"]))
 {
     header("Location: courseWork.php");
-}
+}*/
 ?>
 <!DOCTYPE html>
 <!--
@@ -39,6 +39,20 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="style2.css">
         <script src="js/bootstrap.min.js"></script>
         <title>FACILITIES AVAILABLE</title>
+        <script>
+            function showfunc(){
+                document.getElementById("Showthis").style.display = "block";
+            }
+            function hidefunc(){
+                document.getElementById("Showthis").style.display = "none";
+            }
+            function show1func(){
+                document.getElementById("Showthis1").style.display = "block";
+            }
+            function hide1func(){
+                document.getElementById("Showthis1").style.display = "none";
+            }
+        </script>
 </head>
 <body style="background-color: #CF4747">
    <nav class="navbar navbar-inverse navbar-fixed-top" >
@@ -57,12 +71,12 @@ and open the template in the editor.
 </nav>
     <div class="container">
         <div id="mySidenav" class="sidenav" style="width:25%; ">
-            <a href="#" class="btn " disabled style="background-color: #C21E17; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
             <a class="btn active" href="page2test.php" style="background-color: #FF8A65; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
-            <a class="btn " disabled href="#" style="background-color: #A11913 ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
-            <a class="btn " disabled href="#" style="background-color: #861510; height: 80px; padding-top: 30px;" >PROGRESS</a>
-            <a class="btn " disabled href="#" style="background-color: #670F0B; height: 80px; padding-top: 30px;">CHALLENGES</a>
-            <a class="btn " disabled href="#" style="background-color: #4A0707; height: 80px; padding-top: 30px;">COURSE WORK</a>
+            <a class="btn " disabled href="#" style="background-color: #C21E17; height: 80px; padding-top: 30px;">COURSE WORK</a>
+            <a class="btn " disabled href="#" style="background-color: #A11913; height: 80px; padding-top: 30px;" >PROGRESS</a>
+            <a href="#" class="btn " disabled style="background-color: #861510; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
+            <a class="btn " disabled href="#" style="background-color: #670F0B ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
+            <a class="btn " disabled href="#" style="background-color: #4A0707; height: 80px; padding-top: 30px;">CHALLENGES</a>
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 100px;  height :480px;">
             <div style="margin-top: 25px;">
@@ -135,14 +149,14 @@ and open the template in the editor.
                         <th>No</th>
                     </tr>
                     <tr>
-                        <td>Have you applied for funds from the institute/department in the last 6 months?</td>
+                        <td>Have you applied for funds from the Institute/Department in the last 6 months?</td>
                         <td><input type="radio" name="q5" value="Yes"></td>
                         <td><input type="radio" name="q5" value="No"></td>
                     </tr>
                     <tr>
-                        <td>Have you initiated research grant submission in the last 6 months?</td>
-                        <td><input type="radio" name="q6" value="Yes"></td>
-                        <td><input type="radio" name="q6" value="No"></td>
+                        <td>Have you initiated research grant submission from an external agency in the last 6 months?</td>
+                        <td><input type="radio" name="q6" value="Yes" onclick="showfunc()" onclick="showfunc1()"></td>
+                        <td><input type="radio" name="q6" value="No" onclick="hidefunc()" onclick="hidefunc1()"></td>
                     </tr>
                     <tr>
                         <td>Have you availed facilities from the University to attend workshop/publish research work?</td>
@@ -155,7 +169,10 @@ and open the template in the editor.
                         <td><input type="radio" name="q8" value="No"></td>
                     </tr>
                 </tbody>
-            </table>
+            </table><br><br>
+            
+   
+            <textarea id="Showthis" style="height: 100px;color: black;display:none; width: 500px;padding-top: 0px; line-height: none;background-color: white;" placeholder="Details of the research grant submission from an external agency"></textarea><br><br>
             
             <button class="btn btn-primary bottom-right " style="margin-left: 45%">Submit</button>
             </form>
