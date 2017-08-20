@@ -20,7 +20,7 @@
 </div>
 <div class="MU">
 
-    <img src="images/mulogo.jpg" alt="MU logo" style="width: 20%;height: 55%">
+    <img src="images/mul.jpg" alt="MU logo" style="width: 20%;height: 55%">
 <br>
 <p id="top" style="color: white;size: 100%">Welcome to the Manipal University Ph.D student feedback system.</p>
 </div>
