@@ -177,12 +177,12 @@ and open the template in the editor.
 </nav>
    <div class="container" style="position: relative;">
         <div id="mySidenav" class="sidenav" style="width:25%;">
-            <a href="HoIGuidanceGraph.php" class="btn " style="background-color: #C21E17; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
-            <a class="btn " href="HoIFacilitiesGraph.php" style="background-color: #A11913; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
-            <a class="btn " href="HoIWorkBalGraph.php" style="background-color: #861510 ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
-            <a class="btn " href="HoIProgressGraph.php" style="background-color: #670F0B; height: 80px; padding-top: 30px;" >PROGRESS</a>
-            <a class="btn " href="HoIChallengesGraph.php" style="background-color: #4A0707; height: 80px; padding-top: 30px;">CHALLENGES</a>
-            <a class="btn active" href="#" style="background-color: #FF8A65; height: 80px; padding-top: 30px;">COURSE WORK</a>
+            <a class="btn" href="HoIFacilitiesGraph.php" style="background-color: #C21E17; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
+          <a class="btn active" href="#" style="background-color: #FF8A65; height: 80px; padding-top: 30px;">COURSE WORK</a>
+          <a class="btn " href="HoIProgressGraph.php" style="background-color: #A11913; height: 80px; padding-top: 30px;" >PROGRESS</a>
+          <a href="HoIGuidanceGraph.php" class="btn " style="background-color: #861510; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
+          <a class="btn " href="HoIWorkBalGraph.php" style="background-color: #670F0B ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
+          <a class="btn " href="HoIChallengesGraph.php" style="background-color: #4A0707; height: 80px; padding-top: 30px;">CHALLENGES</a>
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 100px; ;  height :480px;">
             <div style="margin-top: 25px;">

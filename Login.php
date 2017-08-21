@@ -78,7 +78,7 @@ if(isset($_SESSION["hoilogin"]))
 <div class="login">
 <br>
 <br>
-  <h1 style="color:#CF4747">LOGIN <br> _________________</h1>
+<h1 style="color:#CF4747">LOGIN <br> _________________</h1><br><br>
   <!--<h2 style="size:large;color:white;">Ph.D Candidate</h2>
   <br>
   <div class="accept">
@@ -98,7 +98,6 @@ if(isset($_SESSION["hoilogin"]))
   </div>-->
   <form action="LoginAuth.php" method="post">
       <input type="submit" name="tologin" value="Ph.D Candidate" style="background-color: #CF4747; height: 40px; width: 200px; margin: 15px"/><br>
-      <input type="submit" name="tologin" value="Head of Department"style="background-color: #CF4747; height: 40px; width: 200px; margin: 15px"/><br>
       <input type="submit" name="tologin" value="Head of Institute"style="background-color: #CF4747; height: 40px; width: 200px; margin: 15px"/><br>
       <input type="submit" name="tologin" value="Deputy Registrar"style="background-color: #CF4747; height: 40px; width: 200px; margin: 15px"/>
   </form>
