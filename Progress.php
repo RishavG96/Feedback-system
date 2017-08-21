@@ -15,11 +15,7 @@ if(isset($_SESSION["course"]))
 }*/
 ?>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -30,15 +26,16 @@ and open the template in the editor.
         <link rel="stylesheet" href="footer_css/css/style.css">
         <link rel="stylesheet" type="text/css" href="style2.css">
         <script src="js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <title>PROGRESS</title>
         <script>
-            function showfunc(){
-                if(document.getElementbyId("quest").value == "Yes"){
-                    document.getElementbyId("Showthis").style.display = "block";
+            function showfunct(){
+                if(document.getElementById("question").value == "Yes"){
+                    document.getElementById("show").style.display = "block";
                 }
-                if(document.getElementbyId("quest").value == "--Choose an option--" || document.getElementbyId("quest").value == "No")
+                if(document.getElementById("question").value == "--Choose an option--" || document.getElementById("question").value === "No")
                 {
-                    document.getElementbyId("Showthis").style.display = "none";
+                    document.getElementById("show").style.display = "none";
                 }
             }
         </script>
@@ -91,7 +88,7 @@ and open the template in the editor.
                 <tbody>
                     <tr>
                         <td>Have you published any conference paper/journal paper in last 6 months?</td>
-                        <td><select style="background-color:#1d262b;width : 200px;" name="q34" onchange="showfunc()" id="quest">
+                        <td><select style="background-color:#1d262b;width : 200px;" name="q34" onchange="showfunct()" id="question">
                                 <option value="--Choose an option--">--Choose an option--</option>
                                 <option value="Yes">Yes</option>
                                 <option value="No">No</option>
@@ -113,8 +110,7 @@ and open the template in the editor.
                 </tbody>
             </table><br>
             
-            <textarea style="height: 100px; width: 500px; color: black; display: none" id="Showthis" ></textarea><br><br>
-            
+            <textarea style="height: 100px; width: 500px; color: black; display: none;" id="show" placeholder="Details of Conference/Journal Paper" ></textarea><br><br>
             <button class="btn btn-primary bottom-right " style="margin-left: 45%">Submit</button>
             </form>
         </div>
