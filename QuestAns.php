@@ -14,6 +14,13 @@
     $("tr:nth-child(odd)").css("background-color", "#1d262b");
     $("tr:nth-child(even)").css("background-color", "#252e33");
 });</script>
+    <script>
+        function chang(){
+            document.getElementById("1st").onclick = function(){
+                location.href = "page2test.php";
+            };
+        }
+    </script>
         <title>WORK & LIFE</title>
 </head>
 <body style="background-color: #CF4747">
@@ -27,6 +34,10 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
             
+            <li style="margin-top: 10px;margin-right: 50px;">
+                <button class="btn" onclick="chang()" id="1st">Graph View</button>
+                <button class="btn btn-success" id="2nd">Student View</button>
+            </li>
             <li><a href="Logout.php">LOGOUT</a></li>
         </ul>
     </div>
