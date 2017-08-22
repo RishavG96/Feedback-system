@@ -46,8 +46,8 @@ and open the template in the editor.
         $count17=array(0,0,0,0);
         $value17=array("Excellent","Good","Satisfactory","Poor");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery17 = "SELECT q17 FROM  workbal where institute='$i'";
-        $query17 = "SELECT q17 from workbal where institute='$i'";
+     	$strQuery17 = "SELECT q1 FROM  workbal where inst='$i'";
+        $query17 = "SELECT q1 from workbal where inst='$i'";
         
      	// Execute the query, or else return the error message.
      	$result17 = $dbhandle->query($strQuery17) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -55,16 +55,16 @@ and open the template in the editor.
         if($result17i->num_rows>0)
         {
             while($row17=$result17->fetch_assoc()){
-                if($row17["q17"]=="Excellent"){
+                if($row17["q1"]=="Excellent"){
                     $count17[0]+=1;
                 }
-                else if($row17["q17"]=="Good"){
+                else if($row17["q1"]=="Good"){
                     $count17[1]+=1;
                 }
-                else if($row17["q17"]=="Satisfactory"){
+                else if($row17["q1"]=="Satisfactory"){
                     $count17[2]+=1;
                 }
-                else if($row17["q17"]=="Poor"){
+                else if($row17["q1"]=="Poor"){
                     $count17[3]+=1;
                 }
             }
@@ -94,7 +94,7 @@ and open the template in the editor.
         	
 
         	$jsonEncodedData17= json_encode($arrData17);
-        	$columnChart17 = new FusionCharts("column2D", "myFirstChart17" , 600, 300, "chart-17", "json", $jsonEncodedData17);
+        	$columnChart17 = new FusionCharts("column2D", "myFirstChart17" , 600, 300, "chart-1", "json", $jsonEncodedData17);
 
         	// Render the chart
         	$columnChart17->render();
@@ -107,8 +107,8 @@ and open the template in the editor.
         $count18=array(0,0,0,0,0,0,0,0,0);
         $value18=array("Less than 11 hours","11-20 hours","21-20 hours","31-40 hours","41-50 hours","51-60 hours","61-70 hours","71-80 hours","More than 80 hours");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery18 = "SELECT q18 FROM workbal where institute='$i'";
-        $query18 = "SELECT q18 from workbal where institute='$i'";
+     	$strQuery18 = "SELECT q2 FROM workbal where inst='$i'";
+        $query18 = "SELECT q2 from workbal where inst='$i'";
         
      	// Execute the query, or else return the error message.
      	$result18 = $dbhandle->query($strQuery18) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -116,31 +116,31 @@ and open the template in the editor.
         if($result18i->num_rows>0)
         {
             while($row18=$result18i->fetch_assoc()){
-                if($row18["q18"]=="Less than 11 hours"){
+                if($row18["q2"]=="Less than 11 hours"){
                     $count18[0]+=1;
                 }
-                else if($row18["q18"]=="11-20 hours"){
+                else if($row18["q2"]=="11-20 hours"){
                     $count18[1]+=1;
                 }
-                else if($row18["q18"]=="21-20 hours"){
+                else if($row18["q2"]=="21-20 hours"){
                     $count18[2]+=1;
                 }
-                else if($row18["q18"]=="31-40 hours"){
+                else if($row18["q2"]=="31-40 hours"){
                     $count18[3]+=1;
                 }
-                else if($row18["q18"]=="41-50 hours"){
+                else if($row18["q2"]=="41-50 hours"){
                     $count18[4]+=1;
                 }
-                else if($row18["q18"]=="51-60 hours"){
+                else if($row18["q2"]=="51-60 hours"){
                     $count18[5]+=1;
                 }
-                else if($row18["q18"]=="61-70 hours"){
+                else if($row18["q2"]=="61-70 hours"){
                     $count18[6]+=1;
                 }
-                else if($row18["q18"]=="71-80 hours"){
+                else if($row18["q2"]=="71-80 hours"){
                     $count18[7]+=1;
                 }
-                else if($row18["q18"]=="More than 80 hours"){
+                else if($row18["q2"]=="More than 80 hours"){
                     $count18[8]+=1;
                 }
             }
@@ -173,7 +173,7 @@ and open the template in the editor.
 
 	/*Create an object for the column chart using the FusionCharts PHP class constructor. Syntax for the constructor is ` FusionCharts("type of chart", "unique chart id", width of the chart, height of the chart, "div id to render the chart", "data format", "data source")`. Because we are using JSON data to render the chart, the data format will be `json`. The variable `$jsonEncodeData` holds all the JSON data for the chart, and will be passed as the value for the data source parameter of the constructor.*/
 
-        	$columnChart18 = new FusionCharts("column2D", "myFirstChart18" , 600, 300, "chart-18", "json", $jsonEncodedData18);
+        	$columnChart18 = new FusionCharts("column2D", "myFirstChart18" , 600, 300, "chart-2", "json", $jsonEncodedData18);
 
         	// Render the chart
         	$columnChart18->render();
@@ -183,71 +183,12 @@ and open the template in the editor.
      	}
         ?>
     <?php
-        $count19=array(0,0,0,0,0);
-        $value19=array("Extremely Supportive","Very Supportive","Moderately Supportive","Slightly Supportive","Not at all supportive");
-        // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery19 = "SELECT q19 FROM workbal  where institute='$i'";
-        $query19 = "SELECT q19 from workbal where institute='$i'";
-        
-     	// Execute the query, or else return the error message.
-     	$result19 = $dbhandle->query($strQuery19) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
-        $result19i = $dbhandle->query($query19) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
-        if($result19i->num_rows>0)
-        {
-            while($row19=$result19->fetch_assoc()){
-                if($row19["q19"]=="Extremely Supportive"){
-                    $count19[0]+=1;
-                }
-                else if($row19["q19"]=="Very Supportive"){
-                    $count19[1]+=1;
-                }
-                else if($row19["q19"]=="Moderately Supportive"){
-                    $count19[2]+=1;
-                }
-                else if($row19["q19"]=="Slightly Supportive"){
-                    $count19[3]+=1;
-                }
-                else if($row19["q19"]=="Not at all supportive"){
-                    $count19[4]+=1;
-                }
-            }
-        }
-     	// If the query returns a valid response, prepare the JSON string
-     	if ($result19) {
-        	// The `$arrData` array holds the chart attributes and data
-        	$arrData19 = array(
-        	    "chart" => array(
-                  "caption" => "To what extent do you receive support from the Head of the Department",
-                  "showValues" => "0",
-                  "theme" => "zune"
-              	)
-           	);
-
-        	$arrData19["data"] = array();
-
-	// Push the data into the array
-        	for($x19 = 0; $x19 < 5; $x19++) {
-           	array_push($arrData19["data"], array(
-              	"label" => $value19[$x19],
-              	"value" => $count19[$x19]
-              	)
-           	);
-        	}
-                $jsonEncodedData19 = json_encode($arrData19);
-        	$columnChart19 = new FusionCharts("column2D", "myFirstChart19" , 600, 300, "chart-19", "json", $jsonEncodedData19);
-        	// Render the chart
-        	$columnChart19->render();
-        	// Close the database connection
-        	//$dbhandle->close();
-     	}
-        ?>
-    <?php
     
         $count20=array(0,0);
         $value20=array("Yes","No");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery20 = "SELECT q20 FROM workbal  where institute='$i'";
-        $query20 = "SELECT q20 from workbal where institute='$i'";
+     	$strQuery20 = "SELECT q3 FROM workbal where inst='$i'";
+        $query20 = "SELECT q3 from workbal where inst='$i'";
         
      	// Execute the query, or else return the error message.
      	$result20 = $dbhandle->query($strQuery20) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -255,10 +196,10 @@ and open the template in the editor.
         if($result20i->num_rows>0)
         {
             while($row20=$result20->fetch_assoc()){
-                if($row20["q20"]=="Yes"){
+                if($row20["q3"]=="Yes"){
                     $count20[0]+=1;
                 }
-                else if($row20["q20"]=="No"){
+                else if($row20["q3"]=="No"){
                     $count20[1]+=1;
                 }
             }
@@ -285,7 +226,7 @@ and open the template in the editor.
            	);
         	}
         	$jsonEncodedData20 = json_encode($arrData20);
-        	$columnChart20 = new FusionCharts("column2D", "myFirstChart20" , 600, 300, "chart-20", "json", $jsonEncodedData20);
+        	$columnChart20 = new FusionCharts("column2D", "myFirstChart20" , 600, 300, "chart-3", "json", $jsonEncodedData20);
         	// Render the chart
         	$columnChart20->render();
         	// Close the database connection
@@ -293,61 +234,68 @@ and open the template in the editor.
      	}
         ?>
     <?php
-        $count21=array(0,0);
-        $value21=array("Yes","No");
+        $count26=array(0,0,0,0,0,0,0);
+        $value26=array("Learning what career possibilities exist","Finding research careers within academia","Finding research careers within industry","Finding research careers within government","Finding research careers with charity/non-profit organisations","Finding non-research careers that use your skills","Others");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery21 = "SELECT q21 FROM workbal  where institute='$i'";
-        $query21 = "SELECT q21 from workbal where institute='$i'";
+     	$strQuery26 = "SELECT * FROM workbal where inst='$i'";
+        $query26 = "SELECT * from workbal where inst='$i'";
         
      	// Execute the query, or else return the error message.
-     	$result21 = $dbhandle->query($strQuery21) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
-        $result21i = $dbhandle->query($query21) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
-        if($result21i->num_rows>0)
+     	$result26 = $dbhandle->query($strQuery26) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
+        $result26i = $dbhandle->query($query26) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
+        if($result26i->num_rows>0)
         {
-            while($row21=$result21i->fetch_assoc()){
-                if($row21["q21"]=="Yes"){
-                    $count21[0]+=1;
+            while($row26=$result26->fetch_assoc()){
+                if($row26["q4"]=="Learning what career possibilities exist"){
+                    $count26[0]+=1;
                 }
-                else if($row21["q21"]=="No"){
-                    $count21[1]+=1;
+                if($row26["q5"]=="Finding research careers within academia"){
+                    $count26[1]+=1;
+                }
+                if($row26["q6"]=="Finding research careers within industry"){
+                    $count26[2]+=1;
+                }
+                if($row26["q7"]=="Finding research careers within government"){
+                    $count26[3]+=1;
+                }
+                if($row26["q8"]=="Finding research careers with charity/non-profit organisations"){
+                    $count26[4]+=1;
+                }
+                if($row26["q9"]=="Finding non-research careers that use your skills"){
+                    $count26[5]+=1;
+                }
+                if($row26["q10"]=="Others"){
+                    $count26[6]+=1;
                 }
             }
         }
      	// If the query returns a valid response, prepare the JSON string
-     	if ($result21) {
+     	if ($result26) {
         	// The `$arrData` array holds the chart attributes and data
-        	$arrData21 = array(
+        	$arrData26 = array(
         	    "chart" => array(
-                  "caption" => "Do you receive appreciation and encouragement from your guide",
+                  "caption" => "Which of the following would you say is the most difficult for PhD's in your discipline",
                   "showValues" => "0",
                   "theme" => "zune"
               	)
            	);
 
-        	$arrData21["data"] = array();
+        	$arrData26["data"] = array();
 
 	// Push the data into the array
-        	for($x21 = 0; $x21 < 2; $x21++) {
-           	array_push($arrData21["data"], array(
-              	"label" => $value21[$x21],
-              	"value" => $count21[$x21]
+        	for($x26 = 0; $x26 < 7; $x26++) {
+           	array_push($arrData26["data"], array(
+              	"label" => $value26[$x26],
+              	"value" => $count26[$x26]
               	)
            	);
         	}
-
-        	
-
-        	$jsonEncodedData21 = json_encode($arrData21);
-
-	
-
-        	$columnChart21 = new FusionCharts("column2D", "myFirstChart21" , 600, 300, "chart-21", "json", $jsonEncodedData21);
-
+        	$jsonEncodedData26 = json_encode($arrData26);
+        	$columnChart26 = new FusionCharts("column2D", "myFirstChart26" , 600, 400, "chart-4", "json", $jsonEncodedData26);
         	// Render the chart
-        	$columnChart21->render();
-
+        	$columnChart26->render();
         	// Close the database connection
-        	//$dbhandle->close();
+        	$dbhandle->close();
      	}
         ?>
    <nav class="navbar navbar-inverse navbar-fixed-top" >
@@ -369,21 +317,19 @@ and open the template in the editor.
             <a class="btn" href="HoIFacilitiesGraph.php" style="background-color: #C21E17; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
             <a class="btn " href="HoICourseGraph.php" style="background-color: #A11913; height: 80px; padding-top: 30px;">COURSE WORK</a>
             <a class="btn " href="HoIProgressGraph.php" style="background-color: #861510; height: 80px; padding-top: 30px;" >PROGRESS</a>
-            <a href="#" class="btn " href="HoIWorkBalGraph.php"style="background-color: #670F0B; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
-            <a class="btn active" href="#" style="background-color: #FF8A65 ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
+            <a class="btn " href="HoIGuidanceGraph.php"style="background-color: #670F0B; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
+            <a class="btn active" href="HoIWorkBalGraph.php" style="background-color: #FF8A65 ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
             <a class="btn " href="HoIChallengesGraph.php" style="background-color: #4A0707; height: 80px; padding-top: 30px;">CHALLENGES</a>
-        </div>
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 100px;  height :480px;">
             <div style="margin-top: 25px;">
-                <div style="margin-left: 130px" id="chart-17"><!-- Fusion Charts will render here--></div><br>
-                <div style="margin-left: 130px" id="chart-18"><!-- Fusion Charts will render here--></div><br>
-                <div style="margin-left: 130px" id="chart-19"><!-- Fusion Charts will render here--></div><br>
-                <div style="margin-left: 130px" id="chart-20"><!-- Fusion Charts will render here--></div><br>
-                <div style="margin-left: 130px" id="chart-21"><!-- Fusion Charts will render here--></div><br>
+                <div style="margin-left: 130px" id="chart-1"><!-- Fusion Charts will render here--></div><br>
+                <div style="margin-left: 130px" id="chart-2"><!-- Fusion Charts will render here--></div><br>
+                <div style="margin-left: 130px" id="chart-3"><!-- Fusion Charts will render here--></div><br>
+                <div style="margin-left: 130px" id="chart-4"><!-- Fusion Charts will render here--></div><br>
                 <ul class="pager">
-                    <li class="previous"><a href="HoIFacilitiesGraph.php">Previous</a></li>
-                    <li class="next"><a href="HoIProgressGraph.php">Next</a></li>
+                    <li class="previous"><a href="HoIGuidanceGraph.php">Previous</a></li>
+                    <li class="next"><a href="HoIChallengesGraph.php">Next</a></li>
                 </ul>
         </div>
             </div>

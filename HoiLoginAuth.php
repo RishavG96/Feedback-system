@@ -27,7 +27,7 @@ and open the template in the editor.
                 $flag=1;
                 $_SESSION["institute"]=$row["institute"];
                 $_SESSION["login"]=1;
-                header("Location: HoIGuidanceGraph.php");
+                header("Location: HoIFacilitiesGraph.php");
             }
         }
         if($flag==0)

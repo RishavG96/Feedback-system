@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 if(!isset($_SESSION["login"]))
 {
@@ -43,39 +43,39 @@ and open the template in the editor.
    
     <?php
     
-        $count9=array(0,0,0,0,0);
-        $value9=array("Excellent","Good","Satisfactory","Poor","Not Applicable");
+        $count1=array(0,0,0,0,0);
+        $value1=array("Excellent","Good","Satisfactory","Poor","Not Applicable");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery9 = "SELECT q9 FROM  facilities where institute='$i'";
-        $query9 = "SELECT q9 from facilities where institute='$i'";
+     	$strQuery1 = "SELECT q1 FROM  facilities where inst='$i'";
+        $query1 = "SELECT q1 from facilities  where inst='$i'";
         
      	// Execute the query, or else return the error message.
-     	$result9 = $dbhandle->query($strQuery9) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
-        $result9i = $dbhandle->query($query9) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
-        if($result9i->num_rows>0)
+     	$result1 = $dbhandle->query($strQuery1) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
+        $result1i = $dbhandle->query($query1) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
+        if($result1i->num_rows>0)
         {
-            while($row9=$result9->fetch_assoc()){
-                if($row9["q9"]=="Excellent"){
-                    $count9[0]+=1;
+            while($row1=$result1->fetch_assoc()){
+                if($row1["q1"]=="Excellent"){
+                    $count1[0]+=1;
                 }
-                else if($row9["q9"]=="Good"){
-                    $count9[1]+=1;
+                else if($row1["q1"]=="Good"){
+                    $count1[1]+=1;
                 }
-                else if($row9["q9"]=="Satisfactory"){
-                    $count9[2]+=1;
+                else if($row1["q1"]=="Satisfactory"){
+                    $count1[2]+=1;
                 }
-                else if($row9["q9"]=="Poor"){
-                    $count9[3]+=1;
+                else if($row1["q1"]=="Poor"){
+                    $count1[3]+=1;
                 }
-                else if($row9["q9"]=="Not Applicable"){
-                    $count9[4]+=1;
+                else if($row1["q1"]=="Not Applicable"){
+                    $count1[4]+=1;
                 }
             }
         }
      	// If the query returns a valid response, prepare the JSON string
-     	if ($result9) {
+     	if ($result1) {
         	// The `$arrData` array holds the chart attributes and data
-        	$arrData9 = array(
+        	$arrData1 = array(
         	    "chart" => array(
                   "caption" => "How do you rate the quality of Leave facilities and services available in the campus",
                   "showValues" => "0",
@@ -83,63 +83,63 @@ and open the template in the editor.
               	)
            	);
 
-        	$arrData9["data"] = array();
+        	$arrData1["data"] = array();
 
 	// Push the data into the array
-        	for($x9 = 0; $x9 < 5; $x9++) {
-           	array_push($arrData9["data"], array(
-              	"label" => $value9[$x9],
-              	"value" => $count9[$x9]
+        	for($x1 = 0; $x1 < 5; $x1++) {
+           	array_push($arrData1["data"], array(
+              	"label" => $value1[$x1],
+              	"value" => $count1[$x1]
               	)
            	);
         	}
 
         	
 
-        	$jsonEncodedData9 = json_encode($arrData9);
-        	$columnChart9 = new FusionCharts("column2D", "myFirstChart9" , 600, 300, "chart-9", "json", $jsonEncodedData9);
+        	$jsonEncodedData1 = json_encode($arrData1);
+        	$columnChart1 = new FusionCharts("column2D", "myFirstChart1" , 600, 300, "chart-1", "json", $jsonEncodedData1);
 
         	// Render the chart
-        	$columnChart9->render();
+        	$columnChart1->render();
 
         	// Close the database connection
                 //$dbhandle->close();
      	}
         ?>
     <?php
-        $count10=array(0,0,0,0,0);
-        $value10=array("Excellent","Good","Satisfactory","Poor","Not Applicable");
+        $count2=array(0,0,0,0,0);
+        $value2=array("Excellent","Good","Satisfactory","Poor","Not Applicable");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery10 = "SELECT q10 FROM facilities  where institute='$i'";
-        $query10 = "SELECT q10 from facilities where institute='$i'";
+     	$strQuery2 = "SELECT q2 FROM facilities  where inst='$i'";
+        $query2 = "SELECT q2 from facilities where inst='$i'";
         
      	// Execute the query, or else return the error message.
-     	$result10 = $dbhandle->query($strQuery10) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
-        $result10i = $dbhandle->query($query10) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
-        if($result10i->num_rows>0)
+     	$result2 = $dbhandle->query($strQuery2) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
+        $result2i = $dbhandle->query($query2) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
+        if($result2i->num_rows>0)
         {
-            while($row10=$result10i->fetch_assoc()){
-                if($row10["q10"]=="Excellent"){
-                    $count10[0]+=1;
+            while($row2=$result2->fetch_assoc()){
+                if($row2["q2"]=="Excellent"){
+                    $count2[0]+=1;
                 }
-                else if($row10["q10"]=="Good"){
-                    $count10[1]+=1;
+                else if($row2["q2"]=="Good"){
+                    $count2[1]+=1;
                 }
-                else if($row10["q10"]=="Satisfactory"){
-                    $count10[2]+=1;
+                else if($row2["q2"]=="Satisfactory"){
+                    $count2[2]+=1;
                 }
-                else if($row10["q10"]=="Poor"){
-                    $count10[3]+=1;
+                else if($row2["q2"]=="Poor"){
+                    $count2[3]+=1;
                 }
-                else if($row10["q10"]=="Not Applicable"){
-                    $count10[4]+=1;
+                else if($row2["q2"]=="Not Applicable"){
+                    $count2[4]+=1;
                 }
             }
         }
      	// If the query returns a valid response, prepare the JSON string
-     	if ($result10) {
+     	if ($result2) {
         	// The `$arrData` array holds the chart attributes and data
-        	$arrData10 = array(
+        	$arrData2 = array(
         	    "chart" => array(
                   "caption" => "How do you rate the quality of Healthcare facilities and services available in the campus",
                   "showValues" => "0",
@@ -147,27 +147,27 @@ and open the template in the editor.
               	)
            	);
 
-        	$arrData10["data"] = array();
+        	$arrData2["data"] = array();
 
 	// Push the data into the array
         	for($x10 = 0; $x10 < 5; $x10++) {
-           	array_push($arrData10["data"], array(
-              	"label" => $value10[$x10],
-              	"value" => $count10[$x10]
+           	array_push($arrData2["data"], array(
+              	"label" => $value2[$x10],
+              	"value" => $count2[$x10]
               	)
            	);
         	}
 
         	/*JSON Encode the data to retrieve the string containing the JSON representation of the data in the array. */
 
-        	$jsonEncodedData10 = json_encode($arrData10);
+        	$jsonEncodedData2 = json_encode($arrData2);
 
 	/*Create an object for the column chart using the FusionCharts PHP class constructor. Syntax for the constructor is ` FusionCharts("type of chart", "unique chart id", width of the chart, height of the chart, "div id to render the chart", "data format", "data source")`. Because we are using JSON data to render the chart, the data format will be `json`. The variable `$jsonEncodeData` holds all the JSON data for the chart, and will be passed as the value for the data source parameter of the constructor.*/
 
-        	$columnChart10 = new FusionCharts("column2D", "myFirstChart10" , 600, 300, "chart-10", "json", $jsonEncodedData10);
+        	$columnChart2 = new FusionCharts("column2D", "myFirstChart2" , 600, 300, "chart-2", "json", $jsonEncodedData2);
 
         	// Render the chart
-        	$columnChart10->render();
+        	$columnChart2->render();
 
         	// Close the database connection
         	//$dbhandle->close();
@@ -177,8 +177,8 @@ and open the template in the editor.
         $count11=array(0,0,0,0,0);
         $value11=array("Excellent","Good","Satisfactory","Poor","Not Applicable");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery11 = "SELECT q11 FROM facilities  where institute='$i'";
-        $query11 = "SELECT q11 from facilities where institute='$i'";
+     	$strQuery11 = "SELECT q3 FROM facilities  where inst='$i'";
+        $query11 = "SELECT q3 from facilities where inst='$i'";
         
      	// Execute the query, or else return the error message.
      	$result11 = $dbhandle->query($strQuery11) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -186,19 +186,19 @@ and open the template in the editor.
         if($result11i->num_rows>0)
         {
             while($row11=$result11->fetch_assoc()){
-                if($row11["q11"]=="Excellent"){
+                if($row11["q3"]=="Excellent"){
                     $count11[0]+=1;
                 }
-                else if($row11["q11"]=="Good"){
+                else if($row11["q3"]=="Good"){
                     $count11[1]+=1;
                 }
-                else if($row11["q11"]=="Satisfactory"){
+                else if($row11["q3"]=="Satisfactory"){
                     $count11[2]+=1;
                 }
-                else if($row11["q11"]=="Poor"){
+                else if($row11["q3"]=="Poor"){
                     $count11[3]+=1;
                 }
-                else if($row11["q11"]=="Not Applicable"){
+                else if($row11["q3"]=="Not Applicable"){
                     $count11[4]+=1;
                 }
             }
@@ -225,7 +225,7 @@ and open the template in the editor.
            	);
         	}
                 $jsonEncodedData11 = json_encode($arrData11);
-        	$columnChart11 = new FusionCharts("column2D", "myFirstChart11" , 600, 300, "chart-11", "json", $jsonEncodedData11);
+        	$columnChart11 = new FusionCharts("column2D", "myFirstChart11" , 600, 300, "chart-3", "json", $jsonEncodedData11);
         	// Render the chart
         	$columnChart11->render();
         	// Close the database connection
@@ -237,8 +237,8 @@ and open the template in the editor.
         $count12=array(0,0,0,0,0);
         $value12=array("Excellent","Good","Satisfactory","Poor","Not Applicable");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery12 = "SELECT q12 FROM facilities where institute='$i' ";
-        $query12 = "SELECT q12 from facilities where institute='$i'";
+     	$strQuery12 = "SELECT q4 FROM facilities where inst='$i' ";
+        $query12 = "SELECT q4 from facilities where inst='$i'";
         
      	// Execute the query, or else return the error message.
      	$result12 = $dbhandle->query($strQuery12) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -246,19 +246,19 @@ and open the template in the editor.
         if($result12i->num_rows>0)
         {
             while($row12=$result12->fetch_assoc()){
-                if($row12["q12"]=="Excellent"){
+                if($row12["q4"]=="Excellent"){
                     $count12[0]+=1;
                 }
-                else if($row12["q12"]=="Good"){
+                else if($row12["q4"]=="Good"){
                     $count12[1]+=1;
                 }
-                else if($row12["q12"]=="Satisfactory"){
+                else if($row12["q4"]=="Satisfactory"){
                     $count12[2]+=1;
                 }
-                else if($row12["q12"]=="Poor"){
+                else if($row12["q4"]=="Poor"){
                     $count12[3]+=1;
                 }
-                else if($row12["q12"]=="Not Applicable"){
+                else if($row12["q4"]=="Not Applicable"){
                     $count12[4]+=1;
                 }
             }
@@ -291,7 +291,7 @@ and open the template in the editor.
 
 	
 
-        	$columnChart12 = new FusionCharts("column2D", "myFirstChart12" , 600, 300, "chart-12", "json", $jsonEncodedData12);
+        	$columnChart12 = new FusionCharts("column2D", "myFirstChart12" , 600, 300, "chart-4", "json", $jsonEncodedData12);
 
         	// Render the chart
         	$columnChart12->render();
@@ -305,8 +305,8 @@ and open the template in the editor.
         $count13=array(0,0);
         $value13=array("Yes","No");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery13 = "SELECT q13 FROM facilities  where institute='$i'";
-        $query13 = "SELECT q13 from facilities where institute='$i'";
+     	$strQuery13 = "SELECT q5 FROM facilities where inst='$i' ";
+        $query13 = "SELECT q5 from facilities where inst='$i'";
         
      	// Execute the query, or else return the error message.
      	$result13 = $dbhandle->query($strQuery13) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -314,10 +314,10 @@ and open the template in the editor.
         if($result13i->num_rows>0)
         {
             while($row13=$result13->fetch_assoc()){
-                if($row13["q13"]=="Yes"){
+                if($row13["q5"]=="Yes"){
                     $count13[0]+=1;
                 }
-                else if($row13["q13"]=="No"){
+                else if($row13["q5"]=="No"){
                     $count13[1]+=1;
                 }
             }
@@ -344,7 +344,7 @@ and open the template in the editor.
            	);
         	}
         	$jsonEncodedData13 = json_encode($arrData13);
-        	$columnChart13 = new FusionCharts("column2D", "myFirstChart13" , 600, 300, "chart-13", "json", $jsonEncodedData13);
+        	$columnChart13 = new FusionCharts("column2D", "myFirstChart13" , 600, 300, "chart-5", "json", $jsonEncodedData13);
         	// Render the chart
         	$columnChart13->render();
         	// Close the database connection
@@ -355,8 +355,8 @@ and open the template in the editor.
         $count14=array(0,0);
         $value14=array("Yes","No");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery14 = "SELECT q14 FROM facilities  where institute='$i'";
-        $query14 = "SELECT q14 from facilities where institute='$i'";
+     	$strQuery14 = "SELECT q6 FROM facilities  where inst='$i'";
+        $query14 = "SELECT q6 from facilities where inst='$i'";
         
      	// Execute the query, or else return the error message.
      	$result14 = $dbhandle->query($strQuery14) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -364,10 +364,10 @@ and open the template in the editor.
         if($result14i->num_rows>0)
         {
             while($row14=$result14i->fetch_assoc()){
-                if($row14["q14"]=="Yes"){
+                if($row14["q6"]=="Yes"){
                     $count14[0]+=1;
                 }
-                else if($row14["q14"]=="No"){
+                else if($row14["q6"]=="No"){
                     $count14[1]+=1;
                 }
             }
@@ -400,7 +400,7 @@ and open the template in the editor.
 
 	
 
-        	$columnChart14 = new FusionCharts("column2D", "myFirstChart14" , 600, 300, "chart-14", "json", $jsonEncodedData14);
+        	$columnChart14 = new FusionCharts("column2D", "myFirstChart14" , 600, 300, "chart-6", "json", $jsonEncodedData14);
 
         	// Render the chart
         	$columnChart14->render();
@@ -413,8 +413,8 @@ and open the template in the editor.
         $count15=array(0,0);
         $value15=array("Yes","No");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery15 = "SELECT q15 FROM facilities  where institute='$i'";
-        $query15 = "SELECT q15 from facilities where institute='$i'";
+     	$strQuery15 = "SELECT q7 FROM facilities where inst='$i' ";
+        $query15 = "SELECT q7 from facilities where inst='$i'";
         
      	// Execute the query, or else return the error message.
      	$result15 = $dbhandle->query($strQuery15) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -422,10 +422,10 @@ and open the template in the editor.
         if($result15i->num_rows>0)
         {
             while($row15=$result15i->fetch_assoc()){
-                if($row15["q15"]=="Yes"){
+                if($row15["q7"]=="Yes"){
                     $count15[0]+=1;
                 }
-                else if($row15["q15"]=="No"){
+                else if($row15["q7"]=="No"){
                     $count15[1]+=1;
                 }
             }
@@ -452,7 +452,7 @@ and open the template in the editor.
            	);
         	}
         	$jsonEncodedData15 = json_encode($arrData15);
-                $columnChart15 = new FusionCharts("column2D", "myFirstChart15" , 600, 300, "chart-15", "json", $jsonEncodedData15);
+                $columnChart15 = new FusionCharts("column2D", "myFirstChart15" , 600, 300, "chart-7", "json", $jsonEncodedData15);
         	// Render the chart
         	$columnChart15->render();
 
@@ -464,8 +464,8 @@ and open the template in the editor.
         $count16=array(0,0);
         $value16=array("Yes","No");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery16 = "SELECT q16 FROM facilities where institute='$i' ";
-        $query16 = "SELECT q16 from facilities where institute='$i'";
+     	$strQuery16 = "SELECT q8 FROM facilities where inst='$i' ";
+        $query16 = "SELECT q8 from facilities where inst='$i'";
         
      	// Execute the query, or else return the error message.
      	$result16 = $dbhandle->query($strQuery16) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -473,10 +473,10 @@ and open the template in the editor.
         if($result16i->num_rows>0)
         {
             while($row16=$result16i->fetch_assoc()){
-                if($row16["q16"]=="Yes"){
+                if($row16["q8"]=="Yes"){
                     $count16[0]+=1;
                 }
-                else if($row16["q16"]=="No"){
+                else if($row16["q8"]=="No"){
                     $count16[1]+=1;
                 }
             }
@@ -503,7 +503,7 @@ and open the template in the editor.
            	);
         	}
         	$jsonEncodedData16 = json_encode($arrData16);
-        	$columnChart16 = new FusionCharts("column2D", "myFirstChart16" , 600, 300, "chart-16", "json", $jsonEncodedData16);
+        	$columnChart16 = new FusionCharts("column2D", "myFirstChart16" , 600, 300, "chart-8", "json", $jsonEncodedData16);
         	// Render the chart
         	$columnChart16->render();
         	// Close the database connection
@@ -535,17 +535,16 @@ and open the template in the editor.
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 100px;  height :480px;">
             <div style="margin-top: 25px;">
-                <div style="margin-left: 130px" id="chart-9"><!-- Fusion Charts will render here--></div><br>
-                <div style="margin-left: 130px" id="chart-10"><!-- Fusion Charts will render here--></div><br>
-                <div style="margin-left: 130px" id="chart-11"><!-- Fusion Charts will render here--></div><br>
-                <div style="margin-left: 130px" id="chart-12"><!-- Fusion Charts will render here--></div><br>
-                <div style="margin-left: 130px" id="chart-13"><!-- Fusion Charts will render here--></div><br>
-                <div style="margin-left: 130px" id="chart-14"><!-- Fusion Charts will render here--></div><br>
-                <div style="margin-left: 130px" id="chart-15"><!-- Fusion Charts will render here--></div><br>
-                <div style="margin-left: 130px" id="chart-16"><!-- Fusion Charts will render here--></div><br>
+                <div style="margin-left: 130px" id="chart-1"><!-- Fusion Charts will render here--></div><br>
+                <div style="margin-left: 130px" id="chart-2"><!-- Fusion Charts will render here--></div><br>
+                <div style="margin-left: 130px" id="chart-3"><!-- Fusion Charts will render here--></div><br>
+                <div style="margin-left: 130px" id="chart-4"><!-- Fusion Charts will render here--></div><br>
+                <div style="margin-left: 130px" id="chart-5"><!-- Fusion Charts will render here--></div><br>
+                <div style="margin-left: 130px" id="chart-6"><!-- Fusion Charts will render here--></div><br>
+                <div style="margin-left: 130px" id="chart-7"><!-- Fusion Charts will render here--></div><br>
+                <div style="margin-left: 130px" id="chart-8"><!-- Fusion Charts will render here--></div><br>
                 <ul class="pager">
-                    <li class="previous"><a href="HoIGuidanceGraph.php">Previous</a></li>
-                    <li class="next"><a href="HoIWorkBalGraph.php">Next</a></li>
+                    <li class="next"><a href="HoICourseGraph.php">Next</a></li>
                 </ul>
         </div>
             </div>

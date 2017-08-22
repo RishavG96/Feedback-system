@@ -46,8 +46,8 @@ and open the template in the editor.
         $count33=array(0,0);
         $value33=array("PartTime","FullTime");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery33 = "SELECT q33 FROM course where institute='$i'";
-        $query33 = "SELECT q33 from course where institute='$i'";
+     	$strQuery33 = "SELECT q10 FROM course where inst='$i'";
+        $query33 = "SELECT q10 from course where inst='$i'";
         
      	// Execute the query, or else return the error message.
      	$result33 = $dbhandle->query($strQuery33) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -55,10 +55,10 @@ and open the template in the editor.
         if($result33i->num_rows>0)
         {
             while($row33=$result33->fetch_assoc()){
-                if($row33["q33"]=="PartTime"){
+                if($row33["q10"]=="PartTime"){
                     $count33[0]+=1;
                 }
-                else if($row33["q33"]=="FullTime"){
+                else if($row33["q10"]=="FullTime"){
                     $count33[1]+=1;
                 } 
             }
@@ -88,7 +88,7 @@ and open the template in the editor.
         	
 
         	$jsonEncodedData33 = json_encode($arrData33);
-        	$columnChart33 = new FusionCharts("column2D", "myFirstChart33" , 600, 300, "chart-33", "json", $jsonEncodedData33);
+        	$columnChart33 = new FusionCharts("column2D", "myFirstChart33" , 600, 300, "chart-1", "json", $jsonEncodedData33);
 
         	// Render the chart
         	$columnChart33->render();
@@ -101,8 +101,8 @@ and open the template in the editor.
         $count34=array(0,0,0,0);
         $value34=array("First 3 months Full Time","Within First 6 months","2-3 hours everyday","Within One year");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery34 = "SELECT q34 FROM course where institute='$i' ";
-        $query34 = "SELECT q34 from course where institute='$i'";
+     	$strQuery34 = "SELECT q11 FROM course  where inst='$i'";
+        $query34 = "SELECT q11 from course where inst='$i'";
         
      	// Execute the query, or else return the error message.
      	$result34 = $dbhandle->query($strQuery34) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -110,16 +110,16 @@ and open the template in the editor.
         if($result34i->num_rows>0)
         {
             while($row34=$result34->fetch_assoc()){
-                if($row34["q34"]=="First 3 months Full Time"){
+                if($row34["q11"]=="First 3 months Full Time"){
                     $count34[0]+=1;
                 }
-                else if($row34["q34"]=="Within First 6 months"){
+                else if($row34["q11"]=="Within First 6 months"){
                     $count34[1]+=1;
                 }
-                else if($row34["q34"]=="2-3 hours everyday"){
+                else if($row34["q11"]=="2-3 hours everyday"){
                     $count34[2]+=1;
                 }
-                else if($row34["q34"]=="Within One year"){
+                else if($row34["q11"]=="Within One year"){
                     $count34[3]+=1;
                 }
             }
@@ -152,7 +152,7 @@ and open the template in the editor.
 
 	/*Create an object for the column chart using the FusionCharts PHP class constructor. Syntax for the constructor is ` FusionCharts("type of chart", "unique chart id", width of the chart, height of the chart, "div id to render the chart", "data format", "data source")`. Because we are using JSON data to render the chart, the data format will be `json`. The variable `$jsonEncodeData` holds all the JSON data for the chart, and will be passed as the value for the data source parameter of the constructor.*/
 
-        	$columnChart34= new FusionCharts("column2D", "myFirstChart34" , 600, 300, "chart-34", "json", $jsonEncodedData34);
+        	$columnChart34= new FusionCharts("column2D", "myFirstChart34" , 600, 300, "chart-2", "json", $jsonEncodedData34);
 
         	// Render the chart
         	$columnChart34->render();
@@ -178,18 +178,19 @@ and open the template in the editor.
    <div class="container" style="position: relative;">
         <div id="mySidenav" class="sidenav" style="width:25%;">
             <a class="btn" href="HoIFacilitiesGraph.php" style="background-color: #C21E17; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
-          <a class="btn active" href="#" style="background-color: #FF8A65; height: 80px; padding-top: 30px;">COURSE WORK</a>
-          <a class="btn " href="HoIProgressGraph.php" style="background-color: #A11913; height: 80px; padding-top: 30px;" >PROGRESS</a>
-          <a href="HoIGuidanceGraph.php" class="btn " style="background-color: #861510; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
-          <a class="btn " href="HoIWorkBalGraph.php" style="background-color: #670F0B ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
-          <a class="btn " href="HoIChallengesGraph.php" style="background-color: #4A0707; height: 80px; padding-top: 30px;">CHALLENGES</a>
+            <a class="btn active" href="HoICourseGraph.php" style="background-color: #FF8A65; height: 80px; padding-top: 30px;">COURSE WORK</a>
+            <a class="btn " href="HoIProgressGraph.php" style="background-color: #A11913; height: 80px; padding-top: 30px;" >PROGRESS</a>
+            <a href="HoIGuidanceGraph.php" class="btn " style="background-color: #861510; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
+            <a class="btn " href="HoIWorkBalGraph.php" style="background-color: #670F0B ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
+            <a class="btn " href="HoIChallengesGraph.php" style="background-color: #4A0707; height: 80px; padding-top: 30px;">CHALLENGES</a>
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 100px; ;  height :480px;">
             <div style="margin-top: 25px;">
-                <div style="margin-left: 130px" id="chart-33"><!-- Fusion Charts will render here--></div><br>
-                <div style="margin-left: 130px" id="chart-34"><!-- Fusion Charts will render here--></div><br>
+                <div style="margin-left: 130px" id="chart-1"><!-- Fusion Charts will render here--></div><br>
+                <div style="margin-left: 130px" id="chart-2"><!-- Fusion Charts will render here--></div><br>
                 <ul class="pager">
-                    <li class="previous"><a href="HoIChallengesGraph.php">Previous</a></li>
+                    <li class="previous"><a href="HoIFacilitiesGraph.php">Previous</a></li>
+                    <li class="next"><a href="HoIProgressGraph.php">Next</a></li>
                 </ul>
         </div>
             </div>

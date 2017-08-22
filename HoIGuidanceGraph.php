@@ -1,11 +1,10 @@
 <?php 
 session_start();
-$i=$_SESSION["institute"];
 if(!isset($_SESSION["login"]))
 {
     header("Location: Logout.php");
 }
-$_SESSION["hoilogin"]=1;
+$i=$_SESSION["institute"];
 include("./php-wrapper/fusioncharts.php");
 $hostdb = "localhost";  // MySQl host
    $userdb = "root";  // MySQL username
@@ -47,8 +46,8 @@ and open the template in the editor.
         $count=array(0,0,0,0,0);
         $value=array("Always Available","Available most of the time","Sometimes available","Rarely Available","Not available at all");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery = "SELECT q1 FROM guidance where institute='$i'";
-        $query = "SELECT q1 from guidance where institute='$i'";
+     	$strQuery = "SELECT q1 FROM guidance  where inst='$i'";
+        $query = "SELECT q1 from guidance where inst='$i'";
         
      	// Execute the query, or else return the error message.
      	$result = $dbhandle->query($strQuery) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -111,8 +110,8 @@ and open the template in the editor.
         $count2=array(0,0,0,0,0);
         $value2=array("Extremely useful","Very useful","Moderately useful","Rarely useful","Not useful at all");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery2 = "SELECT q2 FROM guidance where institute='$i' ";
-        $query2 = "SELECT q2 from guidance where institute='$i'";
+     	$strQuery2 = "SELECT q2 FROM guidance where inst='$i' ";
+        $query2 = "SELECT q2 from guidance where inst='$i'";
         
      	// Execute the query, or else return the error message.
      	$result2 = $dbhandle->query($strQuery2) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -178,8 +177,8 @@ and open the template in the editor.
         $count3=array(0,0,0,0,0);
         $value3=array("Always on time","Mostly on time","Sometimes on time","Rarely on time","Not at all");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery3 = "SELECT q3 FROM guidance where institute='$i' ";
-        $query3 = "SELECT q3 from guidance where institute='$i'";
+     	$strQuery3 = "SELECT q3 FROM guidance where inst='$i' ";
+        $query3 = "SELECT q3 from guidance where inst='$i'";
         
      	// Execute the query, or else return the error message.
      	$result3 = $dbhandle->query($strQuery3) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -238,8 +237,8 @@ and open the template in the editor.
         $count4=array(0,0,0,0,0);
         $value4=array("Greatly encouraged","Encouraged","Moderately encouraged","Rarely encouraged","Not at all");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery4 = "SELECT q4 FROM guidance  where institute='$i'";
-        $query4 = "SELECT q4 from guidance where institute='$i'";
+     	$strQuery4 = "SELECT q4 FROM guidance where inst='$i' ";
+        $query4 = "SELECT q4 from guidance where inst='$i'";
         
      	// Execute the query, or else return the error message.
      	$result4 = $dbhandle->query($strQuery4) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -306,8 +305,8 @@ and open the template in the editor.
         $count5=array(0,0,0,0);
         $value5=array("Weekly","Once a month","Twice a month","Once a semester");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery5 = "SELECT q5 FROM guidance  where institute='$i'";
-        $query5 = "SELECT q5 from guidance where institute='$i'";
+     	$strQuery5 = "SELECT q5 FROM guidance where inst='$i' ";
+        $query5 = "SELECT q5 from guidance where inst='$i'";
         
      	// Execute the query, or else return the error message.
      	$result5 = $dbhandle->query($strQuery5) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -362,8 +361,8 @@ and open the template in the editor.
         $count6=array(0,0);
         $value6=array("Yes","No");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery6 = "SELECT q6 FROM guidance where institute='$i' ";
-        $query6 = "SELECT q6 from guidance where institute='$i'";
+     	$strQuery6 = "SELECT q6 FROM guidance where inst='$i' ";
+        $query6 = "SELECT q6 from guidance where inst='$i'";
         
      	// Execute the query, or else return the error message.
      	$result6 = $dbhandle->query($strQuery6) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -420,8 +419,8 @@ and open the template in the editor.
         $count7=array(0,0);
         $value7=array("Yes","No");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery7 = "SELECT q7 FROM guidance  where institute='$i'";
-        $query7 = "SELECT q7 from guidance where institute='$i'";
+     	$strQuery7 = "SELECT q7 FROM guidance  where inst='$i'";
+        $query7 = "SELECT q7 from guidance where inst='$i'";
         
      	// Execute the query, or else return the error message.
      	$result7 = $dbhandle->query($strQuery7) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -442,7 +441,7 @@ and open the template in the editor.
         	// The `$arrData` array holds the chart attributes and data
         	$arrData7 = array(
         	    "chart" => array(
-                  "caption" => "Have you noticed any improvement in guidance from last feedback submitted",
+                  "caption" => "Would you recommend your guide to other candidates",
                   "showValues" => "0",
                   "theme" => "zune"
               	)
@@ -468,11 +467,68 @@ and open the template in the editor.
      	}
         ?>
     <?php
+    
+        $count9=array(0,0,0,0);
+        $value9=array("Extremely Supportive","Moderately Supportive","Slightly Supportive","Not at all supportive");
+        // Form the SQL query that returns the top 10 most populous countries
+     	$strQuery9 = "SELECT q8 FROM guidance where inst='$i' ";
+        $query9 = "SELECT q8 from guidance where inst='$i'";
+        
+     	// Execute the query, or else return the error message.
+     	$result9 = $dbhandle->query($strQuery9) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
+        $result9i = $dbhandle->query($query9) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
+        if($result9i->num_rows>0)
+        {
+            while($row9=$result9->fetch_assoc()){
+                if($row9["q8"]=="Extremely Supportive"){
+                    $count9[0]+=1;
+                }
+                else if($row9["q8"]=="Moderately Supportive"){
+                    $count9[1]+=1;
+                }
+                else if($row9["q8"]=="Slightly Supportive"){
+                    $count9[2]+=1;
+                }
+                else if($row9["q8"]=="Not at all supportive"){
+                    $count9[3]+=1;
+                }
+            }
+        }
+     	// If the query returns a valid response, prepare the JSON string
+     	if ($result9) {
+        	// The `$arrData` array holds the chart attributes and data
+        	$arrData9 = array(
+        	    "chart" => array(
+                  "caption" => "To what extent do you receive support from the Head of the Department",
+                  "showValues" => "0",
+                  "theme" => "zune"
+              	)
+           	);
+
+        	$arrData9["data"] = array();
+
+	// Push the data into the array
+        	for($x5 = 0; $x5 < 4; $x5++) {
+           	array_push($arrData9["data"], array(
+              	"label" => $value9[$x5],
+              	"value" => $count9[$x5]
+              	)
+           	);
+        	}
+        	$jsonEncodedData9 = json_encode($arrData9);
+        	$columnChart9 = new FusionCharts("column2D", "myFirstChart9" , 600, 300, "chart-9", "json", $jsonEncodedData9);
+        	// Render the chart
+        	$columnChart9->render();
+        	// Close the database connection
+        	//$dbhandle->close();
+     	}
+        ?>
+    <?php
         $count8=array(0,0);
         $value8=array("Yes","No");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery8 = "SELECT q8 FROM guidance  where institute='$i'";
-        $query8 = "SELECT q8 from guidance where institute='$i'";
+     	$strQuery8 = "SELECT q9 FROM guidance where inst='$i' ";
+        $query8 = "SELECT q9 from guidance where inst='$i'";
         
      	// Execute the query, or else return the error message.
      	$result8 = $dbhandle->query($strQuery8) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
@@ -480,10 +536,10 @@ and open the template in the editor.
         if($result8i->num_rows>0)
         {
             while($row8=$result8i->fetch_assoc()){
-                if($row8["q8"]=="Yes"){
+                if($row8["q9"]=="Yes"){
                     $count8[0]+=1;
                 }
-                else if($row8["q8"]=="No"){
+                else if($row8["q9"]=="No"){
                     $count8[1]+=1;
                 }
             }
@@ -493,7 +549,7 @@ and open the template in the editor.
         	// The `$arrData` array holds the chart attributes and data
         	$arrData8 = array(
         	    "chart" => array(
-                  "caption" => "Would you recommend your guide to other candidates?(For final year only)",
+                  "caption" => "Have you completed DAC in the last 6 months",
                   "showValues" => "0",
                   "theme" => "zune"
               	)
@@ -513,6 +569,115 @@ and open the template in the editor.
         	$columnChart8 = new FusionCharts("column2D", "myFirstChart8" , 600, 300, "chart-8", "json", $jsonEncodedData8);
         	// Render the chart
         	$columnChart8->render();
+        	// Close the database connection
+        	//$dbhandle->close();
+     	}
+        ?>
+     <?php
+        $count10=array(0,0);
+        $value10=array("Yes","No");
+        // Form the SQL query that returns the top 10 most populous countries
+     	$strQuery10 = "SELECT q10 FROM guidance where inst='$i' ";
+        $query10 = "SELECT q10 from guidance where inst='$i'";
+        
+     	// Execute the query, or else return the error message.
+     	$result10 = $dbhandle->query($strQuery10) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
+        $result10i = $dbhandle->query($query10) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
+        if($result10i->num_rows>0)
+        {
+            while($row10=$result10->fetch_assoc()){
+                if($row10["q10"]=="Yes"){
+                    $count10[0]+=1;
+                }
+                else if($row10["q10"]=="No"){
+                    $count10[1]+=1;
+                }
+            }
+        }
+     	// If the query returns a valid response, prepare the JSON string
+     	if ($result10) {
+        	// The `$arrData` array holds the chart attributes and data
+        	$arrData10 = array(
+        	    "chart" => array(
+                  "caption" => "Did you receive support from your guide during DAC",
+                  "showValues" => "0",
+                  "theme" => "zune"
+              	)
+           	);
+
+        	$arrData10["data"] = array();
+
+	// Push the data into the array
+        	for($x6 = 0; $x6 < 2; $x6++) {
+           	array_push($arrData10["data"], array(
+              	"label" => $value10[$x6],
+              	"value" => $count10[$x6]
+              	)
+           	);
+        	}
+
+        	
+
+        	$jsonEncodedData10 = json_encode($arrData10);
+
+	
+
+        	$columnChart10 = new FusionCharts("column2D", "myFirstChart10" , 600, 300, "chart-10", "json", $jsonEncodedData10);
+
+        	// Render the chart
+        	$columnChart10->render();
+
+        	// Close the database connection
+        	//$dbhandle->close();
+     	}
+        ?>
+    <?php
+        $count11=array(0,0);
+        $value11=array("Yes","No");
+        // Form the SQL query that returns the top 10 most populous countries
+     	$strQuery11 = "SELECT q11 FROM guidance where inst='$i' ";
+        $query11 = "SELECT q11 from guidance where inst='$i'";
+        
+     	// Execute the query, or else return the error message.
+     	$result11 = $dbhandle->query($strQuery11) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
+        $result11i = $dbhandle->query($query11) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");
+        if($result11i->num_rows>0)
+        {
+            while($row11=$result11->fetch_assoc()){
+                if($row11["q11"]=="Yes"){
+                    $count11[0]+=1;
+                }
+                else if($row11["q11"]=="No"){
+                    $count11[1]+=1;
+                }
+            }
+        }
+     	// If the query returns a valid response, prepare the JSON string
+     	if ($result11) {
+        	// The `$arrData` array holds the chart attributes and data
+        	$arrData11 = array(
+        	    "chart" => array(
+                  "caption" => "Did you receive feedback from DAC members",
+                  "showValues" => "0",
+                  "theme" => "zune"
+              	)
+           	);
+
+        	$arrData11["data"] = array();
+
+	// Push the data into the array
+        	for($x7 = 0; $x7 < 2; $x7++) {
+           	array_push($arrData11["data"], array(
+              	"label" => $value11[$x7],
+              	"value" => $count11[$x7]
+              	)
+           	);
+        	}
+        	$jsonEncodedData11 = json_encode($arrData11);
+                $columnChart11 = new FusionCharts("column2D", "myFirstChart11" , 600, 300, "chart-11", "json", $jsonEncodedData11);
+        	// Render the chart
+        	$columnChart11->render();
+
         	// Close the database connection
         	$dbhandle->close();
      	}
@@ -535,8 +700,8 @@ and open the template in the editor.
         <div id="mySidenav" class="sidenav" style="width:25%;">
             <a class="btn" href="HoIFacilitiesGraph.php" style="background-color: #C21E17; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
             <a class="btn " href="HoICourseGraph.php" style="background-color: #A11913; height: 80px; padding-top: 30px;">COURSE WORK</a>
-            <a class="btn " href="" style="background-color: #861510; height: 80px; padding-top: 30px;" >PROGRESS</a>
-            <a class="btn active"  href="#"style="background-color: #FF8A65; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
+            <a class="btn " href="HoIProgressGraph.php" style="background-color: #861510; height: 80px; padding-top: 30px;" >PROGRESS</a>
+            <a class="btn active"  href="HoIGuidanceGraph.php"style="background-color: #FF8A65; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
             <a class="btn " href="HoIWorkBalGraph.php" style="background-color: #670F0B ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
             <a class="btn " href="HoIChallengesGraph.php" style="background-color: #4A0707; height: 80px; padding-top: 30px;">CHALLENGES</a>
         </div>
@@ -549,9 +714,13 @@ and open the template in the editor.
                 <div style="margin-left: 130px" id="chart-5"><!-- Fusion Charts will render here--></div><br>
                 <div style="margin-left: 130px" id="chart-6"><!-- Fusion Charts will render here--></div><br>
                 <div style="margin-left: 130px" id="chart-7"><!-- Fusion Charts will render here--></div><br>
+                <div style="margin-left: 130px" id="chart-9"><!-- Fusion Charts will render here--></div><br>
                 <div style="margin-left: 130px" id="chart-8"><!-- Fusion Charts will render here--></div><br>
+                <div style="margin-left: 130px" id="chart-10"><!-- Fusion Charts will render here--></div><br>
+                <div style="margin-left: 130px" id="chart-11"><!-- Fusion Charts will render here--></div><br>
                 <ul class="pager">
-                    <li class="next"><a href="HoIFacilitiesGraph.php">Next</a></li>
+                    <li class="previous"><a href="HoIProgressGraph.php">Previous</a></li>
+                    <li class="next"><a href="HoIWorkBalGraph.php">Next</a></li>
                 </ul>
         </div>
             </div>
