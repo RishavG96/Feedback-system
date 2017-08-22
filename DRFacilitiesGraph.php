@@ -1,10 +1,10 @@
 <?php
 session_start();
-if(!isset($_SESSION["login"]))
+/*if(!isset($_SESSION["login"]))
 {
     header("Location: Logout.php");
-}
-$i=$_SESSION["institute"];
+}*/
+//$i=$_SESSION["institute"];
 include("./php-wrapper/fusioncharts.php");
 $hostdb = "localhost";  // MySQl host
    $userdb = "root";  // MySQL username
