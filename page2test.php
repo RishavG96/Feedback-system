@@ -70,7 +70,7 @@ and open the template in the editor.
     </div>
 </nav>
     <div class="container">
-        <div id="mySidenav" class="sidenav" style="width:25%; ">
+        <div id="mySidenav" class="sidenav" style="width:25%; margin-top: -10px">
             <a class="btn active" href="page2test.php" style="background-color: #FF8A65; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
             <a class="btn " disabled href="#" style="background-color: #C21E17; height: 80px; padding-top: 30px;">COURSE WORK</a>
             <a class="btn " disabled href="#" style="background-color: #A11913; height: 80px; padding-top: 30px;" >PROGRESS</a>
@@ -78,9 +78,9 @@ and open the template in the editor.
             <a class="btn " disabled href="#" style="background-color: #670F0B ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
             <a class="btn " disabled href="#" style="background-color: #4A0707; height: 80px; padding-top: 30px;">CHALLENGES</a>
         </div>
-        <div class="scrollable des" style="margin-left: 25%; margin-top: 100px;  height :480px;">
+        <div class="scrollable des" style="margin-left: 25%; margin-top: 90px;  height :480px;">
             <div style="margin-top: 25px;">
-                <marquee style="color:#111111; font-family: Courier New;background:#FF8A65; margin-left: 1px">Welcome to Manipal University Feedback system portal! Your identity will not be disclosed under any circumstances.</marquee><br><br>
+                <marquee style="color:#111111; font-family: Courier New;background:#FF8A65; margin-left: 1px">Welcome to Manipal University Feedback system portal!</marquee><br><br>
                 <?php
                 $var1=1;
                 if (isset($_SESSION['varname1']))
@@ -169,10 +169,11 @@ and open the template in the editor.
                         <td><input type="radio" name="q8" value="No"></td>
                     </tr>
                 </tbody>
-            </table><br><br>
+            </table><br>
             
    
-            <textarea id="Showthis" style="height: 100px;color: black;display:none; width: 500px;padding-top: 0px; line-height: none;background-color: white;" placeholder="Details of the research grant submission from an external agency"></textarea><br><br>
+            <textarea id="Showthis" style="height: 100px;color: black;display:none; width: 500px;padding-top: 0px; line-height: none;background-color: white;"
+                      name="q9" placeholder="Details of the research grant submission from an external agency"></textarea><br><br>
             
             <button class="btn btn-primary bottom-right " style="margin-left: 45%">Submit</button>
             </form>

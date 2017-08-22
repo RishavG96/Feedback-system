@@ -44,7 +44,7 @@ and open the template in the editor.
     </div>
 </nav>
    <div class="container" style="position: relative;">
-        <div id="mySidenav" class="sidenav" style="width:25%;">
+        <div id="mySidenav" class="sidenav" style="width:25%; margin-top: -10px">
                             <a class="btn" disabled href="#" style="background-color: #C21E17; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
             <a class="btn " disabled href="#" style="background-color: #A11913; height: 80px; padding-top: 30px;">COURSE WORK</a>
             <a class="btn " disabled  href="#" style="background-color: #861510; height: 80px; padding-top: 30px;" >PROGRESS</a>
@@ -52,14 +52,14 @@ and open the template in the editor.
             <a class="btn "disabled href="#" style="background-color: #4A0707 ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
             <a class="btn active"  href="challenges.php" style="background-color: #FF8A65; height: 80px; padding-top: 30px;">CHALLENGES</a>
         </div>
-        <div class="scrollable des" style="margin-left: 25%; margin-top: 100px; ;  height :480px;">
+        <div class="scrollable des" style="margin-left: 25%; margin-top: 90px; ;  height :480px;">
         <div style="margin-top : 3%;">
-            <marquee style="color:#111111; font-family: Courier New;background:#FF8A65; margin-left: 1px">Welcome to Manipal University Feedback system portal! Your identity will not be disclosed under any circumstances.</marquee><br><br>
+            <marquee style="color:#111111; font-family: Courier New;background:#FF8A65; margin-left: 1px">Welcome to Manipal University Feedback system portal!</marquee><br><br>
             <?php
                 $var1=1;
-                if (isset($_SESSION['varname4']))
+                if (isset($_SESSION['varname6']))
                 {
-                    $var1 = $_SESSION['varname4'];
+                    $var1 = $_SESSION['varname6'];
                 }
                 if($var1 == 0)
                 {?>
@@ -71,10 +71,10 @@ and open the template in the editor.
                 ?>
             <form class="form-group formwidth" method="post" action="dataUpdateChallenge.php">
                 <h2>What is the scope for your work?</h2>
-                <textarea style="margin-left: 0.1%;width:500px; height: 100px; padding: 0; color: black"></textarea><br>
+                <textarea style="margin-left: 0.1%;width:500px; height: 100px; padding: 0; color: black" name="q1"></textarea><br>
                 
                 <h2>Any other Comments</h2>
-                <textarea style="margin-left: 0.1%;width:500px; height: 100px; padding: 0; color: black"></textarea><br><br>
+                <textarea style="margin-left: 0.1%;width:500px; height: 100px; padding: 0; color: black" name="q2"></textarea><br><br>
                 
                 <button class="btn btn-primary" style="margin-left: 45%">Submit</button>
             </form>

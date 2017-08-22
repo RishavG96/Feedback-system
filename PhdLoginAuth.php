@@ -32,8 +32,8 @@ and open the template in the editor.
                 }
                 else{
                 $_SESSION["regno"]=$id;
-                $_SESSION["dept"]=$row["dept"];
-                $_SESSION["institute"]=$row["institute"];
+                $_SESSION["name"]=$row["name"];
+                $_SESSION["institute"]=$row["inst"];
                 $_SESSION["login"]=1;
                 header("Location: page2test.php");
                 }

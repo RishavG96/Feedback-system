@@ -56,7 +56,7 @@ if(isset($_SESSION["course"]))
     </div>
 </nav>
    <div class="container" style="position: relative;">
-        <div id="mySidenav" class="sidenav" style="width:25%; ">
+        <div id="mySidenav" class="sidenav" style="width:25%; margin-top: -10px ">
     <a class="btn" disabled href="#" style="background-color: #C21E17; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
             <a class="btn " disabled href="#" style="background-color: #A11913; height: 80px; padding-top: 30px;">COURSE WORK</a>
             <a class="btn active"  href="Progress.php" style="background-color: #FF8A65; height: 80px; padding-top: 30px;" >PROGRESS</a>
@@ -64,9 +64,9 @@ if(isset($_SESSION["course"]))
             <a class="btn " disabled href="#" style="background-color: #670F0B ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
             <a class="btn " disabled href="#" style="background-color: #4A0707; height: 80px; padding-top: 30px;">CHALLENGES</a>
         </div>
-        <div class="scrollable des" style="margin-left: 25%; margin-top: 100px; ;  height :480px;">
+        <div class="scrollable des" style="margin-left: 25%; margin-top: 90px; ;  height :480px;">
             <div style="margin-top: 25px;">
-                <marquee style="color:#111111; font-family: Courier New;background:#FF8A65; margin-left: 1px">Welcome to Manipal University Feedback system portal! Your identity will not be disclosed under any circumstances.</marquee><br><br>
+                <marquee style="color:#111111; font-family: Courier New;background:#FF8A65; margin-left: 1px">Welcome to Manipal University Feedback system portal!</marquee><br><br>
                 <?php
                 $var1=1;
                 if (isset($_SESSION['varname3']))
@@ -88,7 +88,7 @@ if(isset($_SESSION["course"]))
                 <tbody>
                     <tr>
                         <td>Have you published any conference paper/journal paper in last 6 months?</td>
-                        <td><select style="background-color:#1d262b;width : 200px;" name="q34" onchange="showfunct()" id="question">
+                        <td><select style="background-color:#1d262b;width : 200px;" name="q1" onchange="showfunct()" id="question">
                                 <option value="--Choose an option--">--Choose an option--</option>
                                 <option value="Yes">Yes</option>
                                 <option value="No">No</option>
@@ -98,7 +98,7 @@ if(isset($_SESSION["course"]))
                     <tr>
                         <td>How do you rate the PhD program overall?</td>
                         <td>
-                        <select style="background-color:#1d262b;width : 200px;" name="q34">
+                        <select style="background-color:#1d262b;width : 200px;" name="q2">
                                 <option>--Choose an option--</option>
                                 <option value="Excellent">Excellent</option>
                                 <option value="Good">Good</option>
@@ -110,7 +110,7 @@ if(isset($_SESSION["course"]))
                 </tbody>
             </table><br>
             
-            <textarea style="height: 100px; width: 500px; color: black; display: none;" id="show" placeholder="Details of Conference/Journal Paper" ></textarea><br><br>
+            <textarea style="height: 100px; width: 500px; color: black; display: none;" name="q3" id="show" placeholder="Details of Conference/Journal Paper" ></textarea><br><br>
             <button class="btn btn-primary bottom-right " style="margin-left: 45%">Submit</button>
             </form>
         </div>

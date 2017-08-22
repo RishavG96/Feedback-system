@@ -52,7 +52,7 @@ and open the template in the editor.
     </div>
 </nav>
         <div class="container">
-        <div id="mySidenav" class="sidenav" style="width:25%;">
+        <div id="mySidenav" class="sidenav" style="width:25%; margin-top: -10px">
                             <a class="btn" disabled href="#" style="background-color: #C21E17; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
             <a class="btn " disabled href="#" style="background-color: #A11913; height: 80px; padding-top: 30px;">COURSE WORK</a>
             <a class="btn " disabled  href="#" style="background-color: #861510; height: 80px; padding-top: 30px;" >PROGRESS</a>
@@ -60,14 +60,14 @@ and open the template in the editor.
             <a class="btn active" href="WALB.php" style="background-color: #FF8A65 ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
             <a class="btn " disabled href="#" style="background-color: #4A0707; height: 80px; padding-top: 30px;">CHALLENGES</a>
         </div>
-        <div class="scrollable des" style="margin-left: 25%; margin-top: 100px;  height :480px;">
+        <div class="scrollable des" style="margin-left: 25%; margin-top: 90px;  height :480px;">
         <div style="margin-top : 2%;">
-            <marquee style="color:#111111; font-family: Courier New;background:#FF8A65; margin-left: 1px">Welcome to Manipal University Feedback system portal! Your identity will not be disclosed under any circumstances.</marquee><br><br>
+            <marquee style="color:#111111; font-family: Courier New;background:#FF8A65; margin-left: 1px">Welcome to Manipal University Feedback system portal!</marquee><br><br>
             <?php
                 $var1=1;
-                if (isset($_SESSION['varname2']))
+                if (isset($_SESSION['varname5']))
                 {
-                    $var1 = $_SESSION['varname2'];
+                    $var1 = $_SESSION['varname5'];
                 }
                 if($var1 == 0)
                 {?>
@@ -103,11 +103,11 @@ and open the template in the editor.
                     <option value="61-70 hours" >61-70 hours</option>
                     <option value="71-80 hours" >71-80 hours</option>
                     <option value="More than 80 hours" >More than 80 hours</option>
-                </select></td>
+                            </select></td>
                         </tr>
                         <tr>
                             <td>Are you able to balance your personal life and research work?</td>
-                            <td><select style="background-color:#1d262b;width : 200px;" name="q2">
+                            <td><select style="background-color:#1d262b;width : 200px;" name="q3">
                     <option>--Choose an option--</option>
                     <option value="Yes">Yes</option>
                     <option value="No" >No</option>
@@ -117,13 +117,13 @@ and open the template in the editor.
                 </table>
                 
                 <h3>Which of the following would you say is the most difficult for PhD's in your discipline? </h3><br>
-                <input type="checkbox" name="q1" value="Learning what career possibilities exist">Learning what career possibilities exist<br>
-                <input type="checkbox" name="q2" value="Finding research careers within academia">Finding research careers within academia<br>
-                <input type="checkbox" name="q3" value="Finding research careers within industry">Finding research careers within industry<br>
-                <input type="checkbox" name="q4" value="Finding research careers within government">Finding research careers within government<br>
-                <input type="checkbox" name="q5" value="Finding research careers with charity/non-profit organisations">Finding research careers with charity/non-profit organisations<br>
-                <input type="checkbox" name="q6" value="Finding non-research careers that use your skills">Finding non-research careers that use your skills<br>
-                <input type="checkbox" name="q7" value="Others">Others<br>
+                <input type="checkbox" name="q4" value="Learning what career possibilities exist">Learning what career possibilities exist<br>
+                <input type="checkbox" name="q5" value="Finding research careers within academia">Finding research careers within academia<br>
+                <input type="checkbox" name="q6" value="Finding research careers within industry">Finding research careers within industry<br>
+                <input type="checkbox" name="q7" value="Finding research careers within government">Finding research careers within government<br>
+                <input type="checkbox" name="q8" value="Finding research careers with charity/non-profit organisations">Finding research careers with charity/non-profit organisations<br>
+                <input type="checkbox" name="q9" value="Finding non-research careers that use your skills">Finding non-research careers that use your skills<br>
+                <input type="checkbox" name="q10" value="Others">Others<br>
                 
                 <br>    
                 <button class="btn btn-primary" style="margin-left: 45%">Submit</button> 

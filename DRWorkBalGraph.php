@@ -40,8 +40,8 @@ and open the template in the editor.
         $count17=array(0,0,0,0);
         $value17=array("Excellent","Good","Satisfactory","Poor");
         // Form the SQL query that returns the top 10 most populous countries
-     	$strQuery17 = "SELECT q17 FROM  workbal";
-        $query17 = "SELECT q17 from workbal";
+     	$strQuery17 = "SELECT q1 FROM  workbal";
+        $query17 = "SELECT q1 from workbal";
         
      	// Execute the query, or else return the error message.
      	$result17 = $dbhandle->query($strQuery17) or exit("Error code ({$dbhandle->errno}): {$dbhandle->error}");

@@ -50,7 +50,7 @@
   <h2 style="size:large;color:white;">Deputy Registrar (DR)</h2>
   <br>
   <div class="accept">
-      <form action="DRGuidanceGraph.php" method="post">
+      <form action="DRFacilitiesGraph.php" method="post">
     <input type="text" placeholder="Username" name="ID" required>
     <br>
     <br>

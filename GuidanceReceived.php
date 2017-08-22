@@ -72,7 +72,7 @@ and open the template in the editor.
     </div>
 </nav>
    <div class="container" style="position: relative;">
-        <div id="mySidenav" class="sidenav" style="width:25%;">
+        <div id="mySidenav" class="sidenav" style="width:25%; margin-top: -10px">
                 <a class="btn" disabled href="#" style="background-color: #C21E17; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
             <a class="btn " disabled href="#" style="background-color: #A11913; height: 80px; padding-top: 30px;">COURSE WORK</a>
             <a class="btn " disabled  href="" style="background-color: #861510; height: 80px; padding-top: 30px;" >PROGRESS</a>
@@ -80,14 +80,14 @@ and open the template in the editor.
             <a class="btn " disabled href="#" style="background-color: #670F0B ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
             <a class="btn " disabled href="#" style="background-color: #4A0707; height: 80px; padding-top: 30px;">CHALLENGES</a>
         </div>
-        <div class="scrollable des" style="margin-left: 25%; margin-top: 100px; ;  height :480px;">
+        <div class="scrollable des" style="margin-left: 25%; margin-top: 90px; ;  height :480px;">
             <div style="margin-top: 25px;">
-                <marquee style="color:#111111; font-family: Courier New;background:#FF8A65; margin-left: 1px">Welcome to Manipal University Feedback system portal! Your identity will not be disclosed under any circumstances.</marquee><br><br>
+                <marquee style="color:#111111; font-family: Courier New;background:#FF8A65; margin-left: 1px">Welcome to Manipal University Feedback system portal!</marquee><br><br>
                 <?php
                 $var1=1;
-                if (isset($_SESSION['varname']))
+                if (isset($_SESSION['varname4']))
                 {
-                    $var1 = $_SESSION['varname'];
+                    $var1 = $_SESSION['varname4'];
                 }
                 if($var1 == 0)
                 {?>
@@ -170,8 +170,8 @@ and open the template in the editor.
                 </select></td>
             </tr>
             <tr>
-                                            <td>To what extent do you receive support from the Head of the Department?</td>
-                            <td><select style="background-color:#1d262b;width : 200px;" name="q3">
+                    <td>To what extent do you receive support from the Head of the Department?</td>
+                    <td><select style="background-color:#1d262b;width : 200px;" name="support">
                     <option>--Choose an option--</option>
                     <option value="Extremely Supportive" >Extremely Supportive</option>
                     <option value="Moderately Supportive" >Moderately Supportive</option>
@@ -181,23 +181,23 @@ and open the template in the editor.
             </tr>
                                 <tr>
                         <td>Have you completed DAC in the last 6 months?</td>
-                        <td><select style="background-color:#1d262b;width : 200px;" onchange="showfunc()"name="q34" id="quest">
+                        <td><select style="background-color:#1d262b;width : 200px;" onchange="showfunc()"name="DAC" id="quest">
                                 <option value="--Choose an option--">--Choose an option--</option>
                                 <option value="Yes">Yes</option>
                                 <option value="No">No</option></select></td>
                     </tr>
                     <tr id="Show1" style="display: none;">
                         <td>Did you receive support from your guide during DAC? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                <td><select style="background-color:#1d262b;width : 200px;">
-                                        <option value="--Choose an option">--Choose an option--</option>
+                                <td><select style="background-color:#1d262b;width : 200px;" name="DACi">
+                                        <option value="--Choose an option--">--Choose an option--</option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                             </select></td>
                     </tr>
                     <tr id="Show2" style="display: none;">
                         <td>Did you receive feedback from DAC members?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                        <td><select style="background-color:#1d262b;width : 200px;">
-                                        <option value="--Choose an option">--Choose an option--</option>
+                        <td><select style="background-color:#1d262b;width : 200px;" name="DACii">
+                                        <option value="--Choose an option--">--Choose an option--</option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                             </select></td>
