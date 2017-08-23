@@ -1,3 +1,11 @@
+<?php 
+session_start();
+if(!isset($_SESSION["login"]))
+{
+    header("Location: Logout.php");
+}
+$i=$_SESSION["institute"];
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -33,7 +41,7 @@
 </nav>
     <?php 
     $con=  mysqli_connect("localhost", "root", "", "feedback1");
-    $query="select * from phd where filled='true'";
+    $query="select * from phd where filled='true' and inst='$i'";
     $result=$con->query($query) or exit($con->errno);
     ?>
     <div class="container">
