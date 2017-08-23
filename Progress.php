@@ -66,7 +66,7 @@ if(isset($_SESSION["course"]))
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 90px; ;  height :480px;">
             <div style="margin-top: 25px;">
-                <marquee style="color:#111111; font-family: Courier New;background:#FF8A65; margin-left: 1px">Welcome to Manipal University Feedback system portal!</marquee><br><br>
+                <marquee style="color:#111111; font-family: Soho Gothic Pro;background:#FF8A65; margin-left: 1px"><strong>Welcome to Manipal University Feedback system portal!</strong></marquee><br><br>
                 <?php
                 $var1=1;
                 if (isset($_SESSION['varname3']))
