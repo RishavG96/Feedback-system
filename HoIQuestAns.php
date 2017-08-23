@@ -16,9 +16,12 @@
 });</script>
     <script>
         function chang(){
-            document.getElementById("1st").onclick = function(){
-                location.href = "page2test.php";
-            };
+            document.getElementById("1st").onclick = location.href = "HoIFacilitiesGraph.php";
+        }
+    </script>
+    <script>
+        function chang2(){
+            document.getElementById("2nd").onclick = location.href = "HoITableReview.php";
         }
     </script>
         <title>Questions</title>
@@ -36,7 +39,7 @@
             
             <li style="margin-top: 10px;margin-right: 50px;">
                 <button class="btn" onclick="chang()" id="1st">Graph View</button>
-                <button class="btn btn-success" id="2nd">Student View</button>
+                <button class="btn btn-success" id="2nd" onclick="chang2()">Student View</button>
             </li>
             <li><a href="Logout.php">LOGOUT</a></li>
         </ul>

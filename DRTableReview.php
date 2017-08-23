@@ -15,6 +15,16 @@
     $("tr:nth-child(even)").css("background-color", "#252e33");
 });</script>
         <title>Details</title>
+                <script>
+        function chang(){
+            document.getElementById("1st").onclick = location.href = "DRFacilitiesGraph.php";
+        }
+    </script>
+    <script>
+        function chang2(){
+            document.getElementById("2nd").onclick = location.href = "DRTableReview.php";
+        }
+    </script>
 </head>
 <body style="background-color: #CF4747">
    <nav class="navbar navbar-inverse navbar-fixed-top" >
@@ -27,6 +37,10 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
             
+            <li style="margin-top: 10px;margin-right: 50px;">
+                <button class="btn " onclick="chang()" id="1st">Graph View</button>
+                <button class="btn btn-success" id="2nd" onclick="chang2()">Student View</button>
+            </li>
             <li><a href="Logout.php">LOGOUT</a></li>
         </ul>
     </div>
