@@ -1,3 +1,11 @@
+<?php 
+session_start();
+if(!isset($_SESSION["login"]))
+{
+    header("Location: Logout.php");
+}
+$i=$_SESSION["institute"];
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -14,14 +22,7 @@
     $("tr:nth-child(odd)").css("background-color", "#1d262b");
     $("tr:nth-child(even)").css("background-color", "#252e33");
 });</script>
-    <script>
-        function chang(){
-            document.getElementById("1st").onclick = function(){
-                location.href = "page2test.php";
-            };
-        }
-    </script>
-        <title>WORK & LIFE</title>
+        <title>Details</title>
 </head>
 <body style="background-color: #CF4747">
    <nav class="navbar navbar-inverse navbar-fixed-top" >
@@ -34,34 +35,41 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
             
-            <li style="margin-top: 10px;margin-right: 50px;">
-                <button class="btn" onclick="chang()" id="1st">Graph View</button>
-                <button class="btn btn-success" id="2nd">Student View</button>
-            </li>
             <li><a href="Logout.php">LOGOUT</a></li>
         </ul>
     </div>
 </nav>
+    <?php 
+    $con=  mysqli_connect("localhost", "root", "", "feedback1");
+    $query="select * from phd where filled='true' and inst='$i'";
+    $result=$con->query($query) or exit($con->errno);
+    ?>
     <div class="container">
         <div class="scrollable des" style="margin-top: 90px;">
             <table class="table table-hover table-striped" style="color: white;">
                 <tbody>
-                    <tr>
-                        <th>Questions</th>
-                        <th>Answers</th>
+                    <tr style="color: white;">
+                <th>Registration Number</th>
+                <th>Student Name</th>
+                <th>Guide Name</th>
+                <th>Operation</th>
                     </tr>
+                    <?php
+                    while($row=$result->fetch_assoc())
+                    {
+                    ?>
                     <tr>
-                        <td>Test</td>
-                        <td>Test</td>
+                    <td><?php echo $row["regno"]?></td>  
+                    <td><?php echo $row["name"]?></td>
+                    <td><?php echo $row["gname"]?></td>
+                    <td><form action="DRQuestAns.php" method="post">
+                            <input type="submit" value="Show" style="background-color: #CF4747"/>
+                            <input type="hidden" name="regno" value=<?php echo $row["regno"] ?> />
+                            </form></td>
                     </tr>
-                    <tr>
-                        <td>Test</td>
-                        <td>Test</td>
-                    </tr>
-                    <tr>
-                        <td>Test</td>
-                        <td>Test</td>
-                    </tr>
+                    <?php
+                        }
+                    ?>
                 </tbody>
             </table>
         </div>

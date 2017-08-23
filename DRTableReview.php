@@ -14,7 +14,7 @@
     $("tr:nth-child(odd)").css("background-color", "#1d262b");
     $("tr:nth-child(even)").css("background-color", "#252e33");
 });</script>
-        <title>WORK & LIFE</title>
+        <title>Details</title>
 </head>
 <body style="background-color: #CF4747">
    <nav class="navbar navbar-inverse navbar-fixed-top" >
@@ -31,6 +31,11 @@
         </ul>
     </div>
 </nav>
+    <?php 
+    $con=  mysqli_connect("localhost", "root", "", "feedback1");
+    $query="select * from phd where filled='true'";
+    $result=$con->query($query) or exit($con->errno);
+    ?>
     <div class="container">
         <div class="scrollable des" style="margin-top: 90px;">
             <table class="table table-hover table-striped" style="color: white;">
@@ -41,30 +46,22 @@
                 <th>Guide Name</th>
                 <th>Operation</th>
                     </tr>
+                    <?php
+                    while($row=$result->fetch_assoc())
+                    {
+                    ?>
                     <tr>
-                        <td>Test</td>
-                        <td>Test</td>
-                        <td>Test</td>
-                        <td>Test</td>
+                    <td><?php echo $row["regno"]?></td>  
+                    <td><?php echo $row["name"]?></td>
+                    <td><?php echo $row["gname"]?></td>
+                    <td><form action="DRQuestAns.php" method="post">
+                            <input type="submit" value="Show" style="background-color: #CF4747"/>
+                            <input type="hidden" name="regno" value=<?php echo $row["regno"] ?> />
+                            </form></td>
                     </tr>
-                    <tr>
-                        <td>Test</td>
-                        <td>Test</td>
-                        <td>Test</td>
-                        <td>Test</td>
-                    </tr>
-                    <tr>
-                        <td>Test</td>
-                        <td>Test</td>
-                        <td>Test</td>
-                        <td>Test</td>
-                    </tr>
-                    <tr>
-                        <td>Test</td>
-                        <td>Test</td>
-                        <td>Test</td>
-                        <td>Test</td>
-                    </tr>
+                    <?php
+                        }
+                    ?>
                 </tbody>
             </table>
         </div>
