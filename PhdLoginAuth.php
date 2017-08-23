@@ -27,6 +27,7 @@ and open the template in the editor.
                 $flag=1;
                 if($row["filled"]=="true")
                 {
+                    $_SESSION['phd'] = 1;
                     $_SESSION['done'] = 0;
                     header("Location: Ph.Dcandidate.php");
                 }
@@ -41,6 +42,7 @@ and open the template in the editor.
         }
         if($flag==0)
         {
+            $_SESSION['done'] = 1;
             $_SESSION['phd'] = 0;
             header("Location: Ph.Dcandidate.php");
         }

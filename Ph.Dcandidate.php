@@ -114,7 +114,7 @@ if(isset($_SESSION["course"]))
     }
     ?>
     <input type="submit" value="Login" style="background-color: #CF4747;color: #ffffff;width: 100px;height: 30px">
-    </form><br><br>
+    </form>
   </div>
 </div>
 </div>

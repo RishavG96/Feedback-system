@@ -38,7 +38,7 @@
     ?>
     <div class="container">
         <div class="scrollable des" style="margin-top: 90px;">
-            <table class="table table-hover table-striped" style="color: white;">
+            <table class="table table-hover table-striped table-bordered table-responsive" style="color: white;">
                 <tbody>
                     <tr style="color: white;">
                 <th>Registration Number</th>
