@@ -32,6 +32,16 @@ and open the template in the editor.
         <script src="js1/fusioncharts.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <title>GUIDANCE RECEIVED</title>
+               <script>
+        function chang(){
+            document.getElementById("1st").onclick = location.href = "DRFacilitiesGraph.php";
+        }
+    </script>
+    <script>
+        function chang2(){
+            document.getElementById("2nd").onclick = location.href = "DRTableReview.php";
+        }
+    </script>
 </head>
 <body style="background-color: #CF4747">
    
@@ -686,18 +696,22 @@ and open the template in the editor.
         </div>
         <ul class="nav navbar-nav navbar-right">
             
+            <li style="margin-top: 10px;margin-right: 50px;">
+                <button class="btn btn-success" onclick="chang()" id="1st">Graph View</button>
+                <button class="btn" id="2nd" onclick="chang2()">Student View</button>
+            </li>
             <li><a href="Logout.php">LOGOUT</a></li>
         </ul>
     </div>
 </nav>
    <div class="container" style="position: relative;">
         <div id="mySidenav" class="sidenav" style="width:25%;">
-            <a class="btn" href="DRFacilitiesGraph.php" style="background-color: #C21E17; height: 80px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
-            <a class="btn " href="DRCourseGraph.php" style="background-color: #A11913; height: 80px; padding-top: 30px;">COURSE WORK</a>
-            <a class="btn " href="DRProgressGraph.php" style="background-color: #861510; height: 80px; padding-top: 30px;" >PROGRESS</a>
-            <a class="btn active"  href="#"style="background-color: #FF8A65; height: 80px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
-            <a class="btn " href="DRWorkBalGraph.php" style="background-color: #670F0B ;height: 80px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
-            <a class="btn " href="DRChallengesGraph.php" style="background-color: #4A0707; height: 80px; padding-top: 30px;">CHALLENGES</a>
+            <a class="btn" href="DRFacilitiesGraph.php" style="background-color: #C21E17; height: 96px; padding-top: 15px">FACILITIES <br>AVAILABLE</a>
+            <a class="btn " href="DRCourseGraph.php" style="background-color: #A11913; height: 96px; padding-top: 30px;">COURSE WORK</a>
+            <a class="btn " href="DRProgressGraph.php" style="background-color: #861510; height: 96px; padding-top: 30px;" >PROGRESS</a>
+            <a class="btn active"  href="#"style="background-color: #FF8A65; height: 96px; padding-top: 15px" >GUIDANCE<br> RECEIVED</a>
+            <a class="btn " href="DRWorkBalGraph.php" style="background-color: #670F0B ;height: 96px; padding-top: 15px">WORK AND LIFE<br> BALANCE</a>
+            
         </div>
         <div class="scrollable des" style="margin-left: 25%; margin-top: 100px; ;  height :480px;">
             <div style="margin-top: 25px;">
