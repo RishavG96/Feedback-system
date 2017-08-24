@@ -72,7 +72,6 @@
                         <th>Questions</th>
                         <th>Answers</th>
                     </tr>
-                    
                     <tr>
                         <td><b>How do you rate the quality of the following facilities and services available in the campus</b></td>
                         <td></td>
