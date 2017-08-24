@@ -1,3 +1,11 @@
+<?php 
+session_start();
+if(!isset($_SESSION["hoilogin"]))
+{
+    header("Location: Logout.php");
+}
+$i=$_SESSION["institute"];
+?>
 <html>
     <head>
         <meta charset="UTF-8">

@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if(!isset($_SESSION["drlogin"]))
+{
+    header("Location: Logout.php");
+}
+?>
 <html>
     <head>
         <meta charset="UTF-8">

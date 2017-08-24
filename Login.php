@@ -1,6 +1,6 @@
 <?php 
 session_start();
-/*if(isset($_SESSION["facilities"]))
+if(isset($_SESSION["facilities"]))
 {
     header("Location: page2test.php");
 }
@@ -26,9 +26,17 @@ if(isset($_SESSION["course"]))
 }
 if(isset($_SESSION["hoilogin"]))
 {
-    header("Location: HoIGuidanceGraph.php");
+    header("Location: HoIFacilitiesGraph.php");
 }
-*/
+if(isset($_SESSION["drlogin"]))
+{
+    header("Location: DRFacilitiesGraph.php");
+}
+if(isset($_SESSION["thanks"]))
+{
+    header("Location: Thanks.php");
+}
+
 ?>
 <!DOCTYPE html>
 <html>

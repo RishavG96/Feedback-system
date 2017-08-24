@@ -1,3 +1,11 @@
+<?php 
+session_start();
+$_SESSION["thanks"]=1;
+if(!isset($_SESSION["login"]))
+{
+    header("Location: Logout.php");
+}
+?>
 <html>
     <head>
     <title></title>

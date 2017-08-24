@@ -1,9 +1,13 @@
 <?php
 session_start();
 $_SESSION["facilities"]=1;
-/*if(!isset($_SESSION["login"]))
+if(!isset($_SESSION["login"]))
 {
     header("Location: Logout.php");
+}
+if(isset($_SESSION["guidance"]))
+{
+    header("Location: GuidanceReceived.php");
 }
 if(isset($_SESSION["walb"]))
 {
@@ -20,7 +24,11 @@ if(isset($_SESSION["challenges"]))
 if(isset($_SESSION["course"]))
 {
     header("Location: courseWork.php");
-}*/
+}
+if(isset($_SESSION["thanks"]))
+{
+    header("Location: Thanks.php");
+}
 ?>
 <!DOCTYPE html>
 <!--

@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if(!isset($_SESSION["drlogin"]))
+{
+    header("Location: Logout.php");
+}
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -57,6 +64,7 @@
                     <tr style="color: white;">
                 <th>Registration Number</th>
                 <th>Student Name</th>
+                <th>Institution</th>
                 <th>Guide Name</th>
                 <th>Operation</th>
                     </tr>
@@ -67,6 +75,7 @@
                     <tr>
                     <td><?php echo $row["regno"]?></td>  
                     <td><?php echo $row["name"]?></td>
+                    <td><?php echo $row["inst"]?></td>
                     <td><?php echo $row["gname"]?></td>
                     <td><form action="DRQuestAns.php" method="post">
                             <input type="submit" value="Show" style="background-color: #CF4747"/>

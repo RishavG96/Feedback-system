@@ -2,7 +2,7 @@
 session_start();
 if(isset($_SESSION["hoilogin"]))
 {
-    header("Location: HoIGuidanceGraph.php");
+    header("Location: HoIFacilitiesGraph.php");
 }
 ?>
 <!DOCTYPE html>

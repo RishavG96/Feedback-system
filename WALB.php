@@ -1,22 +1,18 @@
 <?php 
 session_start();
 $_SESSION["walb"]=1;
-/*if(!isset($_SESSION["login"]))
+if(!isset($_SESSION["login"]))
 {
     header("Location: Logout.php");
-}
-if(isset($_SESSION["progress"]))
-{
-    header("Location: Progress.php");
 }
 if(isset($_SESSION["challenges"]))
 {
     header("Location: Challenges.php");
 }
-if(isset($_SESSION["course"]))
+if(isset($_SESSION["thanks"]))
 {
-    header("Location: courseWork.php");
-}*/
+    header("Location: Thanks.php");
+}
 ?>
 <!DOCTYPE html>
 <!--

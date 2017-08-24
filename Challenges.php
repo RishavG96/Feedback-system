@@ -1,14 +1,14 @@
 <?php 
 session_start();
 $_SESSION["challenges"]=1;
-/*if(!isset($_SESSION["login"]))
+if(!isset($_SESSION["login"]))
 {
     header("Location: Logout.php");
 }
-if(isset($_SESSION["course"]))
+if(isset($_SESSION["thanks"]))
 {
-    header("Location: courseWork.php");
-}*/
+    header("Location: Thanks.php");
+}
 ?>
 <!DOCTYPE html>
 <!--

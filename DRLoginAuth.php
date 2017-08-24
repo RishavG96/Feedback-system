@@ -15,7 +15,7 @@ and open the template in the editor.
     <body>
         <?php
         $con=  mysqli_connect("localhost", "root", "", "feedback1");
-        $query="select * from hoi";
+        $query="select * from dr";
         $result=$con->query($query) or exit($con->errno);
         $id=$_POST["ID"];
         $pwd=$_POST["psw"];
@@ -25,15 +25,14 @@ and open the template in the editor.
             if($row["username"]==$id && $row["pwd"]==$pwd)
             {
                 $flag=1;
-                $_SESSION["institute"]=$row["institute"];
-                $_SESSION["hoilogin"]=1;
-                header("Location: HoIFacilitiesGraph.php");
+                $_SESSION["drlogin"]=1;
+                header("Location: DRFacilitiesGraph.php");
             }
         }
         if($flag==0)
         {
-            $_SESSION['hoi'] = 0;
-            header("Location: HoI.php");
+            $_SESSION['dr'] = 0;
+            header("Location: DR.php");
         }
         ?>
     </body>

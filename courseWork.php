@@ -1,10 +1,30 @@
 <?php 
 session_start();
 $_SESSION["course"]=1;
-/*if(!isset($_SESSION["login"]))
+if(!isset($_SESSION["login"]))
 {
     header("Location: Logout.php");
-}*/
+}
+if(isset($_SESSION["guidance"]))
+{
+    header("Location: GuidanceReceived.php");
+}
+if(isset($_SESSION["walb"]))
+{
+    header("Location: WALB.php");
+}
+if(isset($_SESSION["progress"]))
+{
+    header("Location: Progress.php");
+}
+if(isset($_SESSION["challenges"]))
+{
+    header("Location: Challenges.php");
+}
+if(isset($_SESSION["thanks"]))
+{
+    header("Location: Thanks.php");
+}
 ?>
 <!DOCTYPE html>
 <!--
@@ -103,7 +123,7 @@ and open the template in the editor.
                         </tr>
                                                 <tr id="Show2" style="display: none;">
                             <td>What do you prefer? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                    <td><select style="background-color:#1d262b;width : 200px;" name="q2">
+                                    <td><select style="background-color:#1d262b;width : 200px;" name="q2i">
                                 <option>--Choose an option--</option>
                                 <option value="Within First 6 months">Within First 6 months</option>
                                 <option value="2-3 hours everyday">2-3 hours everyday</option>

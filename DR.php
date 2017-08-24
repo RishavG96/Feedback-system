@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if(isset($_SESSION["drlogin"]))
+{
+    header("Location: DRFacilitiesGraph.php");
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,12 +57,27 @@
   <h2 style="size:large;color:white;">Deputy Registrar (DR)</h2>
   <br>
   <div class="accept">
-      <form action="DRFacilitiesGraph.php" method="post">
+      <form action="DRLoginAuth.php" method="post">
     <input type="text" placeholder="Username" name="ID" required>
     <br>
     <br>
     <input type="password" placeholder="Password" name="psw" required>
-    <br><br><br>
+    <br><br>
+    <?php
+    $var=1;
+    if (isset($_SESSION['dr']))
+    {
+    $var = $_SESSION['dr'];
+    }
+    if($var == 0)
+    {
+    ?>
+    <div class='alert alert-danger'>
+        <strong>Invalid Login Credentials!</strong>
+    </div>
+    <?php
+    }
+    ?>
     <input type="submit" value="Login" style="background-color: #CF4747;color: #ffffff;width: 100px;height: 30px">
     </form>
   </div>
